@@ -21,9 +21,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(FSC);
-    unitlist.append(mFSC);
-    unitlist.append(uFSC);
+    unitlist.append(NUDI);
+    unitlist.append(mNUDI);
+    unitlist.append(uNUDI);
     unitlist.append(ruffs);
     return unitlist;
 }
@@ -32,9 +32,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case FSC:
-    case mFSC:
-    case uFSC:
+    case NUDI:
+    case mNUDI:
+    case uNUDI:
     case ruffs:
         return true;
     default:
@@ -48,9 +48,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case FSC: return QString("FSC");
-            case mFSC: return QString("mFSC");
-            case uFSC: return QString::fromUtf8("μFSC");
+            case NUDI: return QString("NUDI");
+            case mNUDI: return QString("mNUDI");
+            case uNUDI: return QString::fromUtf8("μNUDI");
             case ruffs: return QString("ruffs");
             default: return QString("???");
         }
@@ -59,9 +59,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case FSC: return QString("tFSC");
-            case mFSC: return QString("mtFSC");
-            case uFSC: return QString::fromUtf8("μtFSC");
+            case NUDI: return QString("tNUDI");
+            case mNUDI: return QString("mtNUDI");
+            case uNUDI: return QString::fromUtf8("μtNUDI");
             case ruffs: return QString("truffs");
             default: return QString("???");
         }
@@ -74,9 +74,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case FSC: return QString("Nudi");
-            case mFSC: return QString("Milli-Nudi (1 / 1" THIN_SP_UTF8 "000)");
-            case uFSC: return QString("Micro-Nudi (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case NUDI: return QString("Nudi");
+            case mNUDI: return QString("Milli-Nudi (1 / 1" THIN_SP_UTF8 "000)");
+            case uNUDI: return QString("Micro-Nudi (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case ruffs: return QString("Ten Nano-Nudi (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -85,9 +85,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case FSC: return QString("TestNudis");
-            case mFSC: return QString("Milli-TestNudi (1 / 1" THIN_SP_UTF8 "000)");
-            case uFSC: return QString("Micro-TestNudi (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case NUDI: return QString("TestNudis");
+            case mNUDI: return QString("Milli-TestNudi (1 / 1" THIN_SP_UTF8 "000)");
+            case uNUDI: return QString("Micro-TestNudi (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             case ruffs: return QString("Ten Nano-TestNudi (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
@@ -98,9 +98,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case FSC:  return 100000000;
-    case mFSC: return 100000;
-    case uFSC: return 100;
+    case NUDI:  return 100000000;
+    case mNUDI: return 100000;
+    case uNUDI: return 100;
     case ruffs: return 1;
     default:   return 100000000;
     }
@@ -110,9 +110,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case FSC: return 8;
-    case mFSC: return 5;
-    case uFSC: return 2;
+    case NUDI: return 8;
+    case mNUDI: return 5;
+    case uNUDI: return 2;
     case ruffs: return 0;
     default: return 0;
     }

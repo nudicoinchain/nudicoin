@@ -58,9 +58,9 @@ public:
      */
     enum Unit
     {
-        FSC,
-        mFSC,
-        uFSC,
+        NUDI,
+        mNUDI,
+        uNUDI,
         ruffs
     };
 

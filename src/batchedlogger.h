@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FSOCIETY_BATCHEDLOGGER_H
-#define FSOCIETY_BATCHEDLOGGER_H
+#ifndef NUDI_BATCHEDLOGGER_H
+#define NUDI_BATCHEDLOGGER_H
 
 #include "tinyformat.h"
 
@@ -30,4 +30,4 @@ public:
     void Flush();
 };
 
-#endif//FSOCIETY_BATCHEDLOGGER_H
+#endif//NUDI_BATCHEDLOGGER_H

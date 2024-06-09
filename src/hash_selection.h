@@ -8,8 +8,8 @@
  *      Author: tri
  */
 
-#ifndef FSOCIETY_SELECTION_H_
-#define FSOCIETY_SELECTION_H_
+#ifndef NUDI_SELECTION_H_
+#define NUDI_SELECTION_H_
 
 #include <uint256.h>
 #include <string>
@@ -90,4 +90,4 @@ protected:
 
 };
 
-#endif /* FSOCIETY_SELECTION_H_ */
+#endif /* NUDI_SELECTION_H_ */

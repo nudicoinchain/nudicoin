@@ -24,18 +24,18 @@ SHA256CMD="$(command -v sha256sum || echo shasum)"
 SHA256ARGS="$(command -v sha256sum >/dev/null || echo \"-a 256\")"
 
 WGETCMD="$(command -v wget || echo '')"
-IPFSCMD="$(command -v ipfs || echo '')"
+IPNUDIMD="$(command -v ipfs || echo '')"
 CURLCMD="$(command -v curl || echo '')"
 
-# fetch methods can be disabled with FSC_DISABLE_SOMETHING=1
-FSC_DISABLE_WGET="${FSC_DISABLE_WGET:-}"
-#FSC_DISABLE_IPFS="${FSC_DISABLE_IPFS:-}"
-FSC_DISABLE_CURL="${FSC_DISABLE_CURL:-}"
+# fetch methods can be disabled with NUDI_DISABLE_SOMETHING=1
+NUDI_DISABLE_WGET="${NUDI_DISABLE_WGET:-}"
+#NUDI_DISABLE_IPFS="${NUDI_DISABLE_IPFS:-}"
+NUDI_DISABLE_CURL="${NUDI_DISABLE_CURL:-}"
 
 LOCKFILE=/tmp/fetch_params.lock
 
 fetch_wget() {
-    if [ -z "$WGETCMD" ] || ! [ -z "$FSC_DISABLE_WGET" ]; then
+    if [ -z "$WGETCMD" ] || ! [ -z "$NUDI_DISABLE_WGET" ]; then
         return 1
     fi
 
@@ -53,7 +53,7 @@ EOF
 }
 
 #fetch_ipfs() {
-#    if [ -z "$IPFSCMD" ] || ! [ -z "$FSC_DISABLE_IPFS" ]; then
+#    if [ -z "$IPNUDIMD" ] || ! [ -z "$NUDI_DISABLE_IPFS" ]; then
 #        return 1
 #    fi
 
@@ -66,7 +66,7 @@ EOF
 #}
 
 fetch_curl() {
-    if [ -z "$CURLCMD" ] || ! [ -z "$FSC_DISABLE_CURL" ]; then
+    if [ -z "$CURLCMD" ] || ! [ -z "$NUDI_DISABLE_CURL" ]; then
         return 1
     fi
 
@@ -176,7 +176,7 @@ main() {
     || exit_locked_error
 
     cat <<EOF
-FSC - fetch-params.sh
+NUDI - fetch-params.sh
 
 This script will fetch the Nudi SNARK parameters and verify their
 integrity with sha256sum.

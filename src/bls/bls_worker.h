@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FSOCIETY_CRYPTO_BLS_WORKER_H
-#define FSOCIETY_CRYPTO_BLS_WORKER_H
+#ifndef NUDI_CRYPTO_BLS_WORKER_H
+#define NUDI_CRYPTO_BLS_WORKER_H
 
 #include <bls/bls.h>
 
@@ -203,4 +203,4 @@ private:
     }
 };
 
-#endif //FSOCIETY_CRYPTO_BLS_WORKER_H
+#endif //NUDI_CRYPTO_BLS_WORKER_H

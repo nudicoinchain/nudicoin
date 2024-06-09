@@ -104,7 +104,7 @@ use old versions of Upstart and do not supply the start-stop-daemon utility.
 Copy nudid.init to /etc/init.d/nudid. Test by running `service nudid start`.
 
 Using this script, you can adjust the path and flags to the nudid program by
-setting the FSOCIETYD and FLAGS environment variables in the file
+setting the NUDID and FLAGS environment variables in the file
 /etc/sysconfig/nudid. You can also use the DAEMONOPTS environment variable here.
 
 ### Mac OS X

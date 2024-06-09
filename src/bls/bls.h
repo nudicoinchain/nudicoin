@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FSOCIETY_CRYPTO_BLS_H
-#define FSOCIETY_CRYPTO_BLS_H
+#ifndef NUDI_CRYPTO_BLS_H
+#define NUDI_CRYPTO_BLS_H
 
 #include <hash.h>
 #include <serialize.h>
@@ -449,4 +449,4 @@ typedef std::shared_ptr<BLSSignatureVector> BLSSignatureVectorPtr;
 
 bool BLSInit();
 
-#endif // FSOCIETY_CRYPTO_BLS_H
+#endif // NUDI_CRYPTO_BLS_H

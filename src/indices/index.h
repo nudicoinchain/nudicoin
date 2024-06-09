@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FSOCIETY_INDEX_H
-#define FSOCIETY_INDEX_H
+#ifndef NUDI_INDEX_H
+#define NUDI_INDEX_H
 
 #include <amount.h>
 #include <script/script.h>

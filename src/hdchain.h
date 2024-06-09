@@ -1,8 +1,8 @@
 // Copyright (c) 2014-2019 The Dash Core developers
 // Copyright (c) 2020-2022 The Nudi developers
 // Distributed under the MIT software license, see the accompanying
-#ifndef FSOCIETY_HDCHAIN_H
-#define FSOCIETY_HDCHAIN_H
+#ifndef NUDI_HDCHAIN_H
+#define NUDI_HDCHAIN_H
 
 #include <key.h>
 #include <sync.h>
@@ -148,4 +148,4 @@ public:
     std::string GetKeyPath() const;
 };
 
-#endif // FSOCIETY_HDCHAIN_H
+#endif // NUDI_HDCHAIN_H

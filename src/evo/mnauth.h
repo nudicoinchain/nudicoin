@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FSOCIETY_MNAUTH_H
-#define FSOCIETY_MNAUTH_H
+#ifndef NUDI_MNAUTH_H
+#define NUDI_MNAUTH_H
 
 #include <bls/bls.h>
 #include <serialize.h>
@@ -56,4 +56,4 @@ public:
 };
 
 
-#endif //FSOCIETY_MNAUTH_H
+#endif //NUDI_MNAUTH_H

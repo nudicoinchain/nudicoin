@@ -5,7 +5,7 @@ Nudi Core Latest v0.0.1.02
 |-|-|-|
 
 Introduction
-In a rapidly evolving digital landscape, Nudi (FSC) aims to revolutionize the world of
+In a rapidly evolving digital landscape, Nudi (NUDI) aims to revolutionize the world of
 open digital money. This whitepaper introduces Nudi, a cryptocurrency designed to
 empower individuals, promote decentralized systems, and foster financial inclusivity. By
 combining smartnodes, passive earnings, and mineable capabilities through the innovative

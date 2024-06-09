@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FSOCIETY_EVODB_H
-#define FSOCIETY_EVODB_H
+#ifndef NUDI_EVODB_H
+#define NUDI_EVODB_H
 
 #include <dbwrapper.h>
 #include <sync.h>
@@ -113,4 +113,4 @@ private:
 
 extern std::unique_ptr<CEvoDB> evoDb;
 
-#endif //FSOCIETY_EVODB_H
+#endif //NUDI_EVODB_H

@@ -41,7 +41,7 @@ class AmountValidator : public QValidator
 public:
     explicit AmountValidator(QObject *parent) :
         QValidator(parent),
-        currentUnit(BitcoinUnits::FSC) {}
+        currentUnit(BitcoinUnits::NUDI) {}
 
     State validate(QString &input, int &pos) const
     {
@@ -69,7 +69,7 @@ class AmountLineEdit: public QLineEdit
 public:
     explicit AmountLineEdit(QWidget *parent):
         QLineEdit(parent),
-        currentUnit(BitcoinUnits::FSC)
+        currentUnit(BitcoinUnits::NUDI)
     {
         setAlignment(Qt::AlignLeft);
         amountValidator = new AmountValidator(this);
@@ -117,7 +117,7 @@ public:
         ensurePolished();
         const QFontMetrics fm(fontMetrics());
         int h = 0;
-        int w = fm.width(BitcoinUnits::format(BitcoinUnits::FSC, BitcoinUnits::maxMoney(), false, BitcoinUnits::separatorAlways));
+        int w = fm.width(BitcoinUnits::format(BitcoinUnits::NUDI, BitcoinUnits::maxMoney(), false, BitcoinUnits::separatorAlways));
         w += 2; // cursor blinking space
         w += GUIUtil::nudiThemeActive() ? 24 : 0; // counteract padding from css
         return QSize(w, h);

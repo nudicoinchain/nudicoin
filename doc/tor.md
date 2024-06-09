@@ -1,4 +1,4 @@
-# TOR SUPPORT IN FSOCIETY CORE
+# TOR SUPPORT IN NUDI CORE
 =======================
 
 It is possible to run Nudi Core as a Tor hidden service, and connect to such services.

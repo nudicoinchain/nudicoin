@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FSOCIETY_QUORUMS_INIT_H
-#define FSOCIETY_QUORUMS_INIT_H
+#ifndef NUDI_QUORUMS_INIT_H
+#define NUDI_QUORUMS_INIT_H
 
 class CDBWrapper;
 class CEvoDB;
@@ -22,4 +22,4 @@ void StopLLMQSystem();
 void InterruptLLMQSystem();
 } // namespace llmq
 
-#endif //FSOCIETY_QUORUMS_INIT_H
+#endif //NUDI_QUORUMS_INIT_H

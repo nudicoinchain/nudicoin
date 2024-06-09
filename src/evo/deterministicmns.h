@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FSOCIETY_DETERMINISTICMNS_H
-#define FSOCIETY_DETERMINISTICMNS_H
+#ifndef NUDI_DETERMINISTICMNS_H
+#define NUDI_DETERMINISTICMNS_H
 
 #include <arith_uint256.h>
 #include <bls/bls.h>
@@ -723,4 +723,4 @@ private:
 
 extern std::unique_ptr<CDeterministicMNManager> deterministicMNManager;
 
-#endif //FSOCIETY_DETERMINISTICMNS_H
+#endif //NUDI_DETERMINISTICMNS_H

@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FSOCIETY_ARITH_UINT256_H
-#define FSOCIETY_ARITH_UINT256_H
+#ifndef NUDI_ARITH_UINT256_H
+#define NUDI_ARITH_UINT256_H
 #include "crypto/common.h"
 #include <assert.h>
 #include <cstring>
@@ -323,4 +323,4 @@ public:
 uint512 ArithToUint512(const arith_uint512 &);
 arith_uint512 UintToArith512(const uint512 &);
 
-#endif // FSOCIETY_ARITH_UINT256_H
+#endif // NUDI_ARITH_UINT256_H
