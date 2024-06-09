@@ -1,7 +1,7 @@
 Description
 ------------
 
-This directory contains data-driven tests for various aspects of Fsociety.
+This directory contains data-driven tests for various aspects of Nudi.
 
 License
 --------

@@ -1,4 +1,4 @@
-Fsociety Core version 0.0.1.01
+Nudi Core version 0.0.1.01
 ==========================
 
 Release is now available from:

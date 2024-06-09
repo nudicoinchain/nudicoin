@@ -1,7 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin Core developers
 // Copyright (c) 2014-2020 The Dash Core developers
-// Copyright (c) 2020-2022 The Fsociety developers
+// Copyright (c) 2020-2022 The Nudi developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -518,8 +518,8 @@ public:
         consensus.DIP0008Enabled = true;
         // consensus.DIP0003EnforcementHeight = 1047200;
         consensus.powLimit = uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20
-        consensus.nPowTargetTimespan = 24 * 60 * 60; // Fsociety: 1 day
-        consensus.nPowTargetSpacing = 2 * 60; // Fsociety: 2 minutes
+        consensus.nPowTargetTimespan = 24 * 60 * 60; // Nudi: 1 day
+        consensus.nPowTargetSpacing = 2 * 60; // Nudi: 2 minutes
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nPowDGWHeight = 60;
@@ -574,17 +574,17 @@ public:
 		vSeeds.emplace_back("ns9.fsocietychain.com");
 		vSeeds.emplace_back("ns10.fsocietychain.com");
 
-        // Fsociety addresses start with 'F'
+        // Nudi addresses start with 'F'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,35);
-        // Fsociety script addresses start with 'f'
+        // Nudi script addresses start with 'f'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,95);
-        // Fsociety private keys start with '3'
+        // Nudi private keys start with '3'
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,18);
-        // Fsociety BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
+        // Nudi BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
-        // Fsociety BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
+        // Nudi BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
-        // Fsociety BIP44 coin type is '5'
+        // Nudi BIP44 coin type is '5'
         std::string strExtCoinType = gArgs.GetArg("-extcoinindex", "");
         nExtCoinType = strExtCoinType.empty() ? 200 : std::stoi(strExtCoinType);
 //        if(gArgs.GetChainName() == CBaseChainParams::MAIN) {
@@ -689,8 +689,8 @@ public:
         consensus.DIP0008Enabled = true;
         // consensus.DIP0003EnforcementHeight = 7300;
         consensus.powLimit = uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20
-        consensus.nPowTargetTimespan = 24 * 60 * 60; // Fsociety: 1 day
-        consensus.nPowTargetSpacing = 60; // Fsociety: 1 minutes
+        consensus.nPowTargetTimespan = 24 * 60 * 60; // Nudi: 1 day
+        consensus.nPowTargetSpacing = 60; // Nudi: 1 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nPowDGWHeight = 60;
@@ -739,18 +739,18 @@ public:
         vSeeds.emplace_back("tns2.fsocietychain", true);
         vSeeds.emplace_back("tns3.fsocietychain", true);
 
-        // Testnet Fsociety addresses start with 't'
+        // Testnet Nudi addresses start with 't'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,65);
-        // Testnet Fsociety script addresses start with '8' or '9'
+        // Testnet Nudi script addresses start with '8' or '9'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,19);
         // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        // Testnet Fsociety BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Testnet Nudi BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
-        // Testnet Fsociety BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Testnet Nudi BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        // Testnet Fsociety BIP44 coin type is '1' (All coin's testnet default)
+        // Testnet Nudi BIP44 coin type is '1' (All coin's testnet default)
         std::string strExtCoinType = gArgs.GetArg("-extcoinindex", "");
         nExtCoinType = strExtCoinType.empty() ? 10227 : std::stoi(strExtCoinType);
 
@@ -840,8 +840,8 @@ public:
         consensus.DIP0008Enabled = true;// DIP0008 activated immediately on devnet
        // consensus.DIP0003EnforcementHeight = 2; // DIP0003 activated immediately on devnet
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 1
-        consensus.nPowTargetTimespan = 24 * 60 * 60; // Fsociety: 1 day
-        consensus.nPowTargetSpacing = 2.5 * 60; // Fsociety: 2.5 minutes
+        consensus.nPowTargetTimespan = 24 * 60 * 60; // Nudi: 1 day
+        consensus.nPowTargetSpacing = 2.5 * 60; // Nudi: 2.5 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nPowDGWHeight = 60;
@@ -891,18 +891,18 @@ public:
         vSeeds.clear();
         //vSeeds.push_back(CDNSSeedData("fsocietyevo.org",  "devnet-seed.fsocietyevo.org"));
 
-        // Testnet Fsociety addresses start with 'y'
+        // Testnet Nudi addresses start with 'y'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
-        // Testnet Fsociety script addresses start with '8' or '9'
+        // Testnet Nudi script addresses start with '8' or '9'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,19);
         // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        // Testnet Fsociety BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Testnet Nudi BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
-        // Testnet Fsociety BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Testnet Nudi BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        // Testnet Fsociety BIP44 coin type is '1' (All coin's testnet default)
+        // Testnet Nudi BIP44 coin type is '1' (All coin's testnet default)
         nExtCoinType = 1;
 
         // long living quorum params
@@ -979,8 +979,8 @@ public:
         consensus.DIP0003Enabled = true;
        // consensus.DIP0003EnforcementHeight = 500;
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 1
-        consensus.nPowTargetTimespan = 24 * 60 * 60; // Fsociety: 1 day
-        consensus.nPowTargetSpacing = 2.5 * 60; // Fsociety: 2.5 minutes
+        consensus.nPowTargetTimespan = 24 * 60 * 60; // Nudi: 1 day
+        consensus.nPowTargetSpacing = 2.5 * 60; // Nudi: 2.5 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nPowDGWHeight = 60;
@@ -1060,18 +1060,18 @@ printf("REG MERKLE ROOT: %s\n",genesis.hashMerkleRoot.ToString().c_str());
             0
         };
 
-        // Regtest Fsociety addresses start with 'y'
+        // Regtest Nudi addresses start with 'y'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
-        // Regtest Fsociety script addresses start with '8' or '9'
+        // Regtest Nudi script addresses start with '8' or '9'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,19);
         // Regtest private keys start with '9' or 'c' (Bitcoin defaults)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        // Regtest Fsociety BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Regtest Nudi BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
-        // Regtest Fsociety BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Regtest Nudi BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        // Regtest Fsociety BIP44 coin type is '1' (All coin's testnet default)
+        // Regtest Nudi BIP44 coin type is '1' (All coin's testnet default)
         nExtCoinType = 1;
 
         // long living quorum params

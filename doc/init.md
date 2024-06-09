@@ -68,9 +68,9 @@ can then be controlled by group membership.
 ### Mac OS X
 
 Binary:              `/usr/local/bin/fsocietyd`  
-Configuration file:  `~/Library/Application Support/FsocietyCore/fsociety.conf`  
-Data directory:      `~/Library/Application Support/FsocietyCore`
-Lock file:           `~/Library/Application Support/FsocietyCore/.lock`
+Configuration file:  `~/Library/Application Support/NudiCore/fsociety.conf`  
+Data directory:      `~/Library/Application Support/NudiCore`
+Lock file:           `~/Library/Application Support/NudiCore/.lock`
 
 Installing Service Configuration
 -----------------------------------

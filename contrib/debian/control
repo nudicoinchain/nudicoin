@@ -34,10 +34,10 @@ Package: fsocietyd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- Fsociety is an experimental new digital currency that enables instant, private
- payments to anyone, anywhere in the world. Fsociety uses peer-to-peer
+ Nudi is an experimental new digital currency that enables instant, private
+ payments to anyone, anywhere in the world. Nudi uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Fsociety Core
+ and issuing money are carried out collectively by the network. Nudi Core
  is the name of the open source software which enables the use of this currency.
  .
  This package provides the daemon, fsocietyd, and the CLI tool
@@ -47,22 +47,22 @@ Package: fsociety-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- Fsociety is an experimental new digital currency that enables instant, private
- payments to anyone, anywhere in the world. Fsociety uses peer-to-peer
+ Nudi is an experimental new digital currency that enables instant, private
+ payments to anyone, anywhere in the world. Nudi uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Fsociety Core
+ and issuing money are carried out collectively by the network. Nudi Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides Fsociety-Qt, a GUI for Fsociety based on Qt.
+ This package provides Nudi-Qt, a GUI for Nudi based on Qt.
 
 Package: fsociety-tx
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer digital currency - standalone transaction tool
- Fsociety is an experimental new digital currency that enables instant, private
- payments to anyone, anywhere in the world. Fsociety uses peer-to-peer
+ Nudi is an experimental new digital currency that enables instant, private
+ payments to anyone, anywhere in the world. Nudi uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Fsociety Core
+ and issuing money are carried out collectively by the network. Nudi Core
  is the name of the open source software which enables the use of this currency.
  .
  This package provides fsociety-tx, a command-line transaction creation

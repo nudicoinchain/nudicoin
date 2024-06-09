@@ -95,13 +95,13 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Fsociety addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>These are your Fsociety addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
+        <source>These are your Nudi addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>These are your Nudi addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>These are your Fsociety addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>These are your Fsociety addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
+        <source>These are your Nudi addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>These are your Nudi addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -401,13 +401,13 @@
     <name>BitcoinGUI</name>
     <message>
         <location filename="../fsociety.cpp" line="+541"/>
-        <source>A fatal error occurred. Fsociety Core can no longer continue safely and will quit.</source>
-        <translation>A fatal error occurred. Fsociety Core can no longer continue safely and will quit.</translation>
+        <source>A fatal error occurred. Nudi Core can no longer continue safely and will quit.</source>
+        <translation>A fatal error occurred. Nudi Core can no longer continue safely and will quit.</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="+1406"/>
-        <source>Fsociety Core</source>
-        <translation>Fsociety Core</translation>
+        <source>Nudi Core</source>
+        <translation>Nudi Core</translation>
     </message>
     <message>
         <location line="-1264"/>
@@ -436,8 +436,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Send coins to a Fsociety address</source>
-        <translation>Send coins to a Fsociety address</translation>
+        <source>Send coins to a Nudi address</source>
+        <translation>Send coins to a Nudi address</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -481,8 +481,8 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Fsociety Core</source>
-        <translation>Show information about Fsociety Core</translation>
+        <source>Show information about Nudi Core</source>
+        <translation>Show information about Nudi Core</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -506,8 +506,8 @@
     </message>
     <message>
         <location line="-20"/>
-        <source>Send %1 funds to a Fsociety address</source>
-        <translation>Send %1 funds to a Fsociety address</translation>
+        <source>Send %1 funds to a Nudi address</source>
+        <translation>Send %1 funds to a Nudi address</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -576,8 +576,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Sign messages with your Fsociety addresses to prove you own them</source>
-        <translation>Sign messages with your Fsociety addresses to prove you own them</translation>
+        <source>Sign messages with your Nudi addresses to prove you own them</source>
+        <translation>Sign messages with your Nudi addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -586,8 +586,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Verify messages to ensure they were signed with specified Fsociety addresses</source>
-        <translation>Verify messages to ensure they were signed with specified Fsociety addresses</translation>
+        <source>Verify messages to ensure they were signed with specified Nudi addresses</source>
+        <translation>Verify messages to ensure they were signed with specified Nudi addresses</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -696,8 +696,8 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>Show the %1 help message to get a list with possible Fsociety command-line options</source>
-        <translation>Show the %1 help message to get a list with possible Fsociety command-line options</translation>
+        <source>Show the %1 help message to get a list with possible Nudi command-line options</source>
+        <translation>Show the %1 help message to get a list with possible Nudi command-line options</translation>
     </message>
     <message>
         <location line="+324"/>
@@ -758,10 +758,10 @@
     </message>
     <message numerus="yes">
         <location line="+540"/>
-        <source>%n active connection(s) to Fsociety network</source>
+        <source>%n active connection(s) to Nudi network</source>
         <translation>
-            <numerusform>%n active connection to Fsociety network</numerusform>
-            <numerusform>%n active connections to Fsociety network</numerusform>
+            <numerusform>%n active connection to Nudi network</numerusform>
+            <numerusform>%n active connections to Nudi network</numerusform>
         </translation>
     </message>
     <message>
@@ -1236,8 +1236,8 @@
     </message>
     <message>
         <location line="+74"/>
-        <source>The entered address &quot;%1&quot; is not a valid Fsociety address.</source>
-        <translation>The entered address &quot;%1&quot; is not a valid Fsociety address.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Nudi address.</source>
+        <translation>The entered address &quot;%1&quot; is not a valid Nudi address.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1313,8 +1313,8 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>&lt;h3&gt;%1 Basics&lt;/h3&gt; %1 gives you true financial privacy by obscuring the origins of your funds. All the Fsociety in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; %1 uses an innovative process to mix your inputs with the inputs of two or more other people, without having your coins ever leave your wallet. You retain control of your money at all times.&lt;hr&gt; &lt;b&gt;The %1 process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;%1 begins by breaking your transaction inputs down into standard denominations. These denominations are 0.001 FSC, 0.01 FSC, 0.1 FSC, 1 FSC and 10 FSC -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;smartnodes.&quot; These smartnodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the smartnodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two or more other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The smartnode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of %1 makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be mixed. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have %1 disabled. &lt;hr&gt;For more information, see the &lt;a style=&quot;%2&quot; href=&quot;%3&quot;&gt;%1 documentation&lt;/a&gt;.</source>
-        <translation>&lt;h3&gt;%1 Basics&lt;/h3&gt; %1 gives you true financial privacy by obscuring the origins of your funds. All the Fsociety in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; %1 uses an innovative process to mix your inputs with the inputs of two or more other people, without having your coins ever leave your wallet. You retain control of your money at all times.&lt;hr&gt; &lt;b&gt;The %1 process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;%1 begins by breaking your transaction inputs down into standard denominations. These denominations are 0.001 FSC, 0.01 FSC, 0.1 FSC, 1 FSC and 10 FSC -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;smartnodes.&quot; These smartnodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the smartnodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two or more other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The smartnode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of %1 makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be mixed. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have %1 disabled. &lt;hr&gt;For more information, see the &lt;a style=&quot;%2&quot; href=&quot;%3&quot;&gt;%1 documentation&lt;/a&gt;.</translation>
+        <source>&lt;h3&gt;%1 Basics&lt;/h3&gt; %1 gives you true financial privacy by obscuring the origins of your funds. All the Nudi in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; %1 uses an innovative process to mix your inputs with the inputs of two or more other people, without having your coins ever leave your wallet. You retain control of your money at all times.&lt;hr&gt; &lt;b&gt;The %1 process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;%1 begins by breaking your transaction inputs down into standard denominations. These denominations are 0.001 FSC, 0.01 FSC, 0.1 FSC, 1 FSC and 10 FSC -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;smartnodes.&quot; These smartnodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the smartnodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two or more other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The smartnode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of %1 makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be mixed. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have %1 disabled. &lt;hr&gt;For more information, see the &lt;a style=&quot;%2&quot; href=&quot;%3&quot;&gt;%1 documentation&lt;/a&gt;.</source>
+        <translation>&lt;h3&gt;%1 Basics&lt;/h3&gt; %1 gives you true financial privacy by obscuring the origins of your funds. All the Nudi in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; %1 uses an innovative process to mix your inputs with the inputs of two or more other people, without having your coins ever leave your wallet. You retain control of your money at all times.&lt;hr&gt; &lt;b&gt;The %1 process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;%1 begins by breaking your transaction inputs down into standard denominations. These denominations are 0.001 FSC, 0.01 FSC, 0.1 FSC, 1 FSC and 10 FSC -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;smartnodes.&quot; These smartnodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the smartnodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two or more other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The smartnode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of %1 makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be mixed. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have %1 disabled. &lt;hr&gt;For more information, see the &lt;a style=&quot;%2&quot; href=&quot;%3&quot;&gt;%1 documentation&lt;/a&gt;.</translation>
     </message>
 </context>
 <context>
@@ -1371,8 +1371,8 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>%1 will download and store a copy of the Fsociety block chain.</source>
-        <translation>%1 will download and store a copy of the Fsociety block chain.</translation>
+        <source>%1 will download and store a copy of the Nudi block chain.</source>
+        <translation>%1 will download and store a copy of the Nudi block chain.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1409,13 +1409,13 @@
     </message>
     <message>
         <location line="+100"/>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Fsociety network, as detailed below.</source>
-        <translation>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Fsociety network, as detailed below.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Nudi network, as detailed below.</source>
+        <translation>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Nudi network, as detailed below.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Attempting to spend Fsociety that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Attempting to spend Fsociety that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
+        <source>Attempting to spend Nudi that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Attempting to spend Nudi that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1613,8 +1613,8 @@
     </message>
     <message>
         <location line="+42"/>
-        <source>Automatically open the Fsociety Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the Fsociety Core client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the Nudi Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the Nudi Core client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1628,8 +1628,8 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Fsociety network through a SOCKS5 proxy.</source>
-        <translation>Connect to the Fsociety network through a SOCKS5 proxy.</translation>
+        <source>Connect to the Nudi network through a SOCKS5 proxy.</source>
+        <translation>Connect to the Nudi network through a SOCKS5 proxy.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1760,8 +1760,8 @@
     </message>
     <message>
         <location line="+22"/>
-        <source>Connect to the Fsociety network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Connect to the Fsociety network through a separate SOCKS5 proxy for Tor hidden services.</translation>
+        <source>Connect to the Nudi network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Connect to the Nudi network through a separate SOCKS5 proxy for Tor hidden services.</translation>
     </message>
     <message>
         <location line="-481"/>
@@ -1888,8 +1888,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
         <location line="+60"/>
         <location line="+298"/>
         <location line="+237"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Fsociety network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Fsociety network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Nudi network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Nudi network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-325"/>
@@ -2211,8 +2211,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Fsociety address or malformed URI parameters.</source>
-        <translation>URI cannot be parsed! This can be caused by an invalid Fsociety address or malformed URI parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Nudi address or malformed URI parameters.</source>
+        <translation>URI cannot be parsed! This can be caused by an invalid Nudi address or malformed URI parameters.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -2398,8 +2398,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+263"/>
-        <source>Enter a Fsociety address (e.g. %1)</source>
-        <translation>Enter a Fsociety address (e.g. %1)</translation>
+        <source>Enter a Nudi address (e.g. %1)</source>
+        <translation>Enter a Nudi address (e.g. %1)</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -3218,8 +3218,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     <name>ReceiveCoinsDialog</name>
     <message>
         <location filename="../forms/receivecoinsdialog.ui" line="+34"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Fsociety network.</source>
-        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Fsociety network.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Nudi network.</source>
+        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Nudi network.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3234,8 +3234,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <location line="-14"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Fsociety network.</source>
-        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Fsociety network.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Nudi network.</source>
+        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Nudi network.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3833,8 +3833,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <location line="+101"/>
-        <source>Warning: Invalid Fsociety address</source>
-        <translation>Warning: Invalid Fsociety address</translation>
+        <source>Warning: Invalid Nudi address</source>
+        <translation>Warning: Invalid Nudi address</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3871,8 +3871,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <location line="-63"/>
-        <source>The Fsociety address to send the payment to</source>
-        <translation>The Fsociety address to send the payment to</translation>
+        <source>The Nudi address to send the payment to</source>
+        <translation>The Nudi address to send the payment to</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3925,8 +3925,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <location line="-271"/>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Fsociety than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Fsociety than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Nudi than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Nudi than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3945,8 +3945,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Fsociety network.</source>
-        <translation>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Fsociety network.</translation>
+        <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+        <translation>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</translation>
     </message>
     <message>
         <location line="+116"/>
@@ -4042,13 +4042,13 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <location line="+35"/>
-        <source>You can sign messages/agreements with your addresses to prove you can receive Fsociety sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>You can sign messages/agreements with your addresses to prove you can receive Fsociety sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Nudi sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>You can sign messages/agreements with your addresses to prove you can receive Nudi sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Fsociety address to sign the message with</source>
-        <translation>The Fsociety address to sign the message with</translation>
+        <source>The Nudi address to sign the message with</source>
+        <translation>The Nudi address to sign the message with</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -4089,8 +4089,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Sign the message to prove you own this Fsociety address</source>
-        <translation>Sign the message to prove you own this Fsociety address</translation>
+        <source>Sign the message to prove you own this Nudi address</source>
+        <translation>Sign the message to prove you own this Nudi address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4120,13 +4120,13 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The Fsociety address the message was signed with</source>
-        <translation>The Fsociety address the message was signed with</translation>
+        <source>The Nudi address the message was signed with</source>
+        <translation>The Nudi address the message was signed with</translation>
     </message>
     <message>
         <location line="+30"/>
-        <source>Verify the message to ensure it was signed with the specified Fsociety address</source>
-        <translation>Verify the message to ensure it was signed with the specified Fsociety address</translation>
+        <source>Verify the message to ensure it was signed with the specified Nudi address</source>
+        <translation>Verify the message to ensure it was signed with the specified Nudi address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5247,8 +5247,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     <name>fsociety-core</name>
     <message>
         <location filename="../fsocietystrings.cpp" line="+12"/>
-        <source>Fsociety Core</source>
-        <translation>Fsociety Core</translation>
+        <source>Nudi Core</source>
+        <translation>Nudi Core</translation>
     </message>
     <message>
         <location line="+1"/>

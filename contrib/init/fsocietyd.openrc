@@ -18,8 +18,8 @@ BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/fsocietyd}
 BITCOIND_NICE=${BITCOIND_NICE:-${NICELEVEL:-0}}
 BITCOIND_OPTS="${BITCOIND_OPTS:-${BITCOIN_OPTS}}"
 
-name="Fsociety Core Daemon"
-description="Fsociety cryptocurrency P2P network daemon"
+name="Nudi Core Daemon"
+description="Nudi cryptocurrency P2P network daemon"
 
 command="/usr/bin/fsocietyd"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
@@ -84,7 +84,7 @@ checkconfig()
 		eerror "It is recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Fsociety Core Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"Nudi Core Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

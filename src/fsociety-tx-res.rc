@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Fsociety"
-            VALUE "FileDescription",    "fsociety-tx (CLI Fsociety transaction editor utility)"
+            VALUE "CompanyName",        "Nudi"
+            VALUE "FileDescription",    "fsociety-tx (CLI Nudi transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "fsociety-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR

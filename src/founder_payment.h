@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 The Fsociety developer
+ * Copyright (c) 2020 The Nudi developer
  * Distributed under the MIT software license, see the accompanying
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.
  * 

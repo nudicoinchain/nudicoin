@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2020 The Dash Core developers
-// Copyright (c) 2020-2022 The Fsociety developers
+// Copyright (c) 2020-2022 The Nudi developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,10 +16,10 @@ static const int MODEL_UPDATE_DELAY_SYNC = 10000;
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
-/* FsocietyGUI -- Size of icons in status bar */
+/* NudiGUI -- Size of icons in status bar */
 static const int STATUSBAR_ICONSIZE = 18;
 
-/* FsocietyGUI -- Size of button icons e.g. in SendCoinEntry or SignVerifyMessageDialog */
+/* NudiGUI -- Size of button icons e.g. in SendCoinEntry or SignVerifyMessageDialog */
 static const int BUTTON_ICONSIZE = 23;
 
 static const bool DEFAULT_SPLASHSCREEN = true;
@@ -45,11 +45,11 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 1
 
-#define QAPP_ORG_NAME "Fsociety"
+#define QAPP_ORG_NAME "Nudi"
 #define QAPP_ORG_DOMAIN "fsocietychain.com"
-#define QAPP_APP_NAME_DEFAULT "Fsociety-Qt"
-#define QAPP_APP_NAME_TESTNET "Fsociety-Qt-testnet"
-#define QAPP_APP_NAME_DEVNET "Fsociety-Qt-%s"
-#define QAPP_APP_NAME_REGTEST "Fsociety-Qt-regtest"
+#define QAPP_APP_NAME_DEFAULT "Nudi-Qt"
+#define QAPP_APP_NAME_TESTNET "Nudi-Qt-testnet"
+#define QAPP_APP_NAME_DEVNET "Nudi-Qt-%s"
+#define QAPP_APP_NAME_REGTEST "Nudi-Qt-regtest"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

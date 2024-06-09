@@ -1,7 +1,7 @@
 # TOR SUPPORT IN FSOCIETY CORE
 =======================
 
-It is possible to run Fsociety Core as a Tor hidden service, and connect to such services.
+It is possible to run Nudi Core as a Tor hidden service, and connect to such services.
 
 The following directions assume you have a Tor proxy running on port 9050. Many
 distributions default to having a SOCKS proxy listening on port 9050, but others
@@ -10,10 +10,10 @@ See [Tor Project FAQ:TBBSocksPort](https://www.torproject.org/docs/faq.html.en#T
 for how to properly configure Tor.
 
 
-## 1. Run Fsociety Core behind a Tor proxy
+## 1. Run Nudi Core behind a Tor proxy
 ----------------------------------
 
-The first step is running Fsociety Core behind a Tor proxy. This will already make all
+The first step is running Nudi Core behind a Tor proxy. This will already make all
 outgoing connections be anonymized, but more is possible.
 
 	-proxy=ip:port  Set the proxy server. If SOCKS5 is selected (default), this proxy
@@ -44,7 +44,7 @@ In a typical situation, this suffices to run behind a Tor proxy:
 	./fsocietyd -proxy=127.0.0.1:9050
 
 
-## 2. Run a Fsociety Core hidden server
+## 2. Run a Nudi Core hidden server
 -------------------------------
 
 If you configure your Tor system accordingly, it is possible to make your node also
@@ -59,7 +59,7 @@ versions of Tor see [Section 4](#4-automatically-listen-on-tor).*
 The directory can be different of course, but (both) port numbers should be equal to
 your fsocietyd's P2P listen port (9999 by default).
 
-	-externalip=X   You can tell Fsociety Core about its publicly reachable address using
+	-externalip=X   You can tell Nudi Core about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
 	                configuration, you can find your onion address in
 	                /var/lib/tor/fsocietycore-service/hostname. Onion addresses are given
@@ -100,7 +100,7 @@ for normal IPv4/IPv6 communication, use:
 	./fsocietyd -onion=127.0.0.1:9050 -externalip=ssapp53tmftyjmjb.onion -discover
 
 
-## 3. List of known Fsociety Core Tor relays
+## 3. List of known Nudi Core Tor relays
 ------------------------------------
 
 Note: All these nodes are hosted by smartnodehosting.com
@@ -121,13 +121,13 @@ Note: All these nodes are hosted by smartnodehosting.com
 
 Starting with Tor version 0.2.7.1 it is possible, through Tor's control socket
 API, to create and destroy 'ephemeral' hidden services programmatically.
-Fsociety Core has been updated to make use of this.
+Nudi Core has been updated to make use of this.
 
 This means that if Tor is running (and proper authentication has been configured),
-Fsociety Core automatically creates a hidden service to listen on. This will positively
+Nudi Core automatically creates a hidden service to listen on. This will positively
 affect the number of available .onion nodes.
 
-This new feature is enabled by default if Fsociety Core is listening (`-listen`), and
+This new feature is enabled by default if Nudi Core is listening (`-listen`), and
 requires a Tor connection to work. It can be explicitly disabled with `-listenonion=0`
 and, if not disabled, configured using the `-torcontrol` and `-torpassword` settings.
 To show verbose debugging information, pass `-debug=tor`.
@@ -145,7 +145,7 @@ Tor configuration.
 
 ## 5. Privacy recommendations
 
-- Do not add anything but Fsociety Core ports to the hidden service created in section 2.
+- Do not add anything but Nudi Core ports to the hidden service created in section 2.
   If you run a web service too, create a new hidden service for that.
   Otherwise it is trivial to link them, which may reduce privacy. Hidden
   services created automatically (as in section 3) always have only one port

@@ -6,7 +6,7 @@ set -eu
 uname_S=$(uname -s 2>/dev/null || echo not)
 
 if [ "$uname_S" = "Darwin" ]; then
-    PARAMS_DIR="$HOME/Library/Application Support/FsocietyParams"
+    PARAMS_DIR="$HOME/Library/Application Support/NudiParams"
 else
     PARAMS_DIR="$HOME/.fsociety-params"
 fi
@@ -85,7 +85,7 @@ EOF
 fetch_failure() {
     cat >&2 <<EOF
 
-Failed to fetch the Fsociety parameters!
+Failed to fetch the Nudi parameters!
 Try installing one of the following programs and make sure you're online:
 
 # * ipfs
@@ -178,7 +178,7 @@ main() {
     cat <<EOF
 FSC - fetch-params.sh
 
-This script will fetch the Fsociety SNARK parameters and verify their
+This script will fetch the Nudi SNARK parameters and verify their
 integrity with sha256sum.
 
 If they already exist locally, it will exit now and do nothing else.
@@ -190,7 +190,7 @@ EOF
         mkdir -p "$PARAMS_DIR"
         README_PATH="$PARAMS_DIR/README"
         cat >> "$README_PATH" <<EOF
-This directory stores common Fsociety SNARK parameters. Note that it is
+This directory stores common Nudi SNARK parameters. Note that it is
 distinct from the daemon's -datadir argument because the parameters are
 large and may be shared across multiple distinct -datadir's such as when
 setting up test networks.

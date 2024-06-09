@@ -38,19 +38,19 @@ Next, follow the instructions in [build-generic](build-generic.md)
 Running
 -------
 
-Fsociety Core is now available at `./src/fsocietyd`
+Nudi Core is now available at `./src/fsocietyd`
 
 Before running, it's recommended you create an RPC configuration file.
 
-    echo -e "rpcuser=fsocietyrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/FsocietyCore/fsociety.conf"
+    echo -e "rpcuser=fsocietyrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/NudiCore/fsociety.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/FsocietyCore/fsociety.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/NudiCore/fsociety.conf"
 
 The first time you run fsocietyd, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/FsocietyCore/debug.log
+    tail -f $HOME/Library/Application\ Support/NudiCore/debug.log
 
 Other commands:
 -------

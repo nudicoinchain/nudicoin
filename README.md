@@ -1,22 +1,22 @@
-Fsociety Core Latest v0.0.1.02
+Nudi Core Latest v0.0.1.02
 ===========================
 
 |CI|master|develop|
 |-|-|-|
 
 Introduction
-In a rapidly evolving digital landscape, Fsociety (FSC) aims to revolutionize the world of
-open digital money. This whitepaper introduces Fsociety, a cryptocurrency designed to
+In a rapidly evolving digital landscape, Nudi (FSC) aims to revolutionize the world of
+open digital money. This whitepaper introduces Nudi, a cryptocurrency designed to
 empower individuals, promote decentralized systems, and foster financial inclusivity. By
 combining smartnodes, passive earnings, and mineable capabilities through the innovative
-ghostrider algorithm, Fsociety seeks to create a more hopeful and prosperous future for all.
+ghostrider algorithm, Nudi seeks to create a more hopeful and prosperous future for all.
 Link: https://fsocietychain.com/assets/whitepaper.pdf
 
 
 License
 -------
 
-Fsociety Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Nudi Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
@@ -24,7 +24,7 @@ Development Process
 
 The `master` branch is meant to be stable. Development is done in separate branches.
 [Tags](https://github.com/fsocietychain/fsociety/tags) are created to indicate new official,
-stable release versions of Fsociety Core.
+stable release versions of Nudi Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 

@@ -12,7 +12,7 @@
  * for both fsocietyd and fsociety-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Fsociety Core");
+const std::string CLIENT_NAME("Nudi Core");
 
 /**
  * Client version number

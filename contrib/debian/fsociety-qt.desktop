@@ -1,10 +1,10 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Fsociety Core
-Comment=Fsociety P2P Cryptocurrency
-Comment[de]=Verbinde mit dem Fsociety peer-to-peer Netzwerk
-Comment[fr]=Fsociety, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Fsociety, eşten eşe kriptografik sanal para birimi
+Name=Nudi Core
+Comment=Nudi P2P Cryptocurrency
+Comment[de]=Verbinde mit dem Nudi peer-to-peer Netzwerk
+Comment[fr]=Nudi, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Nudi, eşten eşe kriptografik sanal para birimi
 Exec=fsociety-qt %u
 Terminal=false
 Type=Application

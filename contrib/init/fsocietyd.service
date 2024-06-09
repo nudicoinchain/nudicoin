@@ -1,5 +1,5 @@
 [Unit]
-Description=Fsociety's distributed currency daemon
+Description=Nudi's distributed currency daemon
 After=network.target
 
 [Service]

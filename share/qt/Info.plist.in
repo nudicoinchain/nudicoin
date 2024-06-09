@@ -26,16 +26,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Fsociety-Qt</string>
+  <string>Nudi-Qt</string>
 
   <key>CFBundleName</key>
-  <string>Fsociety-Qt</string>
+  <string>Nudi-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.fsociety.Fsociety-Qt</string>
+  <string>org.fsociety.Nudi-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -43,7 +43,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.fsociety.FsocietyPayment</string>
+      <string>org.fsociety.NudiPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>fsociety</string>
@@ -57,7 +57,7 @@
       <key>UTTypeIdentifier</key>
       <string>org.fsociety.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Fsociety payment request</string>
+      <string>Nudi payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

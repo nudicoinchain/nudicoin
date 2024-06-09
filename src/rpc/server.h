@@ -136,7 +136,7 @@ public:
 };
 
 /**
- * Fsociety RPC command dispatcher.
+ * Nudi RPC command dispatcher.
  */
 class CRPCTable
 {

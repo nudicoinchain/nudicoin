@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2021 The Dash Core developers
-// Copyright (c) 2020-2022 The Fsociety developers
+// Copyright (c) 2020-2022 The Nudi developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1149,7 +1149,7 @@ UniValue getsuperblockbudget(const JSONRPCRequest& request)
 static const CRPCCommand commands[] =
 { //  category              name                      actor (function)         argNames
   //  --------------------- ------------------------  -----------------------  ----------
-    /* Fsociety features */
+    /* Nudi features */
     { "fsociety",               "getgovernanceinfo",      &getgovernanceinfo,      {} },
     { "fsociety",               "getsuperblockbudget",    &getsuperblockbudget,    {"index"} },
     { "fsociety",               "gobject",                &gobject,                {} },

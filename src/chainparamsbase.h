@@ -11,7 +11,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between fsociety-cli and fsocietyd)
- * of a given instance of the Fsociety system.
+ * of a given instance of the Nudi system.
  */
 class CBaseChainParams
 {

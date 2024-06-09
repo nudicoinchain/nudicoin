@@ -102,7 +102,7 @@ public:
         vOutpoints.assign(setSelected.begin(), setSelected.end());
     }
 
-    // Fsociety-specific helpers
+    // Nudi-specific helpers
 
     void UseCoinJoin(bool fUseCoinJoin)
     {

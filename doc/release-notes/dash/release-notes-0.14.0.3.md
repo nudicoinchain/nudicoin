@@ -1,4 +1,4 @@
-Fsociety Core version 0.14.0.3
+Nudi Core version 0.14.0.3
 ==========================
 
 Release is now available from:
@@ -20,14 +20,14 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/Fsociety-Qt (on Mac) or
+installer (on Windows) or just copy over /Applications/Nudi-Qt (on Mac) or
 fsocietyd/fsociety-qt (on Linux). If you upgrade after DIP0003 activation and you were
 using version < 0.13 you will have to reindex (start with -reindex-chainstate
 or -reindex) to make sure your wallet has all the new data synced. Upgrading from
 version 0.13 should not require any additional actions.
 
 Due to the changes in the "evodb" database format introduced in this release, the
-first startup of Fsociety Core will run a migration process which can take a few minutes
+first startup of Nudi Core will run a migration process which can take a few minutes
 to finish. After the migration, a downgrade to an older version is only possible with
 a reindex (or reindex-chainstate).
 
@@ -45,13 +45,13 @@ Notable changes
 
 Database space usage improvements
 --------------------------------
-Version 0.13.0.0 introduced a new database (evodb) which is found in the datadir of Fsociety Core. It turned
+Version 0.13.0.0 introduced a new database (evodb) which is found in the datadir of Nudi Core. It turned
 out that this database grows quite fast when a lot of changes inside the deterministic smartnode list happen,
 which is for example the case when a lot PoSe punishing/banning is happening. Such a situation happened
 immediately after the activation LLMQ DKGs, causing the database to grow a lot. This release introduces
 a new format in which information in "evodb" is stored, which causes it grow substantially slower.  
 
-Version 0.14.0.0 also introduced a new database (llmq) which is also found in the datadir of Fsociety Core.
+Version 0.14.0.0 also introduced a new database (llmq) which is also found in the datadir of Nudi Core.
 This database stores all LLMQ signatures for 7 days. After 7 days, a cleanup task removes old signatures.
 The idea was that the "llmq" database would grow in the beginning and then stay at an approximately constant
 size. The recent stress test on mainnet has however shown that the database grows too much and causes a risk
@@ -67,7 +67,7 @@ This release fixes this and thus makes it a highly recommended upgrade for smart
 
 MacOS: macOS: disable AppNap during sync and mixing
 ---------------------------------------------------
-AppNap is disabled now when Fsociety Core is syncing/reindexing or mixing.
+AppNap is disabled now when Nudi Core is syncing/reindexing or mixing.
 
 Signed binaries for Windows
 ---------------------------
@@ -80,7 +80,7 @@ if the smartnode succesfully participated in the DKG process.
 
 More information about number of InstantSend locks
 --------------------------------------------------
-The debug console will now show how many InstantSend locks Fsociety Core knows about. Please note that this number
+The debug console will now show how many InstantSend locks Nudi Core knows about. Please note that this number
 does not necessarily equal the number of mempool transactions.
 
 The "getmempoolinfo" RPC also has a new field now which shows the same information.
@@ -103,7 +103,7 @@ See detailed [set of changes](https://github.com/fsocietychain/fsociety/compare/
 - [`b1ffedb2d`](https://github.com/fsocietychain/fsociety/commit/b1ffedb2d) Do not count 0-fee txes for fee estimation (#3037)
 - [`974055a9b`](https://github.com/fsocietychain/fsociety/commit/974055a9b) Fix broken link in PrivateSend info dialog (#3031)
 - [`781b16579`](https://github.com/fsocietychain/fsociety/commit/781b16579) Merge pull request #3028 from PastaPastaPasta/backport-12588
-- [`5af6ce91d`](https://github.com/fsocietychain/fsociety/commit/5af6ce91d) Add Fsociety Core Group codesign certificate (#3027)
+- [`5af6ce91d`](https://github.com/fsocietychain/fsociety/commit/5af6ce91d) Add Nudi Core Group codesign certificate (#3027)
 - [`873ab896c`](https://github.com/fsocietychain/fsociety/commit/873ab896c) Fix osslsigncode compile issue in gitian-build (#3026)
 - [`ea8569e97`](https://github.com/fsocietychain/fsociety/commit/ea8569e97) Backport #12783: macOS: disable AppNap during sync (and mixing) (#3024)
 - [`4286dde49`](https://github.com/fsocietychain/fsociety/commit/4286dde49) Remove support for InstantSend locked gobject collaterals (#3019)
@@ -125,7 +125,7 @@ As well as everyone that submitted issues and reviewed pull requests.
 Older releases
 ==============
 
-Fsociety was previously known as Darkcoin.
+Nudi was previously known as Darkcoin.
 
 Darkcoin tree 0.8.x was a fork of Litecoin tree 0.8, original name was XCoin
 which was first released on Jan/18/2014.
@@ -136,12 +136,12 @@ the 0.8.x tree and was first released on Mar/13/2014.
 Darkcoin tree 0.10.x used to be the closed source implementation of Darksend
 which was released open source on Sep/25/2014.
 
-Fsociety Core tree 0.11.x was a fork of Bitcoin Core tree 0.9,
-Darkcoin was rebranded to Fsociety.
+Nudi Core tree 0.11.x was a fork of Bitcoin Core tree 0.9,
+Darkcoin was rebranded to Nudi.
 
-Fsociety Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
+Nudi Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
 
-Fsociety Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
+Nudi Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
 
 These release are considered obsolete. Old release notes can be found here:
 

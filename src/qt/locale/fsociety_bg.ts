@@ -75,12 +75,12 @@
       <translation>Адреси за получаване</translation>
     </message>
     <message>
-      <source>These are your Fsociety addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-      <translation>Това са вашите Fsociety адреси за изпращане на плащания. Преди изпращане винаги проверявайте количеството и адреса за получаване на монетите.</translation>
+      <source>These are your Nudi addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+      <translation>Това са вашите Nudi адреси за изпращане на плащания. Преди изпращане винаги проверявайте количеството и адреса за получаване на монетите.</translation>
     </message>
     <message>
-      <source>These are your Fsociety addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-      <translation>Това са вашите Fsociety адреси за получаване на плащания. Препоръчително е да използвате нов адрес за всяка нова транзакция. </translation>
+      <source>These are your Nudi addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+      <translation>Това са вашите Nudi адреси за получаване на плащания. Препоръчително е да използвате нов адрес за всяка нова транзакция. </translation>
     </message>
     <message>
       <source>&amp;Copy Address</source>
@@ -313,12 +313,12 @@
   <context>
     <name>BitcoinGUI</name>
     <message>
-      <source>A fatal error occurred. Fsociety Core can no longer continue safely and will quit.</source>
-      <translation>Възникна фатална грешка. Fsociety Core не може да продължи безопасно и ще се изключи.</translation>
+      <source>A fatal error occurred. Nudi Core can no longer continue safely and will quit.</source>
+      <translation>Възникна фатална грешка. Nudi Core не може да продължи безопасно и ще се изключи.</translation>
     </message>
     <message>
-      <source>Fsociety Core</source>
-      <translation>Fsociety Ядро</translation>
+      <source>Nudi Core</source>
+      <translation>Nudi Ядро</translation>
     </message>
     <message>
       <source>Wallet</source>
@@ -341,8 +341,8 @@
       <translation>&amp;Изпращане</translation>
     </message>
     <message>
-      <source>Send coins to a Fsociety address</source>
-      <translation>Изпращане на монети към Fsociety адрес</translation>
+      <source>Send coins to a Nudi address</source>
+      <translation>Изпращане на монети към Nudi адрес</translation>
     </message>
     <message>
       <source>&amp;Receive</source>
@@ -350,7 +350,7 @@
     </message>
     <message>
       <source>Request payments (generates QR codes and fsociety: URIs)</source>
-      <translation>Заявка за плащане (генерира QR кодове и Fsociety: URI)</translation>
+      <translation>Заявка за плащане (генерира QR кодове и Nudi: URI)</translation>
     </message>
     <message>
       <source>&amp;Transactions</source>
@@ -377,8 +377,8 @@
       <translation>Изход от приложението</translation>
     </message>
     <message>
-      <source>Show information about Fsociety Core</source>
-      <translation>Покаци информация за Fsociety Core</translation>
+      <source>Show information about Nudi Core</source>
+      <translation>Покаци информация за Nudi Core</translation>
     </message>
     <message>
       <source>About &amp;Qt</source>
@@ -397,8 +397,8 @@
       <translation>&amp;Относно %1</translation>
     </message>
     <message>
-      <source>Send %1 funds to a Fsociety address</source>
-      <translation>Изпрати %1 средства до Fsociety адрес</translation>
+      <source>Send %1 funds to a Nudi address</source>
+      <translation>Изпрати %1 средства до Nudi адрес</translation>
     </message>
     <message>
       <source>Modify configuration options for %1</source>
@@ -453,16 +453,16 @@
       <translation>Подписване на &amp;съобщение...</translation>
     </message>
     <message>
-      <source>Sign messages with your Fsociety addresses to prove you own them</source>
-      <translation>Подпиши съобщения с твоите Fsociety адреси за да докажеш че ги притежаваш</translation>
+      <source>Sign messages with your Nudi addresses to prove you own them</source>
+      <translation>Подпиши съобщения с твоите Nudi адреси за да докажеш че ги притежаваш</translation>
     </message>
     <message>
       <source>&amp;Verify message...</source>
       <translation>&amp;Проверка на съобщение...</translation>
     </message>
     <message>
-      <source>Verify messages to ensure they were signed with specified Fsociety addresses</source>
-      <translation>Проверете съобщенията, за да сте сигурни че са подписани с определен Fsociety адрес</translation>
+      <source>Verify messages to ensure they were signed with specified Nudi addresses</source>
+      <translation>Проверете съобщенията, за да сте сигурни че са подписани с определен Nudi адрес</translation>
     </message>
     <message>
       <source>&amp;Information</source>
@@ -542,15 +542,15 @@
     </message>
     <message>
       <source>Open a fsociety: URI or payment request</source>
-      <translation>Отвори Fsociety: URI или заявка за плащане</translation>
+      <translation>Отвори Nudi: URI или заявка за плащане</translation>
     </message>
     <message>
       <source>&amp;Command-line options</source>
       <translation>&amp;Опции на командния ред</translation>
     </message>
     <message>
-      <source>Show the %1 help message to get a list with possible Fsociety command-line options</source>
-      <translation>Покажи %1 помощното съобщение за да получите списък с възможни Fsociety команди</translation>
+      <source>Show the %1 help message to get a list with possible Nudi command-line options</source>
+      <translation>Покажи %1 помощното съобщение за да получите списък с възможни Nudi команди</translation>
     </message>
     <message>
       <source>default wallet</source>
@@ -599,10 +599,10 @@
       <translation>Лента с инструменти</translation>
     </message>
     <message numerus="yes">
-      <source>%n active connection(s) to Fsociety network</source>
+      <source>%n active connection(s) to Nudi network</source>
       <translation>
-        <numerusform>%n активни връзки към Fsociety мрежата</numerusform>
-        <numerusform>%n активни връзки към Fsociety мрежата</numerusform>
+        <numerusform>%n активни връзки към Nudi мрежата</numerusform>
+        <numerusform>%n активни връзки към Nudi мрежата</numerusform>
       </translation>
     </message>
     <message>
@@ -985,8 +985,8 @@
       <translation>Редактиране на адрес за изпращане</translation>
     </message>
     <message>
-      <source>The entered address "%1" is not a valid Fsociety address.</source>
-      <translation>Въведеният адрес "%1" не е валиден Fsociety адрес.</translation>
+      <source>The entered address "%1" is not a valid Nudi address.</source>
+      <translation>Въведеният адрес "%1" не е валиден Nudi адрес.</translation>
     </message>
     <message>
       <source>The entered address "%1" is already in the address book.</source>
@@ -1047,7 +1047,7 @@
       <translation>%1 информация</translation>
     </message>
     <message>
-      <source>&lt;h3&gt;%1 Basics&lt;/h3&gt; %1 gives you true financial privacy by obscuring the origins of your funds. All the Fsociety in your wallet is comprised of different "inputs" which you can think of as separate, discrete coins.&lt;br&gt; %1 uses an innovative process to mix your inputs with the inputs of two or more other people, without having your coins ever leave your wallet. You retain control of your money at all times.&lt;hr&gt; &lt;b&gt;The %1 process works like this:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;%1 begins by breaking your transaction inputs down into standard denominations. These denominations are 0.001 FSC, 0.01 FSC, 0.1 FSC, 1 FSC and 10 FSC -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called "smartnodes." These smartnodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the smartnodes, so they never know "who" you are.&lt;/li&gt; &lt;li&gt;When two or more other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The smartnode mixes up the inputs and instructs all three users' wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it's called a "round." Each round of %1 makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be mixed. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these "change addresses." Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have %1 disabled. &lt;hr&gt;For more information, see the &lt;a style="%2" href="%3"&gt;%1 documentation&lt;/a&gt;.</source>
+      <source>&lt;h3&gt;%1 Basics&lt;/h3&gt; %1 gives you true financial privacy by obscuring the origins of your funds. All the Nudi in your wallet is comprised of different "inputs" which you can think of as separate, discrete coins.&lt;br&gt; %1 uses an innovative process to mix your inputs with the inputs of two or more other people, without having your coins ever leave your wallet. You retain control of your money at all times.&lt;hr&gt; &lt;b&gt;The %1 process works like this:&lt;/b&gt;&lt;ol type="1"&gt; &lt;li&gt;%1 begins by breaking your transaction inputs down into standard denominations. These denominations are 0.001 FSC, 0.01 FSC, 0.1 FSC, 1 FSC and 10 FSC -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called "smartnodes." These smartnodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the smartnodes, so they never know "who" you are.&lt;/li&gt; &lt;li&gt;When two or more other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The smartnode mixes up the inputs and instructs all three users' wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it's called a "round." Each round of %1 makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be mixed. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these "change addresses." Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have %1 disabled. &lt;hr&gt;For more information, see the &lt;a style="%2" href="%3"&gt;%1 documentation&lt;/a&gt;.</source>
       <translation type="unfinished"></translation>
     </message>
   </context>
@@ -1094,8 +1094,8 @@
       <translation>Около %1 GB данни ще бъдат запаметени в тази директория.</translation>
     </message>
     <message>
-      <source>%1 will download and store a copy of the Fsociety block chain.</source>
-      <translation>%1 ще изтегли и съхрани копие на  Fsociety блок веригата.</translation>
+      <source>%1 will download and store a copy of the Nudi block chain.</source>
+      <translation>%1 ще изтегли и съхрани копие на  Nudi блок веригата.</translation>
     </message>
     <message>
       <source>The wallet will also be stored in this directory.</source>
@@ -1125,12 +1125,12 @@
       <translation>Форма</translation>
     </message>
     <message>
-      <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Fsociety network, as detailed below.</source>
-      <translation>Скорошните транзакции може да не са видими, поради което салдото на портфейла Ви може да е неправилно. Тази информация ще бъде правилна, след като портфейлът ви е завършил синхронизиране с Fsociety мрежата, както е описано по-долу.</translation>
+      <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Nudi network, as detailed below.</source>
+      <translation>Скорошните транзакции може да не са видими, поради което салдото на портфейла Ви може да е неправилно. Тази информация ще бъде правилна, след като портфейлът ви е завършил синхронизиране с Nudi мрежата, както е описано по-долу.</translation>
     </message>
     <message>
-      <source>Attempting to spend Fsociety that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-      <translation>Опита да похарчите Fsociety, които са  от не визуализирани транзакции няма да бъде приет от мрежата.</translation>
+      <source>Attempting to spend Nudi that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+      <translation>Опита да похарчите Nudi, които са  от не визуализирани транзакции няма да бъде приет от мрежата.</translation>
     </message>
     <message>
       <source>Number of blocks left</source>
@@ -1287,8 +1287,8 @@
       <translation>Желан баланс</translation>
     </message>
     <message>
-      <source>Automatically open the Fsociety Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-      <translation>Автоматично отваря порта за Fsociety Core клиента в маршрутизатора. Това работи само когато вашият маршрутизатор поддържа UPnP и той е разрешен.</translation>
+      <source>Automatically open the Nudi Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+      <translation>Автоматично отваря порта за Nudi Core клиента в маршрутизатора. Това работи само когато вашият маршрутизатор поддържа UPnP и той е разрешен.</translation>
     </message>
     <message>
       <source>Accept connections from outside.</source>
@@ -1299,8 +1299,8 @@
       <translation>Разреши входящи връзки</translation>
     </message>
     <message>
-      <source>Connect to the Fsociety network through a SOCKS5 proxy.</source>
-      <translation>Свързване с мрежата на Fsociety чрез SOCKS5 прокси.</translation>
+      <source>Connect to the Nudi network through a SOCKS5 proxy.</source>
+      <translation>Свързване с мрежата на Nudi чрез SOCKS5 прокси.</translation>
     </message>
     <message>
       <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1399,8 +1399,8 @@
       <translation>Tor</translation>
     </message>
     <message>
-      <source>Connect to the Fsociety network through a separate SOCKS5 proxy for Tor hidden services.</source>
-      <translation>Свързване с мрежата на Fsociety чрез SOCKS5 прокси за Tor скрити услуги.</translation>
+      <source>Connect to the Nudi network through a separate SOCKS5 proxy for Tor hidden services.</source>
+      <translation>Свързване с мрежата на Nudi чрез SOCKS5 прокси за Tor скрити услуги.</translation>
     </message>
     <message>
       <source>Show only a tray icon after minimizing the window.</source>
@@ -1500,8 +1500,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Формуляр</translation>
     </message>
     <message>
-      <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Fsociety network after a connection is established, but this process has not completed yet.</source>
-      <translation>Показаната информация може да е остаряла. Вашият портфейл се синхронизира автоматично след изграждането на връзка с Fsociety мрежата, но този процес все още не е завършен.</translation>
+      <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Nudi network after a connection is established, but this process has not completed yet.</source>
+      <translation>Показаната информация може да е остаряла. Вашият портфейл се синхронизира автоматично след изграждането на връзка с Nudi мрежата, но този процес все още не е завършен.</translation>
     </message>
     <message>
       <source>Available:</source>
@@ -1745,8 +1745,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Невалиден адрес за плащане %1</translation>
     </message>
     <message>
-      <source>URI cannot be parsed! This can be caused by an invalid Fsociety address or malformed URI parameters.</source>
-      <translation>Грешка при анализ на URI! Това може да е следствие от неправилен Fsociety адрес или неправилно зададени URI параметри.</translation>
+      <source>URI cannot be parsed! This can be caused by an invalid Nudi address or malformed URI parameters.</source>
+      <translation>Грешка при анализ на URI! Това може да е следствие от неправилен Nudi адрес или неправилно зададени URI параметри.</translation>
     </message>
     <message>
       <source>Payment request file handling</source>
@@ -1891,8 +1891,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Сума</translation>
     </message>
     <message>
-      <source>Enter a Fsociety address (e.g. %1)</source>
-      <translation>Въведете Fsociety адрес (напр.%1)</translation>
+      <source>Enter a Nudi address (e.g. %1)</source>
+      <translation>Въведете Nudi адрес (напр.%1)</translation>
     </message>
     <message>
       <source>Appearance Setup</source>
@@ -2519,8 +2519,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
   <context>
     <name>ReceiveCoinsDialog</name>
     <message>
-      <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Fsociety network.</source>
-      <translation>Възможност  да се прикрепи съобщение към заявката за плащане, което да бъде показано при отваряне на заявката. Забележка: съобщението няма да бъде изпратено с плащането по мрежата на Fsociety.</translation>
+      <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Nudi network.</source>
+      <translation>Възможност  да се прикрепи съобщение към заявката за плащане, което да бъде показано при отваряне на заявката. Забележка: съобщението няма да бъде изпратено с плащането по мрежата на Nudi.</translation>
     </message>
     <message>
       <source>&amp;Message:</source>
@@ -2531,8 +2531,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Възможност да се прикрепи наименование към новия адрес за получаване.</translation>
     </message>
     <message>
-      <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Fsociety network.</source>
-      <translation>Възможност  да се прикрепи съобщение към заявката за плащане, което да бъде показано при отваряне на заявката. &lt;br&gt;Забележка: съобщението няма да бъде изпратено с плащането по мрежата на Fsociety.</translation>
+      <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Nudi network.</source>
+      <translation>Възможност  да се прикрепи съобщение към заявката за плащане, което да бъде показано при отваряне на заявката. &lt;br&gt;Забележка: съобщението няма да бъде изпратено с плащането по мрежата на Nudi.</translation>
     </message>
     <message>
       <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -3006,8 +3006,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       </translation>
     </message>
     <message>
-      <source>Warning: Invalid Fsociety address</source>
-      <translation>Внимание: Невалиден Fsociety адрес</translation>
+      <source>Warning: Invalid Nudi address</source>
+      <translation>Внимание: Невалиден Nudi адрес</translation>
     </message>
     <message>
       <source>Warning: Unknown change address</source>
@@ -3037,8 +3037,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Плати &amp;На:</translation>
     </message>
     <message>
-      <source>The Fsociety address to send the payment to</source>
-      <translation>Fsociety адресът да изпрати плащането към </translation>
+      <source>The Nudi address to send the payment to</source>
+      <translation>Nudi адресът да изпрати плащането към </translation>
     </message>
     <message>
       <source>Choose previously used address</source>
@@ -3077,8 +3077,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>С&amp;ума:</translation>
     </message>
     <message>
-      <source>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Fsociety than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-      <translation>Таксата ще бъде приспадната от количеството за изпращане. Получателят ще получи по-малко количество Fsociety от това, което сте въвели в полето. Ако са избрани няколко получателя, таксата ще бъде разделена  по равно.</translation>
+      <source>The fee will be deducted from the amount being sent. The recipient will receive a lower amount of Nudi than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+      <translation>Таксата ще бъде приспадната от количеството за изпращане. Получателят ще получи по-малко количество Nudi от това, което сте въвели в полето. Ако са избрани няколко получателя, таксата ще бъде разделена  по равно.</translation>
     </message>
     <message>
       <source>S&amp;ubtract fee from amount</source>
@@ -3093,8 +3093,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Съобщение:</translation>
     </message>
     <message>
-      <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Fsociety network.</source>
-      <translation>Съобщението което беше прикрепено към fsociety: URI ще бъде запазено с транзакцията за ваше сведение. Забележка: Това съобщение няма да бъде изпратено през Fsociety мрежата.</translation>
+      <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+      <translation>Съобщението което беше прикрепено към fsociety: URI ще бъде запазено с транзакцията за ваше сведение. Забележка: Това съобщение няма да бъде изпратено през Nudi мрежата.</translation>
     </message>
     <message>
       <source>Future</source>
@@ -3170,12 +3170,12 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>&amp;Подпиши</translation>
     </message>
     <message>
-      <source>You can sign messages/agreements with your addresses to prove you can receive Fsociety sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-      <translation>Може да подпишете съобщенията/потвържденията с вашите адреси като доказателство, че сте получили Fsociety. Бъдете внимателни, не подписвайте съобщения, които биха разкрили лична информация без ваше съгласие.</translation>
+      <source>You can sign messages/agreements with your addresses to prove you can receive Nudi sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+      <translation>Може да подпишете съобщенията/потвържденията с вашите адреси като доказателство, че сте получили Nudi. Бъдете внимателни, не подписвайте съобщения, които биха разкрили лична информация без ваше съгласие.</translation>
     </message>
     <message>
-      <source>The Fsociety address to sign the message with</source>
-      <translation>Fsociety адресът да подпише съобщението</translation>
+      <source>The Nudi address to sign the message with</source>
+      <translation>Nudi адресът да подпише съобщението</translation>
     </message>
     <message>
       <source>Choose previously used address</source>
@@ -3206,8 +3206,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Копиране на текущия подпис в системния клипборд</translation>
     </message>
     <message>
-      <source>Sign the message to prove you own this Fsociety address</source>
-      <translation>Подпиши съобщението за да докажеш че притежаваш този Fsociety адрес</translation>
+      <source>Sign the message to prove you own this Nudi address</source>
+      <translation>Подпиши съобщението за да докажеш че притежаваш този Nudi адрес</translation>
     </message>
     <message>
       <source>Sign &amp;Message</source>
@@ -3230,12 +3230,12 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Въведете адреса на получателя, съобщението (уверете се, че сте копирали редовете, спациите, табовете и другите точно) и подпишете отдолу, за да удостоверите съобщението. Внимавайте да не вмъкнете излишни символи в подписа от това, което е в самото съобщение, за избегнете риска от злонамерена външна намеса. Имайте предвид, че това само доказва, че подписа е получен с адреса, но не доказва изпращането на всяка транзакция!</translation>
     </message>
     <message>
-      <source>The Fsociety address the message was signed with</source>
-      <translation>Fsociety адресът ,с който е подписано съобщението</translation>
+      <source>The Nudi address the message was signed with</source>
+      <translation>Nudi адресът ,с който е подписано съобщението</translation>
     </message>
     <message>
-      <source>Verify the message to ensure it was signed with the specified Fsociety address</source>
-      <translation>Проверете съобщението, за да сте сигурни че е подписано с определен Fsociety адрес</translation>
+      <source>Verify the message to ensure it was signed with the specified Nudi address</source>
+      <translation>Проверете съобщението, за да сте сигурни че е подписано с определен Nudi адрес</translation>
     </message>
     <message>
       <source>Verify &amp;Message</source>
@@ -4119,8 +4119,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
   <context>
     <name>fsociety-core</name>
     <message>
-      <source>Fsociety Core</source>
-      <translation>Fsociety Core</translation>
+      <source>Nudi Core</source>
+      <translation>Nudi Core</translation>
     </message>
     <message>
       <source>The %s developers</source>

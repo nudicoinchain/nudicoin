@@ -1,11 +1,11 @@
-Fsociety Core
+Nudi Core
 ==========
 
-This is the official reference wallet for Fsociety digital currency and comprises the backbone of the Fsociety peer-to-peer network. You can [download Fsociety Core](https://www.fsocietychain.com/downloads/) or [build it yourself](#building) using the guides below.
+This is the official reference wallet for Nudi digital currency and comprises the backbone of the Nudi peer-to-peer network. You can [download Nudi Core](https://www.fsocietychain.com/downloads/) or [build it yourself](#building) using the guides below.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Fsociety on your native platform.
+The following are some helpful notes on how to run Nudi on your native platform.
 
 ### Unix
 
@@ -20,20 +20,20 @@ Unpack the files into a directory, and then run fsociety-qt.exe.
 
 ### OS X
 
-Drag Fsociety-Qt to your applications folder, and then run Fsociety-Qt.
+Drag Nudi-Qt to your applications folder, and then run Nudi-Qt.
 
 ### Need Help?
 
-* See the [Fsociety documentation](https://docs.fsocietychain.com)
+* See the [Nudi documentation](https://docs.fsocietychain.com)
 for help and more information.
-* See the [Fsociety Developer Documentation](https://fsociety-docs.github.io/) 
+* See the [Nudi Developer Documentation](https://fsociety-docs.github.io/) 
 for technical specifications and implementation details.
-* Ask for help on [Fsociety Nation Discord](http://fsocietychat.org)
-* Ask for help on the [Fsociety Forum](https://fsocietychain.com/forum)
+* Ask for help on [Nudi Nation Discord](http://fsocietychat.org)
+* Ask for help on the [Nudi Forum](https://fsocietychain.com/forum)
 
 Building
 ---------------------
-The following are developer notes on how to build Fsociety Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Nudi Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OS X Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -43,7 +43,7 @@ The following are developer notes on how to build Fsociety Core on your native p
 
 Development
 ---------------------
-The Fsociety Core repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Nudi Core repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
@@ -59,8 +59,8 @@ The Fsociety Core repo's [root README](/README.md) contains relevant information
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [Fsociety Forum](https://fsocietychain.com/forum), in the Development & Technical Discussion board.
-* Discuss on [Fsociety Nation Discord](http://fsocietychat.org)
+* Discuss on the [Nudi Forum](https://fsocietychain.com/forum), in the Development & Technical Discussion board.
+* Discuss on [Nudi Nation Discord](http://fsocietychat.org)
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

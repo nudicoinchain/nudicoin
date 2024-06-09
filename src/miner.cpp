@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2019 The Dash Core developers
-// Copyright (c) 2020-2022 The Fsociety developers
+// Copyright (c) 2020-2022 The Nudi developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -47,7 +47,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// FsocietyMiner
+// NudiMiner
 //
 
 //
@@ -530,9 +530,9 @@ static bool ProcessBlockFound(const CBlock* pblock, const CChainParams& chainpar
     return true;
 }
 
-void static FsocietyMiner(const CChainParams& chainparams)
+void static NudiMiner(const CChainParams& chainparams)
 {
-    LogPrintf("FsocietyMiner -- started\n");
+    LogPrintf("NudiMiner -- started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
     RenameThread("fsociety-miner");
 
@@ -545,7 +545,7 @@ void static FsocietyMiner(const CChainParams& chainparams)
         pWallet = GetFirstWallet();
     #endif
     if (!EnsureWalletIsAvailable(pWallet, false)) {
-        LogPrintf("FsocietyMiner -- Wallet not available\n");
+        LogPrintf("NudiMiner -- Wallet not available\n");
     }
 
     if (pWallet == NULL)
@@ -601,7 +601,7 @@ void static FsocietyMiner(const CChainParams& chainparams)
 
             if (!pblocktemplate.get())
             {
-                LogPrintf("FsocietyMiner -- Keypool ran out, please call keypoolrefill before restarting the mining thread\n");
+                LogPrintf("NudiMiner -- Keypool ran out, please call keypoolrefill before restarting the mining thread\n");
                 return;
             }
             CBlock *pblock = &pblocktemplate->block;
@@ -611,7 +611,7 @@ void static FsocietyMiner(const CChainParams& chainparams)
             LogPrintf("Algos: %s\n",hashSelection.getHashSelectionString());
             IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
-            LogPrintf("FsocietyMiner -- Running miner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
+            LogPrintf("NudiMiner -- Running miner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
                 ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
             //
@@ -629,7 +629,7 @@ void static FsocietyMiner(const CChainParams& chainparams)
                     {
                         // Found a solution
                         SetThreadPriority(THREAD_PRIORITY_NORMAL);
-                        LogPrintf("FsocietyMiner:\n  proof-of-work found\n  hash: %s\n  target: %s\n", hash.GetHex(), hashTarget.GetHex());
+                        LogPrintf("NudiMiner:\n  proof-of-work found\n  hash: %s\n  target: %s\n", hash.GetHex(), hashTarget.GetHex());
                         ProcessBlockFound(pblock, chainparams, hash);
                         SetThreadPriority(THREAD_PRIORITY_LOWEST);
                         coinbaseScript->KeepScript();
@@ -645,7 +645,7 @@ void static FsocietyMiner(const CChainParams& chainparams)
                     if (nHashesDone % 1000 == 0) {   //Calculate hashing speed
                         nHashesPerSec = nHashesDone / (((GetTimeMicros() - nMiningTimeStart) / 1000000.00) + 1);
                         LogPrintf("nNonce: %d, hashRate %f\n",pblock->nNonce, nHashesPerSec);
-                        //LogPrintf("FsocietyMiner:\n  proof-of-work in progress \n  hash: %s\n  target: %s\n, different=%s\n", hash.GetHex(), hashTarget.GetHex(), (UintToArith256(hash) - hashTarget));
+                        //LogPrintf("NudiMiner:\n  proof-of-work in progress \n  hash: %s\n  target: %s\n, different=%s\n", hash.GetHex(), hashTarget.GetHex(), (UintToArith256(hash) - hashTarget));
                     }
                     if ((pblock->nNonce & 0xFF) == 0)
                         break;
@@ -677,17 +677,17 @@ void static FsocietyMiner(const CChainParams& chainparams)
     }
     catch (const boost::thread_interrupted&)
     {
-        LogPrintf("FsocietyMiner -- terminated\n");
+        LogPrintf("NudiMiner -- terminated\n");
         throw;
     }
     catch (const std::runtime_error &e)
     {
-        LogPrintf("FsocietyMiner -- runtime error: %s\n", e.what());
+        LogPrintf("NudiMiner -- runtime error: %s\n", e.what());
         return;
     }
 }
 
-int GenerateFsocietys(bool fGenerate, int nThreads, const CChainParams& chainparams)
+int GenerateNudis(bool fGenerate, int nThreads, const CChainParams& chainparams)
 {
 
     static boost::thread_group* minerThreads = NULL;
@@ -715,7 +715,7 @@ int GenerateFsocietys(bool fGenerate, int nThreads, const CChainParams& chainpar
     nHashesPerSec = 0;
 
     for (int i = 0; i < nThreads; i++){
-        minerThreads->create_thread(boost::bind(&FsocietyMiner, boost::cref(chainparams)));
+        minerThreads->create_thread(boost::bind(&NudiMiner, boost::cref(chainparams)));
     }
     return(numCores);
 }

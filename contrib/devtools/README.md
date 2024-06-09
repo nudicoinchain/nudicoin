@@ -17,7 +17,7 @@ git diff -U0 HEAD~1.. | ./contrib/devtools/clang-format-diff.py -p1 -i -v
 copyright\_header.py
 ====================
 
-Provides utilities for managing copyright headers of `The Fsociety Core
+Provides utilities for managing copyright headers of `The Nudi Core
 developers` in repository source files. It has three subcommands:
 
 ```
@@ -36,31 +36,31 @@ Specifying `verbose` will list the full filenames of files of each category.
 
 copyright\_header.py update \<base\_directory\> [verbose]
 ---------------------------------------------------------
-Updates all the copyright headers of `The Fsociety developers` which were
+Updates all the copyright headers of `The Nudi developers` which were
 changed in a year more recent than is listed. For example:
 ```
-// Copyright (c) <firstYear>-<lastYear> The Fsociety developers
+// Copyright (c) <firstYear>-<lastYear> The Nudi developers
 ```
 will be updated to:
 ```
-// Copyright (c) <firstYear>-<lastModifiedYear> The Fsociety developers
+// Copyright (c) <firstYear>-<lastModifiedYear> The Nudi developers
 ```
 where `<lastModifiedYear>` is obtained from the `git log` history.
 
 This subcommand also handles copyright headers that have only a single year. In
 those cases:
 ```
-// Copyright (c) <year> The Fsociety developers
+// Copyright (c) <year> The Nudi developers
 ```
 will be updated to:
 ```
-// Copyright (c) <year>-<lastModifiedYear> The Fsociety developers
+// Copyright (c) <year>-<lastModifiedYear> The Nudi developers
 ```
 where the update is appropriate.
 
 copyright\_header.py insert \<file\>
 ------------------------------------
-Inserts a copyright header for `The Fsociety developers` at the top of the
+Inserts a copyright header for `The Nudi developers` at the top of the
 file in either Python or C++ style as determined by the file extension. If the
 file is a Python file and it has  `#!` starting the first line, the header is
 inserted in the line below it.
@@ -70,7 +70,7 @@ The copyright dates will be set to be `<year_introduced>-<current_year>` where
 `<year_introduced>` is equal to `<current_year>`, it will be set as a single
 year rather than two hyphenated years.
 
-If the file already has a copyright for `The Fsociety developers`, the
+If the file already has a copyright for `The Nudi developers`, the
 script will exit.
 
 gen-manpages.sh

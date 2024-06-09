@@ -49,7 +49,7 @@ $0 --help
   Show this help message and exit.
 
 $0 [ MAKEARGS... ]
-  Build Fsociety and most of its transitive dependencies from
+  Build Nudi and most of its transitive dependencies from
   source. MAKEARGS are applied to both dependencies and Zcash itself.
 
   Pass flags to ./configure using the CONFIGURE_FLAGS environment variable.

@@ -1,4 +1,4 @@
-Fsociety Core version 0.12.2.3
+Nudi Core version 0.12.2.3
 ==========================
 
 Release is now available from:
@@ -21,7 +21,7 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/Fsociety-Qt (on Mac) or
+installer (on Windows) or just copy over /Applications/Nudi-Qt (on Mac) or
 fsocietyd/fsociety-qt (on Linux).
 
 Downgrade warning
@@ -113,7 +113,7 @@ reviewed pull requests or helped translating on
 Older releases
 ==============
 
-Fsociety was previously known as Darkcoin.
+Nudi was previously known as Darkcoin.
 
 Darkcoin tree 0.8.x was a fork of Litecoin tree 0.8, original name was XCoin
 which was first released on Jan/18/2014.
@@ -124,12 +124,12 @@ the 0.8.x tree and was first released on Mar/13/2014.
 Darkcoin tree 0.10.x used to be the closed source implementation of Darksend
 which was released open source on Sep/25/2014.
 
-Fsociety Core tree 0.11.x was a fork of Bitcoin Core tree 0.9,
-Darkcoin was rebranded to Fsociety.
+Nudi Core tree 0.11.x was a fork of Bitcoin Core tree 0.9,
+Darkcoin was rebranded to Nudi.
 
-Fsociety Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
+Nudi Core tree 0.12.0.x was a fork of Bitcoin Core tree 0.10.
 
-Fsociety Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
+Nudi Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
 
 These release are considered obsolete. Old release notes can be found here:
 
