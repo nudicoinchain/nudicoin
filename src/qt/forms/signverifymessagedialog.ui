@@ -353,7 +353,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../fsociety.qrc"/>
+  <include location="../nudi.qrc"/>
  </resources>
  <connections/>
 </ui>

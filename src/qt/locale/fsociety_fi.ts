@@ -349,7 +349,7 @@
       <translation>&amp;Vastaanota</translation>
     </message>
     <message>
-      <source>Request payments (generates QR codes and fsociety: URIs)</source>
+      <source>Request payments (generates QR codes and nudi: URIs)</source>
       <translation>Pyydä maksuja (Luo QR koodit ja Nudi: URIt)</translation>
     </message>
     <message>
@@ -541,7 +541,7 @@
       <translation>Avaa &amp;URI...</translation>
     </message>
     <message>
-      <source>Open a fsociety: URI or payment request</source>
+      <source>Open a nudi: URI or payment request</source>
       <translation>Avaa Nudi: URI tai maksupyyntö</translation>
     </message>
     <message>
@@ -1428,9 +1428,9 @@
     </message>
     <message>
       <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</source>
+https://www.transifex.com/projects/p/nudi/</source>
       <translation>Puuttuuko sopiva kieli tai käännös on kesken? Auta käännöstyössä täällä:
-https://www.transifex.com/projects/p/fsociety/</translation>
+https://www.transifex.com/projects/p/nudi/</translation>
     </message>
     <message>
       <source>&amp;Unit to show amounts in:</source>
@@ -1725,7 +1725,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Maksupyyntövirhe</translation>
     </message>
     <message>
-      <source>Cannot start fsociety: click-to-pay handler</source>
+      <source>Cannot start nudi: click-to-pay handler</source>
       <translation>Ei voi käynnistää Nudi: click-to-pay handler</translation>
     </message>
     <message>
@@ -1733,8 +1733,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>URI käsittely</translation>
     </message>
     <message>
-      <source>'fsociety://' is not a valid URI. Use 'fsociety:' instead.</source>
-      <translation>'fsociety://' ei ole validi URI. Käytä sen sijaan 'fsociety:'.</translation>
+      <source>'nudi://' is not a valid URI. Use 'nudi:' instead.</source>
+      <translation>'nudi://' ei ole validi URI. Käytä sen sijaan 'nudi:'.</translation>
     </message>
     <message>
       <source>Payment request fetch URL is invalid: %1</source>
@@ -2784,7 +2784,7 @@ Näillä toiminnoilla voit korjata korruptoituneen lohkoketjun tai puuttuvat/van
       <translation>Jos mukautettu siirtomaksu on asetettu 1000 ruff ja siirtotapahtuma on vain 250 tavua,&lt;br /&gt;tällöin "per kilotavu" maksaa vain 250 ruffs siirtomaksun, kun taas "vähintään" maksaa 1000 ruffs.&lt;br /&gt;Siirtotapahtumat jotka ovat isompia kuin kilotavu, molemmat maksaa "per kilotavu".</translation>
     </message>
     <message>
-      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</source>
+      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</source>
       <translation>Minimi siirtomaksun maksaminen on ok niin kauan kun siirtotapahtumien määrä on pienempi kuin tila lohkoissa.&lt;br /&gt;Mutta ota huomioon että tämä voi johtaa siirtotapahtumaan jota ei vahvisteta koskaan, jos siirtotapahtumia on enemmän kuin verkko voi käsitellä.</translation>
     </message>
     <message>
@@ -3097,7 +3097,7 @@ Näillä toiminnoilla voit korjata korruptoituneen lohkoketjun tai puuttuvat/van
       <translation>Viesti:</translation>
     </message>
     <message>
-      <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+      <source>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
       <translation>Viesti joka liitettiin Nudi: URI joka tallenetaan siirtotapahtuman kanssa viitteeksi sinulle. Huomio: Tätä viestiä ei lähetetä Nudi verkkoon.</translation>
     </message>
     <message>
@@ -4121,7 +4121,7 @@ Näillä toiminnoilla voit korjata korruptoituneen lohkoketjun tai puuttuvat/van
     </message>
   </context>
   <context>
-    <name>fsociety-core</name>
+    <name>nudi-core</name>
     <message>
       <source>Nudi Core</source>
       <translation>Nudi Core</translation>

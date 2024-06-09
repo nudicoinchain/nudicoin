@@ -1,36 +1,36 @@
 #!/usr/bin/env bash
 #
-#  fsocietyd The Nudi Core server.
+#  nudid The Nudi Core server.
 #
 #
 # chkconfig: 345 80 20
-# description: fsocietyd
-# processname: fsocietyd
+# description: nudid
+# processname: nudid
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/fsocietyd, see below
-if [ -f /etc/sysconfig/fsocietyd ]; then
-        . /etc/sysconfig/fsocietyd
+# you can override defaults in /etc/sysconfig/nudid, see below
+if [ -f /etc/sysconfig/nudid ]; then
+        . /etc/sysconfig/nudid
 fi
 
 RETVAL=0
 
-prog=fsocietyd
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/fsocietyd
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/fsocietyd}
+prog=nudid
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/nudid
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/nudid}
 
-# fsocietyd defaults to /usr/bin/fsocietyd, override with BITCOIND_BIN
-fsocietyd=${BITCOIND_BIN-/usr/bin/fsocietyd}
+# nudid defaults to /usr/bin/nudid, override with BITCOIND_BIN
+nudid=${BITCOIND_BIN-/usr/bin/nudid}
 
-# fsocietyd opts default to -disablewallet, override with BITCOIND_OPTS
-fsocietyd_opts=${BITCOIND_OPTS--disablewallet}
+# nudid opts default to -disablewallet, override with BITCOIND_OPTS
+nudid_opts=${BITCOIND_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "
-    daemon $DAEMONOPTS $fsocietyd $fsocietyd_opts
+    daemon $DAEMONOPTS $nudid $nudid_opts
     RETVAL=$?
     echo
     [ $RETVAL -eq 0 ] && touch $lockfile

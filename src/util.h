@@ -13,7 +13,7 @@
 #define BITCOIN_UTIL_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fsociety-config.h>
+#include <config/nudi-config.h>
 #endif
 
 #include <attributes.h>
@@ -338,7 +338,7 @@ void RenameThreadPool(ctpl::thread_pool& tp, const char* baseName);
  */
 template <typename Callable> void TraceThread(const std::string name,  Callable func)
 {
-    std::string s = "fsociety-" + name;
+    std::string s = "nudi-" + name;
     RenameThread(s.c_str());
     try
     {

@@ -349,7 +349,7 @@
       <translation>&amp;Ontvangen</translation>
     </message>
     <message>
-      <source>Request payments (generates QR codes and fsociety: URIs)</source>
+      <source>Request payments (generates QR codes and nudi: URIs)</source>
       <translation>Vraag betaling aan (genereert QR-codes en Nudi: URI's)</translation>
     </message>
     <message>
@@ -541,8 +541,8 @@
       <translation>Open &amp;URI</translation>
     </message>
     <message>
-      <source>Open a fsociety: URI or payment request</source>
-      <translation>Open een fsociety: URI of betalingsaanvraag</translation>
+      <source>Open a nudi: URI or payment request</source>
+      <translation>Open een nudi: URI of betalingsaanvraag</translation>
     </message>
     <message>
       <source>&amp;Command-line options</source>
@@ -1428,9 +1428,9 @@
     </message>
     <message>
       <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</source>
+https://www.transifex.com/projects/p/nudi/</source>
       <translation>Is een een taal te kort of een vertaling onvolledig ? Help de vertaling hier: 
-https://www.transifex.com/projects/p/fsociety/</translation>
+https://www.transifex.com/projects/p/nudi/</translation>
     </message>
     <message>
       <source>&amp;Unit to show amounts in:</source>
@@ -1726,7 +1726,7 @@ Om te mixen moeten andere gebruikers exact dezelfde denominaties inbrengen.</tra
       <translation>Fout bij betalingsverzoek</translation>
     </message>
     <message>
-      <source>Cannot start fsociety: click-to-pay handler</source>
+      <source>Cannot start nudi: click-to-pay handler</source>
       <translation>Kan Nudi niet starten: click-to-pay handler</translation>
     </message>
     <message>
@@ -1734,8 +1734,8 @@ Om te mixen moeten andere gebruikers exact dezelfde denominaties inbrengen.</tra
       <translation>URI-afhandeling</translation>
     </message>
     <message>
-      <source>'fsociety://' is not a valid URI. Use 'fsociety:' instead.</source>
-      <translation>'fsociety://' is geen geldige URI. Gebruik in plaats daarvan 'fsociety:'.</translation>
+      <source>'nudi://' is not a valid URI. Use 'nudi:' instead.</source>
+      <translation>'nudi://' is geen geldige URI. Gebruik in plaats daarvan 'nudi:'.</translation>
     </message>
     <message>
       <source>Payment request fetch URL is invalid: %1</source>
@@ -2782,7 +2782,7 @@ Nota: Het bericht zal niet verzonden worden met de betaling over het Nudi netwer
       <translation>Als de aangepaste vergoeding is ingesteld op 1000 ruffs en de transactie is maar 250 bytes, dan wordt bij "per kilobyte" 250 ruffs aan toeslag berekend, &lt;br /&gt;terwijl er bij "tenminste" 1000 ruffs worden berekend. Voor transacties die groter zijn dan een kilobyte, wordt in beide gevallen per kilobyte de toeslag berekend.</translation>
     </message>
     <message>
-      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</source>
+      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</source>
       <translation>Het betalen van de minimale vergoeding is prima zo lang er minder transactie volume is dan ruimte in de blocks. &lt;br /&gt;Maar houd er rekening mee dat dit kan eindigen in een nooit bevestigde transactie zodra er meer vraag is voor Nudi transacties fdan het netwerk kan verwerken.</translation>
     </message>
     <message>
@@ -3095,8 +3095,8 @@ Nota: Het bericht zal niet verzonden worden met de betaling over het Nudi netwer
       <translation>Bericht:</translation>
     </message>
     <message>
-      <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
-      <translation>Een boodschap die was bijgevoegd aan de fsociety: URI die met de transactie voor uw referentie wordt opgeslagen. Opmerking: Dit bericht zal niet over het Nudi netwerk worden verzonden.</translation>
+      <source>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+      <translation>Een boodschap die was bijgevoegd aan de nudi: URI die met de transactie voor uw referentie wordt opgeslagen. Opmerking: Dit bericht zal niet over het Nudi netwerk worden verzonden.</translation>
     </message>
     <message>
       <source>Future</source>
@@ -4119,7 +4119,7 @@ Nota: Het bericht zal niet verzonden worden met de betaling over het Nudi netwer
     </message>
   </context>
   <context>
-    <name>fsociety-core</name>
+    <name>nudi-core</name>
     <message>
       <source>Nudi Core</source>
       <translation>Nudi Core</translation>

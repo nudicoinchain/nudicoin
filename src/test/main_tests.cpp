@@ -4,7 +4,7 @@
 
 #include <net.h>
 
-#include <test/test_fsociety.h>
+#include <test/test_nudi.h>
 
 #include <boost/signals2/signal.hpp>
 #include <boost/test/unit_test.hpp>

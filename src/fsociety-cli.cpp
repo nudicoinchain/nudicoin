@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fsociety-config.h>
+#include <config/nudi-config.h>
 #endif
 
 #include <chainparamsbase.h>
@@ -95,10 +95,10 @@ static int AppInitRPC(int argc, char* argv[])
         std::string strUsage = strprintf("%s RPC client version", PACKAGE_NAME) + " " + FormatFullVersion() + "\n";
         if (!gArgs.IsArgSet("-version")) {
             strUsage += "\nUsage:\n"
-                  "  fsociety-cli [options] <command> [params]  " + strprintf("Send command to %s", PACKAGE_NAME) + "\n" +
-                  "  fsociety-cli [options] -named <command> [name=value] ... " + strprintf("Send command to %s (with named arguments)", PACKAGE_NAME) + "\n" +
-                  "  fsociety-cli [options] help                List commands\n" +
-                  "  fsociety-cli [options] help <command>      Get help for a command\n";
+                  "  nudi-cli [options] <command> [params]  " + strprintf("Send command to %s", PACKAGE_NAME) + "\n" +
+                  "  nudi-cli [options] -named <command> [name=value] ... " + strprintf("Send command to %s (with named arguments)", PACKAGE_NAME) + "\n" +
+                  "  nudi-cli [options] help                List commands\n" +
+                  "  nudi-cli [options] help <command>      Get help for a command\n";
 
             strUsage += "\n" + gArgs.GetHelpMessage();
         }
@@ -376,7 +376,7 @@ static UniValue CallRPC(BaseRequestHandler *rh, const std::string& strMethod, co
         if (response.error != -1) {
             responseErrorMessage = strprintf(" (error code %d - \"%s\")", response.error, http_errorstring(response.error));
         }
-        throw CConnectionFailed(strprintf("Could not connect to the server %s:%d%s\n\nMake sure the fsocietyd server is running and that you are connecting to the correct RPC port.", host, port, responseErrorMessage));
+        throw CConnectionFailed(strprintf("Could not connect to the server %s:%d%s\n\nMake sure the nudid server is running and that you are connecting to the correct RPC port.", host, port, responseErrorMessage));
     } else if (response.status == HTTP_UNAUTHORIZED) {
         if (failedToGetAuthCookie) {
             throw std::runtime_error(strprintf(
@@ -467,7 +467,7 @@ int CommandLineRPC(int argc, char *argv[])
                             strPrint += "error message:\n"+errMsg.get_str();
 
                         if (errCode.isNum() && errCode.get_int() == RPC_WALLET_NOT_SPECIFIED) {
-                            strPrint += "\nTry adding \"-rpcwallet=<filename>\" option to fsociety-cli command line.";
+                            strPrint += "\nTry adding \"-rpcwallet=<filename>\" option to nudi-cli command line.";
                         }
                     }
                 } else {

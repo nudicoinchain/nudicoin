@@ -349,7 +349,7 @@
       <translation>&amp;Al</translation>
     </message>
     <message>
-      <source>Request payments (generates QR codes and fsociety: URIs)</source>
+      <source>Request payments (generates QR codes and nudi: URIs)</source>
       <translation>Ödeme talep et (QR kodu ve Nudi URI'si oluşturur)</translation>
     </message>
     <message>
@@ -541,7 +541,7 @@
       <translation>&amp;URI Aç...</translation>
     </message>
     <message>
-      <source>Open a fsociety: URI or payment request</source>
+      <source>Open a nudi: URI or payment request</source>
       <translation>Bir Nudi: bağlantısı ya da ödeme talebi aç</translation>
     </message>
     <message>
@@ -1428,9 +1428,9 @@
     </message>
     <message>
       <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</source>
+https://www.transifex.com/projects/p/nudi/</source>
       <translation>Diliniz mevcut değil veya çeviri eksik mi? Buradan çevirilere katkıda bulunun:
-https://www.transifex.com/projects/p/fsociety/</translation>
+https://www.transifex.com/projects/p/nudi/</translation>
     </message>
     <message>
       <source>&amp;Unit to show amounts in:</source>
@@ -1725,7 +1725,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Ödeme talebi hatası</translation>
     </message>
     <message>
-      <source>Cannot start fsociety: click-to-pay handler</source>
+      <source>Cannot start nudi: click-to-pay handler</source>
       <translation>Nudi başlatılamadı: tıkla-ve-öde yöneticisi</translation>
     </message>
     <message>
@@ -1733,8 +1733,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>URI yönetimi</translation>
     </message>
     <message>
-      <source>'fsociety://' is not a valid URI. Use 'fsociety:' instead.</source>
-      <translation>'fsociety://' geçerli bir URI değil. Bunun yerine 'fsociety:' kullanın.</translation>
+      <source>'nudi://' is not a valid URI. Use 'nudi:' instead.</source>
+      <translation>'nudi://' geçerli bir URI değil. Bunun yerine 'nudi:' kullanın.</translation>
     </message>
     <message>
       <source>Payment request fetch URL is invalid: %1</source>
@@ -2780,8 +2780,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Eğer özel ücret 1000 ruff olarak belirlendiyse ve işlem sadece 250 bayt ise "kilobayt başına" ücret olarak sadece 250 ruff ödersiniz,&lt;br /&gt;bu da "en az" 1000 ruff öder. Bir kilobayttan büyük işlemler için ikisi de kilobayt başına ödeme yapar.</translation>
     </message>
     <message>
-      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</source>
-      <translation>Bloklardaki alandan daha düşük işlem hacmi var olduğu sürece sadece minimum ücreti ödemek yeterli olur.&lt;br /&gt;Ama ağın işleyebileceğinden daha fazla fsociety işlemi talebi olursa, bunun işlemlerin asla teyit edilememesi gibi bir sonucu olabileceğini unutmayın.</translation>
+      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</source>
+      <translation>Bloklardaki alandan daha düşük işlem hacmi var olduğu sürece sadece minimum ücreti ödemek yeterli olur.&lt;br /&gt;Ama ağın işleyebileceğinden daha fazla nudi işlemi talebi olursa, bunun işlemlerin asla teyit edilememesi gibi bir sonucu olabileceğini unutmayın.</translation>
     </message>
     <message>
       <source>per kilobyte</source>
@@ -3093,7 +3093,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Mesaj:</translation>
     </message>
     <message>
-      <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+      <source>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
       <translation>Referans için Nudi: URI'siyle iliştirilmiş işlemle birlikte depolanacak bir ileti. Not: Bu mesaj Nudi ağı üzerinden gönderilmeyecektir.</translation>
     </message>
     <message>
@@ -4117,7 +4117,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
   </context>
   <context>
-    <name>fsociety-core</name>
+    <name>nudi-core</name>
     <message>
       <source>Nudi Core</source>
       <translation>Nudi Core</translation>

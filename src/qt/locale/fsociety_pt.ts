@@ -350,8 +350,8 @@
         <translation>&amp;Receber</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fsociety: URIs)</source>
-        <translation>Solicitar pagamentos (gera códigos QR e fsociety: URIs)</translation>
+        <source>Request payments (generates QR codes and nudi: URIs)</source>
+        <translation>Solicitar pagamentos (gera códigos QR e nudi: URIs)</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
@@ -542,8 +542,8 @@
         <translation>Abrir &amp;URI...</translation>
     </message>
     <message>
-        <source>Open a fsociety: URI or payment request</source>
-        <translation>Abrir um fsociety: URI ou cobrança</translation>
+        <source>Open a nudi: URI or payment request</source>
+        <translation>Abrir um nudi: URI ou cobrança</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1049,7 +1049,7 @@
     </message>
     <message>
         <source>&lt;h3&gt;%1 Basics&lt;/h3&gt; %1 gives you true financial privacy by obscuring the origins of your funds. All the Nudi in your wallet is comprised of different &quot;inputs&quot; which you can think of as separate, discrete coins.&lt;br&gt; %1 uses an innovative process to mix your inputs with the inputs of two or more other people, without having your coins ever leave your wallet. You retain control of your money at all times.&lt;hr&gt; &lt;b&gt;The %1 process works like this:&lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;%1 begins by breaking your transaction inputs down into standard denominations. These denominations are 0.001 FSC, 0.01 FSC, 0.1 FSC, 1 FSC and 10 FSC -- sort of like the paper money you use every day.&lt;/li&gt; &lt;li&gt;Your wallet then sends requests to specially configured software nodes on the network, called &quot;smartnodes.&quot; These smartnodes are informed then that you are interested in mixing a certain denomination. No identifiable information is sent to the smartnodes, so they never know &quot;who&quot; you are.&lt;/li&gt; &lt;li&gt;When two or more other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. The smartnode mixes up the inputs and instructs all three users&apos; wallets to pay the now-transformed input back to themselves. Your wallet pays that denomination directly to itself, but in a different address (called a change address).&lt;/li&gt; &lt;li&gt;In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it&apos;s called a &quot;round.&quot; Each round of %1 makes it exponentially more difficult to determine where your funds originated.&lt;/li&gt; &lt;li&gt;This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be mixed. No additional waiting is required.&lt;/li&gt; &lt;/ol&gt; &lt;hr&gt;&lt;b&gt;IMPORTANT:&lt;/b&gt; Your wallet only contains 1000 of these &quot;change addresses.&quot; Every time a mixing event happens, up to 9 of your addresses are used up. This means those 1000 addresses last for about 100 mixing events. When 900 of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled.&lt;br&gt; Consequently, users who have backups disabled will also have %1 disabled. &lt;hr&gt;For more information, see the &lt;a style=&quot;%2&quot; href=&quot;%3&quot;&gt;%1 documentation&lt;/a&gt;.</source>
-        <translation>&lt;h3&gt;O básico sobre %1&lt;/h3&gt;O %1 te dá verdadeira privacidade financeira ao obscurecer a origem dos seus fundos. Todos os fsocietys na sua carteira é composto de &quot;inputs&quot; diferentes que você pode pensar como sendo moedas separadas, discretas. &lt;br&gt;O %1 usa um processo inovador para misturas os inputs de duas pessoas diferentes, sem que suas moedas saiam de suas carteiras. Você mantém o controle de seu dinheiro o tempo todo.&lt;hr&gt;&lt;b&gt;O processo do %1 funciona assim: &lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;O %1 começa quebrando os inputs de suuas transações em denominações padrão. Essas denominações são 0.001 FSC, 0.01 FSC, 0.1 FSC, 1 FSC e 10 FSC -- algo como o dinheiro de papel que você usa todo dia.&lt;/li&gt;&lt;li&gt;Sua carteira então envia uma requisição para um software especialmente configurado na rede, chamados de &quot;smartnodes.&quot; Esses smartnodes são informados que você está interessado em misturar uma denominação específica. Nenhuma informação identificável é enviada aos smartnodes, então eles nunca sabem &quot;quem&quot; você é.&lt;/li&gt;&lt;li&gt;Quando duas pessoas enviam mensagens similares, uma sessão de mistura tem início. O smartnode mistura os inputs e instrui os três usuários da carteira para pagar o input agora transformado de volta a si mesmos. Sua carteira paga a denominação diretamente a si mesmo, mas em um endereço diferente (chamado de endereço mudado).&lt;/li&gt;&lt;li&gt;A fim de obscurecer plenamente seus fundos, sua carteira repete esse processo várias vezes com cada denominação. Cada vez que o processo é completado, se chama um &quot;round&quot;. Cada round de %1 torna exponencialmente mais difícil determinar onde os fundos se originaram.&lt;/li&gt;&lt;li&gt;Esse processo de mistura acontece no background sem nenhuma intervenção da sua parte. Quando você deseja fazer uma transação, seus fundos jã estarão misturados. Nenhuma espera adicional é requerida.&lt;/li&gt;&lt;/ol&gt;&lt;hr&gt;&lt;b&gt;IMPORTANTE:&lt;/b&gt; Sua carteira só contém 1000 desses &quot;mudar endereços.&quot; Cada vez que um evento de mistura acontece, 9 de seus endereços são usados. Isso indica que esses 1000 endereços duram por cerca de 100 eventos de mistura. Quando 900 desses endereços são usados, sua carteira deve criar mais endereços. Contudo, ela só é capaz de fazer isso se você tem o backup automático habilitado.&lt;br&gt;Consequentemente, usuários que têm seus backups desabilitados também terão o %1 desabilitado. &lt;hr&gt;Para mais informações, consulte a &lt;a style=&quot;%2&quot; href=&quot;%3&quot;&gt;documentação do %1&lt;/a&gt;.</translation>
+        <translation>&lt;h3&gt;O básico sobre %1&lt;/h3&gt;O %1 te dá verdadeira privacidade financeira ao obscurecer a origem dos seus fundos. Todos os nudis na sua carteira é composto de &quot;inputs&quot; diferentes que você pode pensar como sendo moedas separadas, discretas. &lt;br&gt;O %1 usa um processo inovador para misturas os inputs de duas pessoas diferentes, sem que suas moedas saiam de suas carteiras. Você mantém o controle de seu dinheiro o tempo todo.&lt;hr&gt;&lt;b&gt;O processo do %1 funciona assim: &lt;/b&gt;&lt;ol type=&quot;1&quot;&gt; &lt;li&gt;O %1 começa quebrando os inputs de suuas transações em denominações padrão. Essas denominações são 0.001 FSC, 0.01 FSC, 0.1 FSC, 1 FSC e 10 FSC -- algo como o dinheiro de papel que você usa todo dia.&lt;/li&gt;&lt;li&gt;Sua carteira então envia uma requisição para um software especialmente configurado na rede, chamados de &quot;smartnodes.&quot; Esses smartnodes são informados que você está interessado em misturar uma denominação específica. Nenhuma informação identificável é enviada aos smartnodes, então eles nunca sabem &quot;quem&quot; você é.&lt;/li&gt;&lt;li&gt;Quando duas pessoas enviam mensagens similares, uma sessão de mistura tem início. O smartnode mistura os inputs e instrui os três usuários da carteira para pagar o input agora transformado de volta a si mesmos. Sua carteira paga a denominação diretamente a si mesmo, mas em um endereço diferente (chamado de endereço mudado).&lt;/li&gt;&lt;li&gt;A fim de obscurecer plenamente seus fundos, sua carteira repete esse processo várias vezes com cada denominação. Cada vez que o processo é completado, se chama um &quot;round&quot;. Cada round de %1 torna exponencialmente mais difícil determinar onde os fundos se originaram.&lt;/li&gt;&lt;li&gt;Esse processo de mistura acontece no background sem nenhuma intervenção da sua parte. Quando você deseja fazer uma transação, seus fundos jã estarão misturados. Nenhuma espera adicional é requerida.&lt;/li&gt;&lt;/ol&gt;&lt;hr&gt;&lt;b&gt;IMPORTANTE:&lt;/b&gt; Sua carteira só contém 1000 desses &quot;mudar endereços.&quot; Cada vez que um evento de mistura acontece, 9 de seus endereços são usados. Isso indica que esses 1000 endereços duram por cerca de 100 eventos de mistura. Quando 900 desses endereços são usados, sua carteira deve criar mais endereços. Contudo, ela só é capaz de fazer isso se você tem o backup automático habilitado.&lt;br&gt;Consequentemente, usuários que têm seus backups desabilitados também terão o %1 desabilitado. &lt;hr&gt;Para mais informações, consulte a &lt;a style=&quot;%2&quot; href=&quot;%3&quot;&gt;documentação do %1&lt;/a&gt;.</translation>
     </message>
 </context>
 <context>
@@ -1429,9 +1429,9 @@
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</source>
+https://www.transifex.com/projects/p/nudi/</source>
         <translation>Idioma inexistente ou tradução incompleta? Contribua com a tradução aqui:
-https://www.transifex.com/projects/p/fsociety/</translation>
+https://www.transifex.com/projects/p/nudi/</translation>
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
@@ -1726,7 +1726,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
         <translation>Erro no pedido de pagamento</translation>
     </message>
     <message>
-        <source>Cannot start fsociety: click-to-pay handler</source>
+        <source>Cannot start nudi: click-to-pay handler</source>
         <translation>Não foi possível iniciar Nudi: manipulador click-to-pay</translation>
     </message>
     <message>
@@ -1734,8 +1734,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
         <translation>Manipulação de URI</translation>
     </message>
     <message>
-        <source>&apos;fsociety://&apos; is not a valid URI. Use &apos;fsociety:&apos; instead.</source>
-        <translation>&apos;fsociety://&apos; não é uma URL válida. Use &apos;fsociety:&apos; como alternativa.</translation>
+        <source>&apos;nudi://&apos; is not a valid URI. Use &apos;nudi:&apos; instead.</source>
+        <translation>&apos;nudi://&apos; não é uma URL válida. Use &apos;nudi:&apos; como alternativa.</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -2781,8 +2781,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
         <translation>Se a taxa por defeito está definida em 1000 ruffs e a transação é apenas 250 bytes, então &quot;per kilobyte&quot; paga apenas 250 ruffs de taxa,&lt;br /&gt;enquanto &quot;no mínimo&quot; paga 1000 ruffs. Para transações maiores que um kilobyte, ambas pagam por kilobyte.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</source>
-        <translation>Não há problema em pagar apenas a taxa mínima desde que exista um volume transacional inferior ao espaço nos blocos.&lt;br /&gt;Mas tenha em conta que pode ocorrer uma transação que nunca será confirmada devido a existir uma maior procura para transações em fsociety, do que a rede tem capacidade para processar.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</source>
+        <translation>Não há problema em pagar apenas a taxa mínima desde que exista um volume transacional inferior ao espaço nos blocos.&lt;br /&gt;Mas tenha em conta que pode ocorrer uma transação que nunca será confirmada devido a existir uma maior procura para transações em nudi, do que a rede tem capacidade para processar.</translation>
     </message>
     <message>
         <source>per kilobyte</source>
@@ -3094,7 +3094,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
         <translation>Mensagem:</translation>
     </message>
     <message>
-        <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+        <source>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
         <translation>A mensagem que foi anexada ao Nudi: URI na qual será gravada na transação para sua referência. Nota: Essa mensagem não será gravada publicamente na rede Nudi.</translation>
     </message>
     <message>
@@ -4118,7 +4118,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
 </context>
 <context>
-    <name>fsociety-core</name>
+    <name>nudi-core</name>
     <message>
         <source>Nudi Core</source>
         <translation>Nudi Core</translation>

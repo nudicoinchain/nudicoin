@@ -32,7 +32,7 @@
 #include <warnings.h>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fsociety-config.h>
+#include <config/nudi-config.h>
 #endif
 #ifdef ENABLE_WALLET
 #include <coinjoin/coinjoin-client-options.h>

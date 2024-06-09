@@ -349,8 +349,8 @@
       <translation>受取 (&amp;R)</translation>
     </message>
     <message>
-      <source>Request payments (generates QR codes and fsociety: URIs)</source>
-      <translation>送金を要求 (QRコードとfsociety:URIを生成)</translation>
+      <source>Request payments (generates QR codes and nudi: URIs)</source>
+      <translation>送金を要求 (QRコードとnudi:URIを生成)</translation>
     </message>
     <message>
       <source>&amp;Transactions</source>
@@ -541,8 +541,8 @@
       <translation>URIを開く… (&amp;U)</translation>
     </message>
     <message>
-      <source>Open a fsociety: URI or payment request</source>
-      <translation>fsociety: URIまたは送金リクエストを開く</translation>
+      <source>Open a nudi: URI or payment request</source>
+      <translation>nudi: URIまたは送金リクエストを開く</translation>
     </message>
     <message>
       <source>&amp;Command-line options</source>
@@ -1424,9 +1424,9 @@
     </message>
     <message>
       <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</source>
+https://www.transifex.com/projects/p/nudi/</source>
       <translation>希望の言語がない場合または翻訳に問題がある場合はこちらで翻訳にご協力ください。:
-https://www.transifex.com/projects/p/fsociety/</translation>
+https://www.transifex.com/projects/p/nudi/</translation>
     </message>
     <message>
       <source>&amp;Unit to show amounts in:</source>
@@ -1719,7 +1719,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>支払いリクエストのエラー</translation>
     </message>
     <message>
-      <source>Cannot start fsociety: click-to-pay handler</source>
+      <source>Cannot start nudi: click-to-pay handler</source>
       <translation>Nudi を起動できません: click-to-pay ハンドラー</translation>
     </message>
     <message>
@@ -1727,7 +1727,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>URI のハンドリング</translation>
     </message>
     <message>
-      <source>'fsociety://' is not a valid URI. Use 'fsociety:' instead.</source>
+      <source>'nudi://' is not a valid URI. Use 'nudi:' instead.</source>
       <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2768,7 +2768,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>カスタマイズされた手数料が1000ruffsに設定され、トランザクションが250 bytesしかなかった場合、キロバイトあたりでは250 ruffsしか手数料を支払いませんが&lt;br /&gt;最低でも1000 ruffs支払います。1キロバイト以上のトランザクションに対しては、1キロバイトあたり1000ruffs支払います。</translation>
     </message>
     <message>
-      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</source>
+      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</source>
       <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3077,7 +3077,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>メッセージ：</translation>
     </message>
     <message>
-      <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+      <source>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
       <translation>Nudi: URIに添付されていたメッセージです。これは参照用としてトランザクションとともに保存されます。注意：このメッセージはNudiネットワークを経由して送信されるわけではありません。</translation>
     </message>
     <message>
@@ -4098,7 +4098,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
   </context>
   <context>
-    <name>fsociety-core</name>
+    <name>nudi-core</name>
     <message>
       <source>Nudi Core</source>
       <translation>Nudiコア</translation>

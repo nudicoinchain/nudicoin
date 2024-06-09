@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 #include <rpc/blockchain.h>
-#include <test/test_fsociety.h>
+#include <test/test_nudi.h>
 
 /* Equality between doubles is imprecise. Comparison should be done
  * with a small threshold of tolerance, rather than exact equality.

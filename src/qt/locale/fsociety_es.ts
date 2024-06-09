@@ -350,7 +350,7 @@
         <translation>&amp;Recibir</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fsociety: URIs)</source>
+        <source>Request payments (generates QR codes and nudi: URIs)</source>
         <translation>Solicitar pagos (genera códigos QR y URIs de Nudi)</translation>
     </message>
     <message>
@@ -542,8 +542,8 @@
         <translation>Abrir &amp;URI...</translation>
     </message>
     <message>
-        <source>Open a fsociety: URI or payment request</source>
-        <translation>Abrir un fsociety: URI o petición de pago</translation>
+        <source>Open a nudi: URI or payment request</source>
+        <translation>Abrir un nudi: URI o petición de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1429,9 +1429,9 @@
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</source>
+https://www.transifex.com/projects/p/nudi/</source>
         <translation>¿Idioma no disponible o traducción incompleta? Contribuye a la traducción aquí:
-https://www.transifex.com/projects/p/fsociety/</translation>
+https://www.transifex.com/projects/p/nudi/</translation>
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
@@ -1439,7 +1439,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Elegir la subdivisión predeterminada para mostrar las cuantías en la interfaz y cuando se envían fsocietys.</translation>
+        <translation>Elegir la subdivisión predeterminada para mostrar las cuantías en la interfaz y cuando se envían nudis.</translation>
     </message>
     <message>
         <source>Decimal digits</source>
@@ -1726,16 +1726,16 @@ https://www.transifex.com/projects/p/fsociety/</translation>
         <translation>Error en solicitud de pago</translation>
     </message>
     <message>
-        <source>Cannot start fsociety: click-to-pay handler</source>
-        <translation>No se pudo iniciar fsociety: manejador de pago-por-clic</translation>
+        <source>Cannot start nudi: click-to-pay handler</source>
+        <translation>No se pudo iniciar nudi: manejador de pago-por-clic</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>Gestión de URI</translation>
     </message>
     <message>
-        <source>&apos;fsociety://&apos; is not a valid URI. Use &apos;fsociety:&apos; instead.</source>
-        <translation>&apos;fsociety://&apos; no es un URI válido. Usa &apos;fsociety:&apos;.</translation>
+        <source>&apos;nudi://&apos; is not a valid URI. Use &apos;nudi:&apos; instead.</source>
+        <translation>&apos;nudi://&apos; no es un URI válido. Usa &apos;nudi:&apos;.</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -2781,7 +2781,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
         <translation>Si la comisión personalizada se establece en 1000 ruffs y la transacción sólo ocupa 250 bytes, entonces &quot;por kilobyte&quot; sólo se pagan 250 ruffs de comisión,&lt;br /&gt;mientras que &quot;como mínimo&quot; paga 1000 ruffs. Para transacciones mayores de un kilobyte ambas pagan por kilobyte.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</source>
         <translation>Pagar sólo la comisión mínima está bien mientras el volumen de transacciones sea menor al espacio en los bloques.&lt;br /&gt;No obstante, tenga en cuenta que esto puede acabar en una transacción que nunca se confirme una vez haya más demanda de transacciones Nudi que lo que la red puede procesar.</translation>
     </message>
     <message>
@@ -3094,7 +3094,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
         <translation>Mensaje:</translation>
     </message>
     <message>
-        <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+        <source>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
         <translation>Un mensaje que se adjuntó al Nudi: URI que será almacenada con la transacción para su referencia. Nota: Este mensaje no se enviará a través de la red Nudi.</translation>
     </message>
     <message>
@@ -4118,7 +4118,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
 </context>
 <context>
-    <name>fsociety-core</name>
+    <name>nudi-core</name>
     <message>
         <source>Nudi Core</source>
         <translation>Nudi Core</translation>

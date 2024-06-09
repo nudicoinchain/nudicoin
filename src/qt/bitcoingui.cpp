@@ -395,7 +395,7 @@ void BitcoinGUI::createActions()
     coinJoinCoinsMenuAction->setToolTip(coinJoinCoinsMenuAction->statusTip());
 
     receiveCoinsMenuAction = new QAction(tr("&Receive"), this);
-    receiveCoinsMenuAction->setStatusTip(tr("Request payments (generates QR codes and fsociety: URIs)"));
+    receiveCoinsMenuAction->setStatusTip(tr("Request payments (generates QR codes and nudi: URIs)"));
     receiveCoinsMenuAction->setToolTip(receiveCoinsMenuAction->statusTip());
 
     // These showNormalIfMinimized are needed because Send Coins and Receive Coins
@@ -470,7 +470,7 @@ void BitcoinGUI::createActions()
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
     openAction = new QAction(QIcon(":/icons/browse"), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a fsociety: URI or payment request"));
+    openAction->setStatusTip(tr("Open a nudi: URI or payment request"));
 
     showHelpMessageAction = new QAction(QIcon(":/icons/configure"), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
@@ -1221,7 +1221,7 @@ void BitcoinGUI::updateWidth()
         ++nButtonsVisible;
     }
     // Add 30 per button as padding and use minimum 980 which is the minimum required to show all tab's contents
-    // Use nButtonsVisible + 1 <- for the fsociety logo
+    // Use nButtonsVisible + 1 <- for the nudi logo
     int nWidth = std::max<int>(980, (nWidthWidestButton + 30) * (nButtonsVisible + 1));
     setMinimumWidth(nWidth);
     resize(nWidth, height());

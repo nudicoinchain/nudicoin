@@ -17,9 +17,9 @@ RUN pip3 install pyzmq # really needed?
 RUN pip3 install jinja2
 RUN pip3 install flake8
 
-# fsociety_hash
-RUN git clone https://github.com/fsocietychain/fsociety_hash
-RUN cd fsociety_hash && python3 setup.py install
+# nudi_hash
+RUN git clone https://github.com/nudichain/nudi_hash
+RUN cd nudi_hash && python3 setup.py install
 
 ARG USER_ID=1000
 ARG GROUP_ID=1000
@@ -27,8 +27,8 @@ ARG GROUP_ID=1000
 # add user with specified (or default) user/group ids
 ENV USER_ID ${USER_ID}
 ENV GROUP_ID ${GROUP_ID}
-RUN groupadd -g ${GROUP_ID} fsociety
-RUN useradd -u ${USER_ID} -g fsociety -s /bin/bash -m -d /fsociety fsociety
+RUN groupadd -g ${GROUP_ID} nudi
+RUN useradd -u ${USER_ID} -g nudi -s /bin/bash -m -d /nudi nudi
 
 # Packages needed for all target builds
 RUN dpkg --add-architecture i386
@@ -55,13 +55,13 @@ RUN \
   update-alternatives --set x86_64-w64-mingw32-g++  /usr/bin/x86_64-w64-mingw32-g++-posix; \
   exit 0
 
-RUN mkdir /fsociety-src && \
+RUN mkdir /nudi-src && \
   mkdir -p /cache/ccache && \
   mkdir /cache/depends && \
   mkdir /cache/sdk-sources && \
-  chown $USER_ID:$GROUP_ID /fsociety-src && \
+  chown $USER_ID:$GROUP_ID /nudi-src && \
   chown $USER_ID:$GROUP_ID /cache && \
   chown $USER_ID:$GROUP_ID /cache -R
-WORKDIR /fsociety-src
+WORKDIR /nudi-src
 
-USER fsociety
+USER nudi

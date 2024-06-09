@@ -4,7 +4,7 @@
 
 #include <chain.h>
 #include <versionbits.h>
-#include <test/test_fsociety.h>
+#include <test/test_nudi.h>
 #include <chainparams.h>
 #include <validation.h>
 #include <consensus/params.h>

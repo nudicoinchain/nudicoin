@@ -10,7 +10,7 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between fsociety-cli and fsocietyd)
+ * CBaseChainParams defines the base parameters (shared between nudi-cli and nudid)
  * of a given instance of the Nudi system.
  */
 class CBaseChainParams

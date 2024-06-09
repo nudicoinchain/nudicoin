@@ -7,7 +7,7 @@
 #include <uint256.h>
 #include <undo.h>
 #include <utilstrencodings.h>
-#include <test/test_fsociety.h>
+#include <test/test_nudi.h>
 #include <validation.h>
 #include <consensus/validation.h>
 

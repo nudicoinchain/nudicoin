@@ -1,21 +1,21 @@
 Shared Libraries
 ================
 
-## fsocietyconsensus
+## nudiconsensus
 
 The purpose of this library is to make the verification functionality that is critical to Nudi's consensus available to other applications, e.g. to language bindings.
 
 ### API
 
-The interface is defined in the C header `fsocietyconsensus.h` located in  `src/script/fsocietyconsensus.h`.
+The interface is defined in the C header `nudiconsensus.h` located in  `src/script/nudiconsensus.h`.
 
 #### Version
 
-`fsocietyconsensus_version` returns an `unsigned int` with the API version *(currently at an experimental `0`)*.
+`nudiconsensus_version` returns an `unsigned int` with the API version *(currently at an experimental `0`)*.
 
 #### Script Validation
 
-`fsocietyconsensus_verify_script` returns an `int` with the status of the verification. It will be `1` if the input script correctly spends the previous output `scriptPubKey`.
+`nudiconsensus_verify_script` returns an `int` with the status of the verification. It will be `1` if the input script correctly spends the previous output `scriptPubKey`.
 
 ##### Parameters
 - `const unsigned char *scriptPubKey` - The previous output script that encumbers spending.
@@ -24,21 +24,21 @@ The interface is defined in the C header `fsocietyconsensus.h` located in  `src/
 - `unsigned int txToLen` - The number of bytes for the `txTo`.
 - `unsigned int nIn` - The index of the input in `txTo` that spends the `scriptPubKey`.
 - `unsigned int flags` - The script validation flags *(see below)*.
-- `fsocietyconsensus_error* err` - Will have the error/success code for the operation *(see below)*.
+- `nudiconsensus_error* err` - Will have the error/success code for the operation *(see below)*.
 
 ##### Script Flags
-- `fsocietyconsensus_SCRIPT_FLAGS_VERIFY_NONE`
-- `fsocietyconsensus_SCRIPT_FLAGS_VERIFY_P2SH` - Evaluate P2SH ([BIP16](https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki)) subscripts
-- `fsocietyconsensus_SCRIPT_FLAGS_VERIFY_DERSIG` - Enforce strict DER ([BIP66](https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki)) compliance
-- `fsocietyconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY` - Enforce NULLDUMMY ([BIP147](https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki))
-- `fsocietyconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY` - Enable CHECKLOCKTIMEVERIFY ([BIP65](https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki))
-- `fsocietyconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY` - Enable CHECKSEQUENCEVERIFY ([BIP112](https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki))
+- `nudiconsensus_SCRIPT_FLAGS_VERIFY_NONE`
+- `nudiconsensus_SCRIPT_FLAGS_VERIFY_P2SH` - Evaluate P2SH ([BIP16](https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki)) subscripts
+- `nudiconsensus_SCRIPT_FLAGS_VERIFY_DERSIG` - Enforce strict DER ([BIP66](https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki)) compliance
+- `nudiconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY` - Enforce NULLDUMMY ([BIP147](https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki))
+- `nudiconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY` - Enable CHECKLOCKTIMEVERIFY ([BIP65](https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki))
+- `nudiconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY` - Enable CHECKSEQUENCEVERIFY ([BIP112](https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki))
 
 ##### Errors
-- `fsocietyconsensus_ERR_OK` - No errors with input parameters *(see the return value of `fsocietyconsensus_verify_script` for the verification status)*
-- `fsocietyconsensus_ERR_TX_INDEX` - An invalid index for `txTo`
-- `fsocietyconsensus_ERR_TX_SIZE_MISMATCH` - `txToLen` did not match with the size of `txTo`
-- `fsocietyconsensus_ERR_DESERIALIZE` - An error deserializing `txTo`
+- `nudiconsensus_ERR_OK` - No errors with input parameters *(see the return value of `nudiconsensus_verify_script` for the verification status)*
+- `nudiconsensus_ERR_TX_INDEX` - An invalid index for `txTo`
+- `nudiconsensus_ERR_TX_SIZE_MISMATCH` - `txToLen` did not match with the size of `txTo`
+- `nudiconsensus_ERR_DESERIALIZE` - An error deserializing `txTo`
 
 ### Example Implementations
 - [NBitcoin](https://github.com/NicolasDorier/NBitcoin/blob/master/NBitcoin/Script.cs#L814) (.NET Bindings)

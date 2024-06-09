@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fsociety-config.h>
+#include <config/nudi-config.h>
 #endif
 
 #include <qt/rpcconsole.h>
@@ -1297,7 +1297,7 @@ void RPCConsole::setButtonIcons()
 void RPCConsole::reloadThemedWidgets()
 {
     clear();
-    ui->promptLabel->setHidden(GUIUtil::fsocietyThemeActive());
+    ui->promptLabel->setHidden(GUIUtil::nudiThemeActive());
     // Adjust button icon colors on theme changes
     setButtonIcons();
 }

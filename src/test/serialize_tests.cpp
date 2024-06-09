@@ -5,7 +5,7 @@
 #include <serialize.h>
 #include <streams.h>
 #include <hash.h>
-#include <test/test_fsociety.h>
+#include <test/test_nudi.h>
 
 #include <stdint.h>
 

@@ -103,8 +103,8 @@ bool fDisableGovernance = false;
 */
 int nWalletBackups = 10;
 
-const char * const BITCOIN_CONF_FILENAME = "fsociety.conf";
-const char * const BITCOIN_PID_FILENAME = "fsocietyd.pid";
+const char * const BITCOIN_CONF_FILENAME = "nudi.conf";
+const char * const BITCOIN_PID_FILENAME = "nudid.pid";
 
 ArgsManager gArgs;
 
@@ -295,7 +295,7 @@ public:
         std::pair<bool,std::string> found_result(false, std::string());
 
         // We pass "true" to GetArgHelper in order to return the last
-        // argument value seen from the command line (so "fsocietyd -foo=bar
+        // argument value seen from the command line (so "nudid -foo=bar
         // -foo=baz" gives GetArg(am,"foo")=={true,"baz"}
         found_result = GetArgHelper(am.m_override_args, arg, true);
         if (found_result.first) {
@@ -669,7 +669,7 @@ fs::path GetDefaultDataDir()
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\NudiCore
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\NudiCore
     // Mac: ~/Library/Application Support/NudiCore
-    // Unix: ~/.fsocietycore
+    // Unix: ~/.nudicore
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "NudiCore";
@@ -685,7 +685,7 @@ fs::path GetDefaultDataDir()
     return pathRet / "Library/Application Support/NudiCore";
 #else
     // Unix
-    return pathRet / ".fsocietycore";
+    return pathRet / ".nudicore";
 #endif
 #endif
 }
@@ -806,7 +806,7 @@ void ArgsManager::ReadConfigFile(const std::string& confPath)
     if (stream.good()) {
         ReadConfigStream(stream);
     } else {
-        // Create an empty fsociety.conf if it does not excist
+        // Create an empty nudi.conf if it does not excist
         FILE* configFile = fopen(GetConfigFile(confPath).string().c_str(), "a");
         if (configFile != nullptr)
             fclose(configFile);

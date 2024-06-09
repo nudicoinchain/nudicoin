@@ -7,7 +7,7 @@
 #define BITCOIN_QT_BITCOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fsociety-config.h>
+#include <config/nudi-config.h>
 #endif
 
 #include <amount.h>
@@ -309,7 +309,7 @@ private Q_SLOTS:
     void showPeers();
     void showRepair();
 
-    /** Open external (default) editor with fsociety.conf */
+    /** Open external (default) editor with nudi.conf */
     void showConfEditor();
     /** Show folder with wallet backups in default file browser */
     void showBackups();

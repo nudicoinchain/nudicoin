@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 #if defined(BUILD_BITCOIN_INTERNAL) && defined(HAVE_CONFIG_H)
-#include <config/fsociety-config.h>
+#include <config/nudi-config.h>
   #if defined(_WIN32)
     #if defined(DLL_EXPORT)
       #if defined(HAVE_FUNC_ATTRIBUTE_DLLEXPORT)
@@ -35,38 +35,38 @@ extern "C" {
 
 #define BITCOINCONSENSUS_API_VER 0
 
-typedef enum fsocietyconsensus_error_t
+typedef enum nudiconsensus_error_t
 {
-    fsocietyconsensus_ERR_OK = 0,
-    fsocietyconsensus_ERR_TX_INDEX,
-    fsocietyconsensus_ERR_TX_SIZE_MISMATCH,
-    fsocietyconsensus_ERR_TX_DESERIALIZE,
-    fsocietyconsensus_ERR_INVALID_FLAGS,
-} fsocietyconsensus_error;
+    nudiconsensus_ERR_OK = 0,
+    nudiconsensus_ERR_TX_INDEX,
+    nudiconsensus_ERR_TX_SIZE_MISMATCH,
+    nudiconsensus_ERR_TX_DESERIALIZE,
+    nudiconsensus_ERR_INVALID_FLAGS,
+} nudiconsensus_error;
 
 /** Script verification flags */
 enum
 {
-    fsocietyconsensus_SCRIPT_FLAGS_VERIFY_NONE                = 0,
-    fsocietyconsensus_SCRIPT_FLAGS_VERIFY_P2SH                = (1U << 0), // evaluate P2SH (BIP16) subscripts
-    fsocietyconsensus_SCRIPT_FLAGS_VERIFY_DERSIG              = (1U << 2), // enforce strict DER (BIP66) compliance
-    fsocietyconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY           = (1U << 4), // enforce NULLDUMMY (BIP147)
-    fsocietyconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY = (1U << 9), // enable CHECKLOCKTIMEVERIFY (BIP65)
-    fsocietyconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY = (1U << 10), // enable CHECKSEQUENCEVERIFY (BIP112)
-    fsocietyconsensus_SCRIPT_FLAGS_VERIFY_ALL                 = fsocietyconsensus_SCRIPT_FLAGS_VERIFY_P2SH | fsocietyconsensus_SCRIPT_FLAGS_VERIFY_DERSIG |
-                                                            fsocietyconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY | fsocietyconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY |
-                                                            fsocietyconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY
+    nudiconsensus_SCRIPT_FLAGS_VERIFY_NONE                = 0,
+    nudiconsensus_SCRIPT_FLAGS_VERIFY_P2SH                = (1U << 0), // evaluate P2SH (BIP16) subscripts
+    nudiconsensus_SCRIPT_FLAGS_VERIFY_DERSIG              = (1U << 2), // enforce strict DER (BIP66) compliance
+    nudiconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY           = (1U << 4), // enforce NULLDUMMY (BIP147)
+    nudiconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY = (1U << 9), // enable CHECKLOCKTIMEVERIFY (BIP65)
+    nudiconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY = (1U << 10), // enable CHECKSEQUENCEVERIFY (BIP112)
+    nudiconsensus_SCRIPT_FLAGS_VERIFY_ALL                 = nudiconsensus_SCRIPT_FLAGS_VERIFY_P2SH | nudiconsensus_SCRIPT_FLAGS_VERIFY_DERSIG |
+                                                            nudiconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY | nudiconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY |
+                                                            nudiconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY
 };
 
 /// Returns 1 if the input nIn of the serialized transaction pointed to by
 /// txTo correctly spends the scriptPubKey pointed to by scriptPubKey under
 /// the additional constraints specified by flags.
 /// If not nullptr, err will contain an error/success code for the operation
-EXPORT_SYMBOL int fsocietyconsensus_verify_script(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen,
+EXPORT_SYMBOL int nudiconsensus_verify_script(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen,
                                     const unsigned char *txTo        , unsigned int txToLen,
-                                    unsigned int nIn, unsigned int flags, fsocietyconsensus_error* err);
+                                    unsigned int nIn, unsigned int flags, nudiconsensus_error* err);
 
-EXPORT_SYMBOL unsigned int fsocietyconsensus_version();
+EXPORT_SYMBOL unsigned int nudiconsensus_version();
 
 #ifdef __cplusplus
 } // extern "C"

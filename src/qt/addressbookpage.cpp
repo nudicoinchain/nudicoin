@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fsociety-config.h>
+#include <config/nudi-config.h>
 #endif
 
 #include <qt/addressbookpage.h>
@@ -244,7 +244,7 @@ void AddressBookPage::on_showAddressQRCode_clicked()
     QRDialog* dialog = new QRDialog(this);
 
     dialog->setAttribute(Qt::WA_DeleteOnClose);
-    dialog->setInfo(tr("QR code"), "fsociety:"+strAddress, "", strAddress);
+    dialog->setInfo(tr("QR code"), "nudi:"+strAddress, "", strAddress);
     dialog->show();
 }
 

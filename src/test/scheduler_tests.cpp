@@ -5,7 +5,7 @@
 #include <random.h>
 #include <scheduler.h>
 
-#include <test/test_fsociety.h>
+#include <test/test_nudi.h>
 
 #include <boost/thread.hpp>
 #include <boost/test/unit_test.hpp>

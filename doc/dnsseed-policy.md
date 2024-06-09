@@ -50,4 +50,4 @@ situations but should be discussed in public in advance.
 
 See also
 ----------
-- [fsociety-seeder](https://github.com/nightlyfsociety/fsociety-seeder) is a reference implementation of a DNS seed.
+- [nudi-seeder](https://github.com/nightlynudi/nudi-seeder) is a reference implementation of a DNS seed.

@@ -14,7 +14,7 @@
 #include <util.h>
 #include <validation.h>
 
-#include <test/test_fsociety.h>
+#include <test/test_nudi.h>
 
 #include <stdint.h>
 

@@ -129,7 +129,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../fsociety.qrc"/>
+  <include location="../nudi.qrc"/>
  </resources>
  <connections>
   <connection>

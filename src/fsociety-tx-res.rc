@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "Nudi"
-            VALUE "FileDescription",    "fsociety-tx (CLI Nudi transaction editor utility)"
+            VALUE "FileDescription",    "nudi-tx (CLI Nudi transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "fsociety-tx"
+            VALUE "InternalName",       "nudi-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "fsociety-tx.exe"
-            VALUE "ProductName",        "fsociety-tx"
+            VALUE "OriginalFilename",   "nudi-tx.exe"
+            VALUE "ProductName",        "nudi-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

@@ -157,7 +157,7 @@ UniValue getrawtransaction(const JSONRPCRequest& request)
             "         \"reqSigs\" : n,            (numeric) The required sigs\n"
             "         \"type\" : \"pubkeyhash\",  (string) The type, eg 'pubkeyhash'\n"
             "         \"addresses\" : [           (json array of string)\n"
-            "           \"address\"        (string) fsociety address\n"
+            "           \"address\"        (string) nudi address\n"
             "           ,...\n"
             "         ]\n"
             "       }\n"
@@ -400,15 +400,15 @@ UniValue createrawtransaction(const JSONRPCRequest& request)
             "2. \"outputs\"               (array, required) a json array with outputs (key-value pairs)\n"
             "   [\n"
             "    {\n"
-            "      \"address\": x.xxx,    (obj, optional) A key-value pair. The key (string) is the fsociety address, the value (float or string) is the amount in " + CURRENCY_UNIT + "\n"
+            "      \"address\": x.xxx,    (obj, optional) A key-value pair. The key (string) is the nudi address, the value (float or string) is the amount in " + CURRENCY_UNIT + "\n"
             "    },\n"
             "    {\n"
-            "      \"address\":           (obj, optional) A key-value pair. The key (string) is the fsociety address, value is a json string, numberic pair for future_maturity, future_locktime, and future_amount\n"
+            "      \"address\":           (obj, optional) A key-value pair. The key (string) is the nudi address, value is a json string, numberic pair for future_maturity, future_locktime, and future_amount\n"
             "                                   There can only one address contain future information. A future transaction is mature when there is enough confiration (future_maturity) or time (future_locktime)\n"
             "        {\n"
             "           \"future_maturity\":n, (numeric, required) number of confirmation for this future to mature.\n"
             "           \"future_locktime\":n  (numeric, required) total time in seconds from its first confirmation for this future to mature\n"
-            "           \"future_amount\":n    (numeric, required) fsociety amount to be locked\n"
+            "           \"future_amount\":n    (numeric, required) nudi amount to be locked\n"
             "         }\n"
             "    },\n"                                                                                                                                                                                                                                                                                                                                              "    },\n"
             "    {\n"
@@ -644,7 +644,7 @@ UniValue decodescript(const JSONRPCRequest& request)
             "  \"type\":\"type\", (string) The output type\n"
             "  \"reqSigs\": n,    (numeric) The required signatures\n"
             "  \"addresses\": [   (json array of string)\n"
-            "     \"address\"     (string) fsociety address\n"
+            "     \"address\"     (string) nudi address\n"
             "     ,...\n"
             "  ],\n"
             "  \"p2sh\",\"address\" (string) address of P2SH script wrapping this redeem script (not returned if the script is already a P2SH).\n"
@@ -1075,7 +1075,7 @@ UniValue signrawtransaction(const JSONRPCRequest& request)
 
     if (!IsDeprecatedRPCEnabled("signrawtransaction")) {
         throw JSONRPCError(RPC_METHOD_DEPRECATED, "signrawtransaction is deprecated and will be fully removed in v0.18. "
-            "To use signrawtransaction in v0.17, restart fsocietyd with -deprecatedrpc=signrawtransaction.\n"
+            "To use signrawtransaction in v0.17, restart nudid with -deprecatedrpc=signrawtransaction.\n"
             "Projects should transition to using signrawtransactionwithkey and signrawtransactionwithwallet before upgrading to v0.18");
     }
 

@@ -46,7 +46,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 1
 
 #define QAPP_ORG_NAME "Nudi"
-#define QAPP_ORG_DOMAIN "fsocietychain.com"
+#define QAPP_ORG_DOMAIN "nudichain.com"
 #define QAPP_APP_NAME_DEFAULT "Nudi-Qt"
 #define QAPP_APP_NAME_TESTNET "Nudi-Qt-testnet"
 #define QAPP_APP_NAME_DEVNET "Nudi-Qt-%s"

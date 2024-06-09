@@ -19,7 +19,7 @@ OpenURIDialog::OpenURIDialog(QWidget *parent) :
     ui->setupUi(this);
     GUIUtil::updateFonts();
     GUIUtil::disableMacFocusRect(this);
-    ui->uriEdit->setPlaceholderText("fsociety:");
+    ui->uriEdit->setPlaceholderText("nudi:");
 }
 
 OpenURIDialog::~OpenURIDialog()
@@ -50,5 +50,5 @@ void OpenURIDialog::on_selectFileButton_clicked()
     if(filename.isEmpty())
         return;
     QUrl fileUri = QUrl::fromLocalFile(filename);
-    ui->uriEdit->setText("fsociety:?r=" + QUrl::toPercentEncoding(fileUri.toString()));
+    ui->uriEdit->setText("nudi:?r=" + QUrl::toPercentEncoding(fileUri.toString()));
 }

@@ -6,7 +6,7 @@
 #include <script/interpreter.h>
 
 #include <test/lcg.h>
-#include <test/test_fsociety.h>
+#include <test/test_nudi.h>
 
 #include <boost/test/unit_test.hpp>
 

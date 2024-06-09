@@ -349,7 +349,7 @@
       <translation>&amp;รับ</translation>
     </message>
     <message>
-      <source>Request payments (generates QR codes and fsociety: URIs)</source>
+      <source>Request payments (generates QR codes and nudi: URIs)</source>
       <translation>เรียกเก็บการชำระเงิน (สร้างคิว อาร์ โค้ด QR codes และแหล่งที่มาของ Nudi: URIs)</translation>
     </message>
     <message>
@@ -541,7 +541,7 @@
       <translation>เปิด &amp;URI...</translation>
     </message>
     <message>
-      <source>Open a fsociety: URI or payment request</source>
+      <source>Open a nudi: URI or payment request</source>
       <translation>เปิด Nudi: URI หรือคำขอการชำระเงิน</translation>
     </message>
     <message>
@@ -1426,9 +1426,9 @@
     </message>
     <message>
       <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</source>
+https://www.transifex.com/projects/p/nudi/</source>
       <translation>ภาษาขาดหายไปหรือการแปลไม่สมบูรณ์ใช่หรือไม่?  สามารถช่วยแปลเพิ่มเติมได้ที่นี่:   
-https://www.transifex.com/projects/p/fsociety/</translation>
+https://www.transifex.com/projects/p/nudi/</translation>
     </message>
     <message>
       <source>&amp;Unit to show amounts in:</source>
@@ -1721,7 +1721,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>คำขอการชำระเงินผิดพลาด</translation>
     </message>
     <message>
-      <source>Cannot start fsociety: click-to-pay handler</source>
+      <source>Cannot start nudi: click-to-pay handler</source>
       <translation>ไม่สามารถเริ่มต้น Nudi: คลิกเพื่อจ่ายเงิน</translation>
     </message>
     <message>
@@ -1729,8 +1729,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>การจัดการ URI</translation>
     </message>
     <message>
-      <source>'fsociety://' is not a valid URI. Use 'fsociety:' instead.</source>
-      <translation>'fsociety://' ไม่ใช่ URI ที่ถูกต้องใช้ 'fsociety:' แทน</translation>
+      <source>'nudi://' is not a valid URI. Use 'nudi:' instead.</source>
+      <translation>'nudi://' ไม่ใช่ URI ที่ถูกต้องใช้ 'nudi:' แทน</translation>
     </message>
     <message>
       <source>Payment request fetch URL is invalid: %1</source>
@@ -2770,7 +2770,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>หากค่าธรรมเนียมที่กำหนดเองถูกตั้งค่าเป็น 1000 ruffs และการทำธุรกรรมนี้มีเพียง 250 ไบต์   ซึ่ง "ต่อกิโลไบต์" จะจ่ายเพียง 250 ruffs ในขณะที่ "อย่างน้อย" จ่าย 1000 ruffs สำหรับธุรกรรมที่มีขนาดใหญ่กว่ากิโลไบต์จะต้องจ่ายเป็นกิโลไบต์</translation>
     </message>
     <message>
-      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</source>
+      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</source>
       <translation>การจ่ายเงินเพียงค่าขั้นต่ำก็ทำได้ดีตราบเท่าที่ปริมาณธุรกรรมมีน้อยกว่าพื้นที่ในบล็อก&lt;br /&gt; แต่โปรดทราบว่าการจ่ายนี้จะสิ้นสุดลงในธุรกรรมที่ไม่เคยมีการยืนยัน ความต้องการใช้การทำธุรกรรมแบบ Nudi มีมากกว่าที่เครือข่ายสามารถดำเนินการได้</translation>
     </message>
     <message>
@@ -3081,7 +3081,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>ข้อความ: </translation>
     </message>
     <message>
-      <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+      <source>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
       <translation>ข้อความที่แนบมาไปยัง Nudi: URI ซึ่งจะถูกเก็บไว้กับธุรกรรมเพื่อเป็นข้อมูลอ้างอิงของคุณ  หมายเหตุ: ข้อความนี้จะถูกส่งไปยังเครือข่าย Nudi </translation>
     </message>
     <message>
@@ -4102,7 +4102,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
   </context>
   <context>
-    <name>fsociety-core</name>
+    <name>nudi-core</name>
     <message>
       <source>Nudi Core</source>
       <translation>Nudi Core</translation>

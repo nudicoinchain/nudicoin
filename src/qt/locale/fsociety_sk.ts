@@ -349,7 +349,7 @@
       <translation>&amp;Prijať</translation>
     </message>
     <message>
-      <source>Request payments (generates QR codes and fsociety: URIs)</source>
+      <source>Request payments (generates QR codes and nudi: URIs)</source>
       <translation>Vyžiadať platby (vygeneruje QR kódy a Nudi: URI)</translation>
     </message>
     <message>
@@ -541,8 +541,8 @@
       <translation>Otvoriť &amp;URI...</translation>
     </message>
     <message>
-      <source>Open a fsociety: URI or payment request</source>
-      <translation>Otvoriť fsociety: URI alebo žiadosť o platbu </translation>
+      <source>Open a nudi: URI or payment request</source>
+      <translation>Otvoriť nudi: URI alebo žiadosť o platbu </translation>
     </message>
     <message>
       <source>&amp;Command-line options</source>
@@ -1432,9 +1432,9 @@
     </message>
     <message>
       <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</source>
+https://www.transifex.com/projects/p/nudi/</source>
       <translation>Chýbajúci alebo nekompletný preklad? Pomôžte nám tu:
-https://www.transifex.com/projects/p/fsociety/</translation>
+https://www.transifex.com/projects/p/nudi/</translation>
     </message>
     <message>
       <source>&amp;Unit to show amounts in:</source>
@@ -1733,7 +1733,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Chyba pri vyžiadaní platby</translation>
     </message>
     <message>
-      <source>Cannot start fsociety: click-to-pay handler</source>
+      <source>Cannot start nudi: click-to-pay handler</source>
       <translation>Nudi sa nedá spustiť: click-to-pay handler</translation>
     </message>
     <message>
@@ -1741,8 +1741,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Spracovanie URI</translation>
     </message>
     <message>
-      <source>'fsociety://' is not a valid URI. Use 'fsociety:' instead.</source>
-      <translation>„fsociety://“ nie je platný URI. Namiesto toho použite „fsociety:“.</translation>
+      <source>'nudi://' is not a valid URI. Use 'nudi:' instead.</source>
+      <translation>„nudi://“ nie je platný URI. Namiesto toho použite „nudi:“.</translation>
     </message>
     <message>
       <source>Payment request fetch URL is invalid: %1</source>
@@ -2800,7 +2800,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Ak je vlastný poplatok nastavený na 1000 ruffov a transakcia je len 250 bytov, v tom prípade sa "za kilobajt" zaplatí  na poplatkoch iba 250 ruffov, &lt;br /&gt;zatiaľ čo "pri najmenšom" zaplatí 1000 ruffov. Pre transakcie väčšie ako jeden kilobajt, obe zaplatia rovnako za kilobajt. </translation>
     </message>
     <message>
-      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</source>
+      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</source>
       <translation>Platenie minimálneho poplatku je v poriadku pokiaľ je objem transakcií menší ako je miesto v bloku. &lt;br /&gt;Buďte opatrný pretože to môže skončiť s nikdy nepotvrdenými transakciami, akonáhle je dopyt po Nudi transakciách väčší ako dokáže sieť Nudi spracovať.</translation>
     </message>
     <message>
@@ -3117,8 +3117,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Správa:</translation>
     </message>
     <message>
-      <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
-      <translation>Správa ktorá bola pripojená ku fsociety: URI ktorá sa uchová spolu s transakciou pre vašu referenciu. Poznámka: Táto správa nebude poslaná cez sieť Nudi.</translation>
+      <source>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+      <translation>Správa ktorá bola pripojená ku nudi: URI ktorá sa uchová spolu s transakciou pre vašu referenciu. Poznámka: Táto správa nebude poslaná cez sieť Nudi.</translation>
     </message>
     <message>
       <source>Future</source>
@@ -4147,7 +4147,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
   </context>
   <context>
-    <name>fsociety-core</name>
+    <name>nudi-core</name>
     <message>
       <source>Nudi Core</source>
       <translation>Nudi Core</translation>

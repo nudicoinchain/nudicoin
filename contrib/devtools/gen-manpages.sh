@@ -7,10 +7,10 @@ BUILDDIR=${BUILDDIR:-$TOPDIR}
 BINDIR=${BINDIR:-$BUILDDIR/src}
 MANDIR=${MANDIR:-$TOPDIR/doc/man}
 
-BITCOIND=${BITCOIND:-$SRCDIR/fsocietyd}
-BITCOINCLI=${BITCOINCLI:-$SRCDIR/fsociety-cli}
-BITCOINTX=${BITCOINTX:-$SRCDIR/fsociety-tx}
-BITCOINQT=${BITCOINQT:-$SRCDIR/qt/fsociety-qt}
+BITCOIND=${BITCOIND:-$SRCDIR/nudid}
+BITCOINCLI=${BITCOINCLI:-$SRCDIR/nudi-cli}
+BITCOINTX=${BITCOINTX:-$SRCDIR/nudi-tx}
+BITCOINQT=${BITCOINQT:-$SRCDIR/qt/nudi-qt}
 
 [ ! -x $BITCOIND ] && echo "$BITCOIND not found or not executable." && exit 1
 
@@ -18,8 +18,8 @@ BITCOINQT=${BITCOINQT:-$SRCDIR/qt/fsociety-qt}
 BTCVER=($($BITCOINCLI --version | head -n1 | awk -F'[ -]' '{ print $6, $7 }'))
 
 # Create a footer file with copyright content.
-# This gets autodetected fine for fsocietyd if --version-string is not set,
-# but has different outcomes for fsociety-qt and fsociety-cli.
+# This gets autodetected fine for nudid if --version-string is not set,
+# but has different outcomes for nudi-qt and nudi-cli.
 echo "[COPYRIGHT]" > footer.h2m
 $BITCOIND --version | sed -n '1!p' >> footer.h2m
 

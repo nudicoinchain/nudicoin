@@ -19,7 +19,7 @@ Sanity checks:
 
 Once you've got the right hardware and software:
 
-    git clone git://github.com/fsocietychain/fsociety.git
+    git clone git://github.com/nudichain/nudi.git
     git clone git://github.com/devrandom/gitian-builder.git
     mkdir gitian-builder/inputs
     cd gitian-builder/inputs

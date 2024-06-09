@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.fsociety.Nudi-Qt";
+        return @"org.nudi.Nudi-Qt";
     } else {
         return [self __bundleIdentifier];
     }

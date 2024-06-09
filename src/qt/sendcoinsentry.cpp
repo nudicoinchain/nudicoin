@@ -31,7 +31,7 @@ SendCoinsEntry::SendCoinsEntry(QWidget* parent, bool hideFuture) :
 
     setButtonIcons();
 
-    // normal fsociety address field
+    // normal nudi address field
     GUIUtil::setupAddressWidget(ui->payTo, this, true);
 
     GUIUtil::setFont({ui->payToLabel,

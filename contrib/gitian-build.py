@@ -23,13 +23,13 @@ def setup():
             exit(1)
     subprocess.check_call(['sudo', 'apt-get', 'install', '-qq'] + programs)
     if not os.path.isdir('gitian.sigs'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/fsocietychain/gitian.sigs.git'])
-    if not os.path.isdir('fsociety-detached-sigs'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/fsocietychain/fsociety-detached-sigs.git'])
+        subprocess.check_call(['git', 'clone', 'https://github.com/nudichain/gitian.sigs.git'])
+    if not os.path.isdir('nudi-detached-sigs'):
+        subprocess.check_call(['git', 'clone', 'https://github.com/nudichain/nudi-detached-sigs.git'])
     if not os.path.isdir('gitian-builder'):
         subprocess.check_call(['git', 'clone', 'https://github.com/devrandom/gitian-builder.git'])
-    if not os.path.isdir('fsociety'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/fsocietychain/fsociety.git'])
+    if not os.path.isdir('nudi'):
+        subprocess.check_call(['git', 'clone', 'https://github.com/nudichain/nudi.git'])
     os.chdir('gitian-builder')
     make_image_prog = ['bin/make-base-vm', '--suite', 'bionic', '--arch', 'amd64']
     if args.docker:
@@ -46,36 +46,36 @@ def setup():
 def build():
     global args, workdir
 
-    os.makedirs('fsocietycore-binaries/' + args.version, exist_ok=True)
+    os.makedirs('nudicore-binaries/' + args.version, exist_ok=True)
     print('\nBuilding Dependencies\n')
     os.chdir('gitian-builder')
     os.makedirs('inputs', exist_ok=True)
 
     subprocess.check_call(['wget', '-O', 'inputs/osslsigncode-2.0.tar.gz', 'https://github.com/mtrojnar/osslsigncode/archive/2.0.tar.gz'])
     subprocess.check_call(["echo '5a60e0a4b3e0b4d655317b2f12a810211c50242138322b16e7e01c6fbb89d92f inputs/osslsigncode-2.0.tar.gz' | sha256sum -c"], shell=True)
-    subprocess.check_call(['make', '-C', '../fsociety/depends', 'download', 'SOURCES_PATH=' + os.getcwd() + '/cache/common'])
+    subprocess.check_call(['make', '-C', '../nudi/depends', 'download', 'SOURCES_PATH=' + os.getcwd() + '/cache/common'])
 
     if args.linux:
         print('\nCompiling ' + args.version + ' Linux')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'fsociety='+args.commit, '--url', 'fsociety='+args.url, '../fsociety/contrib/gitian-descriptors/gitian-linux.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-linux', '--destination', '../gitian.sigs/', '../fsociety/contrib/gitian-descriptors/gitian-linux.yml'])
-        subprocess.check_call('mv build/out/fsocietycore-*.tar.gz build/out/src/fsocietycore-*.tar.gz ../fsocietycore-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'nudi='+args.commit, '--url', 'nudi='+args.url, '../nudi/contrib/gitian-descriptors/gitian-linux.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-linux', '--destination', '../gitian.sigs/', '../nudi/contrib/gitian-descriptors/gitian-linux.yml'])
+        subprocess.check_call('mv build/out/nudicore-*.tar.gz build/out/src/nudicore-*.tar.gz ../nudicore-binaries/'+args.version, shell=True)
 
     if args.windows:
         print('\nCompiling ' + args.version + ' Windows')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'fsociety='+args.commit, '--url', 'fsociety='+args.url, '../fsociety/contrib/gitian-descriptors/gitian-win.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-unsigned', '--destination', '../gitian.sigs/', '../fsociety/contrib/gitian-descriptors/gitian-win.yml'])
-        subprocess.check_call('mv build/out/fsocietycore-*-win-unsigned.tar.gz inputs/fsocietycore-win-unsigned.tar.gz', shell=True)
-        subprocess.check_call('mv build/out/fsocietycore-*.zip build/out/fsocietycore-*.exe ../fsocietycore-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'nudi='+args.commit, '--url', 'nudi='+args.url, '../nudi/contrib/gitian-descriptors/gitian-win.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-unsigned', '--destination', '../gitian.sigs/', '../nudi/contrib/gitian-descriptors/gitian-win.yml'])
+        subprocess.check_call('mv build/out/nudicore-*-win-unsigned.tar.gz inputs/nudicore-win-unsigned.tar.gz', shell=True)
+        subprocess.check_call('mv build/out/nudicore-*.zip build/out/nudicore-*.exe ../nudicore-binaries/'+args.version, shell=True)
 
     if args.macos:
         print('\nCompiling ' + args.version + ' MacOS')
         subprocess.check_call(['wget', '-N', '-P', 'inputs', 'https://bitcoincore.org/depends-sources/sdks/MacOSX10.11.sdk.tar.gz'])
         subprocess.check_output(["echo 'bec9d089ebf2e2dd59b1a811a38ec78ebd5da18cbbcd6ab39d1e59f64ac5033f inputs/MacOSX10.11.sdk.tar.gz' | sha256sum -c"], shell=True)
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'fsociety='+args.commit, '--url', 'fsociety='+args.url, '../fsociety/contrib/gitian-descriptors/gitian-osx.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-unsigned', '--destination', '../gitian.sigs/', '../fsociety/contrib/gitian-descriptors/gitian-osx.yml'])
-        subprocess.check_call('mv build/out/fsocietycore-*-osx-unsigned.tar.gz inputs/fsocietycore-osx-unsigned.tar.gz', shell=True)
-        subprocess.check_call('mv build/out/fsocietycore-*.tar.gz build/out/fsocietycore-*.dmg ../fsocietycore-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'nudi='+args.commit, '--url', 'nudi='+args.url, '../nudi/contrib/gitian-descriptors/gitian-osx.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-unsigned', '--destination', '../gitian.sigs/', '../nudi/contrib/gitian-descriptors/gitian-osx.yml'])
+        subprocess.check_call('mv build/out/nudicore-*-osx-unsigned.tar.gz inputs/nudicore-osx-unsigned.tar.gz', shell=True)
+        subprocess.check_call('mv build/out/nudicore-*.tar.gz build/out/nudicore-*.dmg ../nudicore-binaries/'+args.version, shell=True)
 
     os.chdir(workdir)
 
@@ -94,16 +94,16 @@ def sign():
 
     if args.windows:
         print('\nSigning ' + args.version + ' Windows')
-        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../fsociety/contrib/gitian-descriptors/gitian-win-signer.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-signed', '--destination', '../gitian.sigs/', '../fsociety/contrib/gitian-descriptors/gitian-win-signer.yml'])
-        subprocess.check_call('mv build/out/fsocietycore-*win64-setup.exe ../fsocietycore-binaries/'+args.version, shell=True)
-        subprocess.check_call('mv build/out/fsocietycore-*win32-setup.exe ../fsocietycore-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../nudi/contrib/gitian-descriptors/gitian-win-signer.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-signed', '--destination', '../gitian.sigs/', '../nudi/contrib/gitian-descriptors/gitian-win-signer.yml'])
+        subprocess.check_call('mv build/out/nudicore-*win64-setup.exe ../nudicore-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/nudicore-*win32-setup.exe ../nudicore-binaries/'+args.version, shell=True)
 
     if args.macos:
         print('\nSigning ' + args.version + ' MacOS')
-        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../fsociety/contrib/gitian-descriptors/gitian-osx-signer.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-signed', '--destination', '../gitian.sigs/', '../fsociety/contrib/gitian-descriptors/gitian-osx-signer.yml'])
-        subprocess.check_call('mv build/out/fsocietycore-osx-signed.dmg ../fsocietycore-binaries/'+args.version+'/fsocietycore-'+args.version+'-osx.dmg', shell=True)
+        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../nudi/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-signed', '--destination', '../gitian.sigs/', '../nudi/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+        subprocess.check_call('mv build/out/nudicore-osx-signed.dmg ../nudicore-binaries/'+args.version+'/nudicore-'+args.version+'-osx.dmg', shell=True)
 
     os.chdir(workdir)
 
@@ -120,15 +120,15 @@ def verify():
     os.chdir('gitian-builder')
 
     print('\nVerifying v'+args.version+' Linux\n')
-    subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-linux', '../fsociety/contrib/gitian-descriptors/gitian-linux.yml'])
+    subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-linux', '../nudi/contrib/gitian-descriptors/gitian-linux.yml'])
     print('\nVerifying v'+args.version+' Windows\n')
-    subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-unsigned', '../fsociety/contrib/gitian-descriptors/gitian-win.yml'])
+    subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-unsigned', '../nudi/contrib/gitian-descriptors/gitian-win.yml'])
     print('\nVerifying v'+args.version+' MacOS\n')
-    subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-unsigned', '../fsociety/contrib/gitian-descriptors/gitian-osx.yml'])
+    subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-unsigned', '../nudi/contrib/gitian-descriptors/gitian-osx.yml'])
     print('\nVerifying v'+args.version+' Signed Windows\n')
-    subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-signed', '../fsociety/contrib/gitian-descriptors/gitian-win-signer.yml'])
+    subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-signed', '../nudi/contrib/gitian-descriptors/gitian-win-signer.yml'])
     print('\nVerifying v'+args.version+' Signed MacOS\n')
-    subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-signed', '../fsociety/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+    subprocess.call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-signed', '../nudi/contrib/gitian-descriptors/gitian-osx-signer.yml'])
 
     os.chdir(workdir)
 
@@ -138,7 +138,7 @@ def main():
     parser = argparse.ArgumentParser(usage='%(prog)s [options] signer version')
     parser.add_argument('-c', '--commit', action='store_true', dest='commit', help='Indicate that the version argument is for a commit or branch')
     parser.add_argument('-p', '--pull', action='store_true', dest='pull', help='Indicate that the version argument is the number of a github repository pull request')
-    parser.add_argument('-u', '--url', dest='url', default='https://github.com/fsocietychain/fsociety', help='Specify the URL of the repository. Default is %(default)s')
+    parser.add_argument('-u', '--url', dest='url', default='https://github.com/nudichain/nudi', help='Specify the URL of the repository. Default is %(default)s')
     parser.add_argument('-v', '--verify', action='store_true', dest='verify', help='Verify the Gitian build')
     parser.add_argument('-b', '--build', action='store_true', dest='build', help='Do a Gitian build')
     parser.add_argument('-s', '--sign', action='store_true', dest='sign', help='Make signed binaries for Windows and MacOS')
@@ -214,10 +214,10 @@ def main():
     if not args.build and not args.sign and not args.verify:
         exit(0)
 
-    os.chdir('fsociety')
+    os.chdir('nudi')
     if args.pull:
         subprocess.check_call(['git', 'fetch', args.url, 'refs/pull/'+args.version+'/merge'])
-        os.chdir('../gitian-builder/inputs/fsociety')
+        os.chdir('../gitian-builder/inputs/nudi')
         subprocess.check_call(['git', 'fetch', args.url, 'refs/pull/'+args.version+'/merge'])
         args.commit = subprocess.check_output(['git', 'show', '-s', '--format=%H', 'FETCH_HEAD'], universal_newlines=True, encoding='utf8').strip()
         args.version = 'pull-' + args.version

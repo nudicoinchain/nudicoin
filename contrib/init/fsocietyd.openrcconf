@@ -1,31 +1,31 @@
-# /etc/conf.d/fsocietyd: config file for /etc/init.d/fsocietyd
+# /etc/conf.d/nudid: config file for /etc/init.d/nudid
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/fsocietycore/fsociety.conf"
+#BITCOIND_CONFIGFILE="/etc/nudicore/nudi.conf"
 
 # What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/fsocietyd"
+#BITCOIND_PIDDIR="/var/run/nudid"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/fsocietyd.pid"
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/nudid.pid"
 
-# Where to write fsocietyd data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/fsocietyd"
+# Where to write nudid data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/nudid"
 
-# User and group to own fsocietyd process
-#BITCOIND_USER="fsocietycore"
-#BITCOIND_GROUP="fsocietycore"
+# User and group to own nudid process
+#BITCOIND_USER="nudicore"
+#BITCOIND_GROUP="nudicore"
 
-# Path to fsocietyd executable
-#BITCOIND_BIN="/usr/bin/fsocietyd"
+# Path to nudid executable
+#BITCOIND_BIN="/usr/bin/nudid"
 
-# Nice value to run fsocietyd under
+# Nice value to run nudid under
 #BITCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
 #BITCOIND_OPTS=""
 
-# The timeout in seconds OpenRC will wait for fsocietyd to terminate
+# The timeout in seconds OpenRC will wait for nudid to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule

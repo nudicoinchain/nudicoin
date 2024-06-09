@@ -4,32 +4,32 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-bin_PROGRAMS += qt/fsociety-qt
-EXTRA_LIBRARIES += qt/libfsocietyqt.a
+bin_PROGRAMS += qt/nudi-qt
+EXTRA_LIBRARIES += qt/libnudiqt.a
 
-# fsociety qt core #
+# nudi qt core #
 QT_TS = \
-  qt/locale/fsociety_ar.ts \
-  qt/locale/fsociety_bg.ts \
-  qt/locale/fsociety_de.ts \
-  qt/locale/fsociety_en.ts \
-  qt/locale/fsociety_es.ts \
-  qt/locale/fsociety_fi.ts \
-  qt/locale/fsociety_fr.ts \
-  qt/locale/fsociety_it.ts \
-  qt/locale/fsociety_ja.ts \
-  qt/locale/fsociety_ko.ts \
-  qt/locale/fsociety_nl.ts \
-  qt/locale/fsociety_pl.ts \
-  qt/locale/fsociety_pt.ts \
-  qt/locale/fsociety_ro.ts \
-  qt/locale/fsociety_ru.ts \
-  qt/locale/fsociety_sk.ts \
-  qt/locale/fsociety_th.ts \
-  qt/locale/fsociety_tr.ts \
-  qt/locale/fsociety_vi.ts \
-  qt/locale/fsociety_zh_CN.ts \
-  qt/locale/fsociety_zh_TW.ts
+  qt/locale/nudi_ar.ts \
+  qt/locale/nudi_bg.ts \
+  qt/locale/nudi_de.ts \
+  qt/locale/nudi_en.ts \
+  qt/locale/nudi_es.ts \
+  qt/locale/nudi_fi.ts \
+  qt/locale/nudi_fr.ts \
+  qt/locale/nudi_it.ts \
+  qt/locale/nudi_ja.ts \
+  qt/locale/nudi_ko.ts \
+  qt/locale/nudi_nl.ts \
+  qt/locale/nudi_pl.ts \
+  qt/locale/nudi_pt.ts \
+  qt/locale/nudi_ro.ts \
+  qt/locale/nudi_ru.ts \
+  qt/locale/nudi_sk.ts \
+  qt/locale/nudi_th.ts \
+  qt/locale/nudi_tr.ts \
+  qt/locale/nudi_vi.ts \
+  qt/locale/nudi_zh_CN.ts \
+  qt/locale/nudi_zh_TW.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \
@@ -110,17 +110,17 @@ BITCOIN_MM = \
   qt/macos_appnap.mm
 
 QT_MOC = \
-  qt/fsociety.moc \
+  qt/nudi.moc \
   qt/bitcoinamountfield.moc \
   qt/callback.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
 
-QT_QRC_CPP = qt/qrc_fsociety.cpp
-QT_QRC = qt/fsociety.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_fsociety_locale.cpp
-QT_QRC_LOCALE = qt/fsociety_locale.qrc
+QT_QRC_CPP = qt/qrc_nudi.cpp
+QT_QRC = qt/nudi.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_nudi_locale.cpp
+QT_QRC_LOCALE = qt/nudi_locale.qrc
 
 PROTOBUF_CC = qt/paymentrequest.pb.cc
 PROTOBUF_H = qt/paymentrequest.pb.h
@@ -223,9 +223,9 @@ RES_ICONS = \
   qt/res/icons/lock_closed.png \
   qt/res/icons/lock_open.png \
   qt/res/icons/quit.png \
-  qt/res/icons/fsociety.ico \
-  qt/res/icons/fsociety.png \
-  qt/res/icons/fsociety_testnet.ico \
+  qt/res/icons/nudi.ico \
+  qt/res/icons/nudi.png \
+  qt/res/icons/nudi_testnet.ico \
   qt/res/icons/receive.png \
   qt/res/icons/remove.png \
   qt/res/icons/send.png \
@@ -340,8 +340,8 @@ RES_IMAGES = \
   qt/res/images/checkbox_partly_checked_light.png \
   qt/res/images/checkbox_partly_checked_hover_light.png \
   qt/res/images/checkbox_partly_checked_disabled_light.png \
-  qt/res/images/fsociety_logo_toolbar.png \
-  qt/res/images/fsociety_logo_toolbar_blue.png \
+  qt/res/images/nudi_logo_toolbar.png \
+  qt/res/images/nudi_logo_toolbar_blue.png \
   qt/res/images/radio_normal_dark.png \
   qt/res/images/radio_normal_hover_dark.png \
   qt/res/images/radio_checked_dark.png \
@@ -384,19 +384,19 @@ RES_FONTS = \
 
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
 
-BITCOIN_RC = qt/res/fsociety-qt-res.rc
+BITCOIN_RC = qt/res/nudi-qt-res.rc
 
 BITCOIN_QT_INCLUDES = -DQT_NO_KEYWORDS
 
-qt_libfsocietyqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+qt_libnudiqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(QT_DBUS_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
-qt_libfsocietyqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
-qt_libfsocietyqt_a_OBJCXXFLAGS = $(AM_OBJCXXFLAGS) $(QT_PIE_FLAGS)
+qt_libnudiqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_libnudiqt_a_OBJCXXFLAGS = $(AM_OBJCXXFLAGS) $(QT_PIE_FLAGS)
 
-qt_libfsocietyqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
+qt_libnudiqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
   $(QT_QRC) $(QT_QRC_LOCALE) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_FONTS) $(RES_MOVIES)
 
-nodist_qt_libfsocietyqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
+nodist_qt_libnudiqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
   $(PROTOBUF_H) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
 
 # forms/foo.h -> forms/ui_foo.h
@@ -405,71 +405,71 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libfsocietyqt_a_OBJECTS) $(qt_fsociety_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libnudiqt_a_OBJECTS) $(qt_nudi_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# fsociety-qt binary #
-qt_fsociety_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+# nudi-qt binary #
+qt_nudi_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
-qt_fsociety_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_nudi_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 
-qt_fsociety_qt_SOURCES = qt/fsociety.cpp
+qt_nudi_qt_SOURCES = qt/nudi.cpp
 if TARGET_DARWIN
-  qt_fsociety_qt_SOURCES += $(BITCOIN_MM)
+  qt_nudi_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  qt_fsociety_qt_SOURCES += $(BITCOIN_RC)
+  qt_nudi_qt_SOURCES += $(BITCOIN_RC)
 endif
-qt_fsociety_qt_LDADD = qt/libfsocietyqt.a $(LIBBITCOIN_SERVER)
+qt_nudi_qt_LDADD = qt/libnudiqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-qt_fsociety_qt_LDADD += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
+qt_nudi_qt_LDADD += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
 endif
 if ENABLE_ZMQ
-qt_fsociety_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+qt_nudi_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
-qt_fsociety_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
+qt_nudi_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
   $(BACKTRACE_LIB) $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(BLS_LIBS)
-qt_fsociety_qt_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_fsociety_qt_LIBTOOLFLAGS = $(AM_LIBTOOLFLAGS) --tag CXX
+qt_nudi_qt_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_nudi_qt_LIBTOOLFLAGS = $(AM_LIBTOOLFLAGS) --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
 
 SECONDARY: $(QT_QM)
 
-$(srcdir)/qt/fsocietystrings.cpp: FORCE
+$(srcdir)/qt/nudistrings.cpp: FORCE
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) PACKAGE_NAME="$(PACKAGE_NAME)" COPYRIGHT_HOLDERS="$(COPYRIGHT_HOLDERS)" COPYRIGHT_HOLDERS_SUBSTITUTION="$(COPYRIGHT_HOLDERS_SUBSTITUTION)" $(PYTHON) ../share/qt/extract_strings_qt.py $(libdash_server_a_SOURCES) $(libdash_wallet_a_SOURCES) $(libdash_common_a_SOURCES) $(libdash_zmq_a_SOURCES) $(libdash_consensus_a_SOURCES) $(libdash_util_a_SOURCES)
 
-translate: $(srcdir)/qt/fsocietystrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_BASE_CPP) qt/fsociety.cpp $(BITCOIN_QT_WINDOWS_CPP) $(BITCOIN_QT_WALLET_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: $(srcdir)/qt/nudistrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_BASE_CPP) qt/nudi.cpp $(BITCOIN_QT_WINDOWS_CPP) $(BITCOIN_QT_WALLET_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -I$(srcdir) -locations relative -no-obsolete -ts $(srcdir)/qt/locale/fsociety_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -I$(srcdir) -locations relative -no-obsolete -ts $(srcdir)/qt/locale/nudi_en.ts
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC)
 	@cp -f $< $(@D)/temp_$(<F)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) $(RCCFLAGS) -name fsociety_locale $(@D)/temp_$(<F) | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) $(RCCFLAGS) -name nudi_locale $(@D)/temp_$(<F) | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 	@rm $(@D)/temp_$(<F)
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_FONTS) $(RES_MOVIES) $(PROTOBUF_H)
 	@test -f $(RCC)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) $(RCCFLAGS) -name fsociety $< | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) $(RCCFLAGS) -name nudi $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
-CLEAN_QT = $(nodist_qt_libfsocietyqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_fsociety_locale.qrc qt/res/css/colors/*
+CLEAN_QT = $(nodist_qt_libnudiqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_nudi_locale.qrc qt/res/css/colors/*
 
 CLEANFILES += $(CLEAN_QT)
 
-fsociety_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libfsocietyqt_a_OBJECTS) $(qt_fsociety_qt_OBJECTS) qt/fsociety-qt$(EXEEXT) $(LIBBITCOINQT)
+nudi_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libnudiqt_a_OBJECTS) $(qt_nudi_qt_OBJECTS) qt/nudi-qt$(EXEEXT) $(LIBBITCOINQT)
 
-fsociety_qt : qt/fsociety-qt$(EXEEXT)
+nudi_qt : qt/nudi-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

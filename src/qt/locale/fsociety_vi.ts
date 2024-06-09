@@ -349,8 +349,8 @@
       <translation>&amp;Nhận</translation>
     </message>
     <message>
-      <source>Request payments (generates QR codes and fsociety: URIs)</source>
-      <translation>Yêu cầu thanh toán (sinh mã QR và fsociety: URIs)</translation>
+      <source>Request payments (generates QR codes and nudi: URIs)</source>
+      <translation>Yêu cầu thanh toán (sinh mã QR và nudi: URIs)</translation>
     </message>
     <message>
       <source>&amp;Transactions</source>
@@ -541,8 +541,8 @@
       <translation>Mở &amp;URI...</translation>
     </message>
     <message>
-      <source>Open a fsociety: URI or payment request</source>
-      <translation>Mở một fsociety: URI hoặc một yêu cầu thanh toán</translation>
+      <source>Open a nudi: URI or payment request</source>
+      <translation>Mở một nudi: URI hoặc một yêu cầu thanh toán</translation>
     </message>
     <message>
       <source>&amp;Command-line options</source>
@@ -1425,9 +1425,9 @@
     </message>
     <message>
       <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</source>
+https://www.transifex.com/projects/p/nudi/</source>
       <translation>Ngôn ngữ ị thiếu hoặc việc dịch chưa hoàn tất? Tham gia dịch giúp tại đây:
-https://www.transifex.com/projects/p/fsociety/</translation>
+https://www.transifex.com/projects/p/nudi/</translation>
     </message>
     <message>
       <source>&amp;Unit to show amounts in:</source>
@@ -1720,15 +1720,15 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Yêu cầu thanh toán bị lỗi</translation>
     </message>
     <message>
-      <source>Cannot start fsociety: click-to-pay handler</source>
-      <translation>Không thể khởi động fsociety: trình xử lý click-to-pay</translation>
+      <source>Cannot start nudi: click-to-pay handler</source>
+      <translation>Không thể khởi động nudi: trình xử lý click-to-pay</translation>
     </message>
     <message>
       <source>URI handling</source>
       <translation>xử lý URI</translation>
     </message>
     <message>
-      <source>'fsociety://' is not a valid URI. Use 'fsociety:' instead.</source>
+      <source>'nudi://' is not a valid URI. Use 'nudi:' instead.</source>
       <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2769,8 +2769,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Nếu mức phí tuỳ chỉnh được đặt là 1000 ruff và giao dịch chỉ có 250 byte, thì "theo kilobyte" chỉ trả 250 ruff cho phí,&lt;br /&gt;trong khi "ít nhất" phải trả 1000 ruff. Cho các giao dịch lớn hơn 1 kilobyte thì cả hai đều trả theo kilobyte.</translation>
     </message>
     <message>
-      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</source>
-      <translation>Chỉ trả phí tối thiểu cũng được chỉ khi mà có lượng giao dịch ít hơn không gian trong khối.&lt;br /&gt;Nhưng cần lưu ý là nó có thể xảy ra hiện tượng giao dịch không bao giờ được xác nhận một khi có nhiều nhu cầu giao fsociety hơn khả năng mà mạng lưới có thể xử lý được.</translation>
+      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</source>
+      <translation>Chỉ trả phí tối thiểu cũng được chỉ khi mà có lượng giao dịch ít hơn không gian trong khối.&lt;br /&gt;Nhưng cần lưu ý là nó có thể xảy ra hiện tượng giao dịch không bao giờ được xác nhận một khi có nhiều nhu cầu giao nudi hơn khả năng mà mạng lưới có thể xử lý được.</translation>
     </message>
     <message>
       <source>per kilobyte</source>
@@ -3080,8 +3080,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Thông điệp:</translation>
     </message>
     <message>
-      <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
-      <translation>Một thông điệp được đính với fsociety: URI đó sẽ được lưu trữ với các giao dịch cho các bạn tham khảo. Lưu ý: Thông điệp này sẽ không được gửi qua mạng Nudi. </translation>
+      <source>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+      <translation>Một thông điệp được đính với nudi: URI đó sẽ được lưu trữ với các giao dịch cho các bạn tham khảo. Lưu ý: Thông điệp này sẽ không được gửi qua mạng Nudi. </translation>
     </message>
     <message>
       <source>Future</source>
@@ -4101,7 +4101,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
   </context>
   <context>
-    <name>fsociety-core</name>
+    <name>nudi-core</name>
     <message>
       <source>Nudi Core</source>
       <translation>Nudi Core</translation>

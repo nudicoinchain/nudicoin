@@ -10,7 +10,7 @@ open digital money. This whitepaper introduces Nudi, a cryptocurrency designed t
 empower individuals, promote decentralized systems, and foster financial inclusivity. By
 combining smartnodes, passive earnings, and mineable capabilities through the innovative
 ghostrider algorithm, Nudi seeks to create a more hopeful and prosperous future for all.
-Link: https://fsocietychain.com/assets/whitepaper.pdf
+Link: https://nudichain.com/assets/whitepaper.pdf
 
 
 License
@@ -23,7 +23,7 @@ Development Process
 -------------------
 
 The `master` branch is meant to be stable. Development is done in separate branches.
-[Tags](https://github.com/fsocietychain/fsociety/tags) are created to indicate new official,
+[Tags](https://github.com/nudichain/nudi/tags) are created to indicate new official,
 stable release versions of Nudi Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).

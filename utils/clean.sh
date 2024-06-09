@@ -9,7 +9,7 @@ rm -f doc/man/Makefile
 rm -f doc/man/Makefile.in
 
 rm -f src/config/stamp-h1
-rm -f src/config/fsociety-config.h
+rm -f src/config/nudi-config.h
 rm -f src/obj/build.h
 rm -f src/leveldb/build_config.mk
 
@@ -17,7 +17,7 @@ rm -f src/test/buildenv.py
 rm -f src/test/data/*.json.h
 rm -f src/test/data/*.raw.h
 
-rm -rf test_bitcoin.coverage/ fsociety-gtest.coverage/ total.coverage/
+rm -rf test_bitcoin.coverage/ nudi-gtest.coverage/ total.coverage/
 
 rm -rf cache
 rm -rf target
@@ -69,19 +69,19 @@ clean_dirs .libs
 clean_dirs __pycache__
 
 clean_exe src/bench/bench_bitcoin
-clean_exe src/fsociety-cli
-clean_exe src/fsocietyd
-clean_exe src/fsociety-gtest
-clean_exe src/fsociety-tx
-clean_exe src/test/test_fsociety
-clean_exe src/test/test_fsociety_fuzzy
+clean_exe src/nudi-cli
+clean_exe src/nudid
+clean_exe src/nudi-gtest
+clean_exe src/nudi-tx
+clean_exe src/test/test_nudi
+clean_exe src/test/test_nudi_fuzzy
 
 clean_exe src/leveldb/db_bench
 clean_exe src/leveldb/leveldbutil
 rm -f src/leveldb/*_test src/leveldb/*_test.exe
 rm -f src/leveldb/*.so src/leveldb/*.so.*
 
-clean_dep . src/config/fsociety-config.h.in
+clean_dep . src/config/nudi-config.h.in
 
 clean_dep src/secp256k1 src/libsecp256k1-config.h.in
 rm -f src/secp256k1/src/ecmult_static_context.h

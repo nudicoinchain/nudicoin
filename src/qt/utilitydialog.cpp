@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fsociety-config.h>
+#include <config/nudi-config.h>
 #endif
 
 #include <qt/utilitydialog.h>
@@ -76,7 +76,7 @@ HelpMessageDialog::HelpMessageDialog(interfaces::Node& node, QWidget *parent, He
     } else if (helpMode == cmdline) {
         setWindowTitle(tr("Command-line options"));
         QString header = "Usage:\n"
-            "  fsociety-qt [command-line options]                     \n";
+            "  nudi-qt [command-line options]                     \n";
         QTextCursor cursor(ui->helpMessage->document());
         cursor.insertText(version);
         cursor.insertBlock();

@@ -46,14 +46,14 @@
 #include <QUrlQuery>
 
 const int BITCOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITCOIN_IPC_PREFIX("fsociety:");
+const QString BITCOIN_IPC_PREFIX("nudi:");
 // BIP70 payment protocol messages
 const char* BIP70_MESSAGE_PAYMENTACK = "PaymentACK";
 const char* BIP70_MESSAGE_PAYMENTREQUEST = "PaymentRequest";
 // BIP71 payment protocol media types
-const char* BIP71_MIMETYPE_PAYMENT = "application/fsociety-payment";
-const char* BIP71_MIMETYPE_PAYMENTACK = "application/fsociety-paymentack";
-const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/fsociety-paymentrequest";
+const char* BIP71_MIMETYPE_PAYMENT = "application/nudi-payment";
+const char* BIP71_MIMETYPE_PAYMENTACK = "application/nudi-paymentack";
+const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/nudi-paymentrequest";
 
 struct X509StoreDeleter {
       void operator()(X509_STORE* b) {
@@ -200,11 +200,11 @@ void PaymentServer::ipcParseCommandLine(interfaces::Node& node, int argc, char* 
         if (arg.startsWith("-"))
             continue;
 
-        // If the fsociety: URI contains a payment request, we are not able to detect the
+        // If the nudi: URI contains a payment request, we are not able to detect the
         // network as that would require fetching and parsing the payment request.
         // That means clicking such an URI which contains a testnet payment request
         // will start a mainnet instance and throw a "wrong network" error.
-        if (arg.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // fsociety: URI
+        if (arg.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // nudi: URI
         {
             savedPaymentRequests.append(arg);
 
@@ -300,7 +300,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
     GOOGLE_PROTOBUF_VERIFY_VERSION;
 
     // Install global event filter to catch QFileOpenEvents
-    // on Mac: sent when you click fsociety: links
+    // on Mac: sent when you click nudi: links
     // other OSes: helpful when dealing with payment request files
     if (parent)
         parent->installEventFilter(this);
@@ -317,7 +317,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
         if (!uriServer->listen(name)) {
             // constructor is called early in init, so don't use "Q_EMIT message()" here
             QMessageBox::critical(0, tr("Payment request error"),
-                tr("Cannot start fsociety: click-to-pay handler"));
+                tr("Cannot start nudi: click-to-pay handler"));
         }
         else {
             connect(uriServer, SIGNAL(newConnection()), this, SLOT(handleURIConnection()));
@@ -332,7 +332,7 @@ PaymentServer::~PaymentServer()
 }
 
 //
-// OSX-specific way of handling fsociety: URIs and PaymentRequest mime types.
+// OSX-specific way of handling nudi: URIs and PaymentRequest mime types.
 // Also used by paymentservertests.cpp and when opening a payment request file
 // via "Open URI..." menu entry.
 //
@@ -357,7 +357,7 @@ void PaymentServer::initNetManager()
         return;
     delete netManager;
 
-    // netManager is used to fetch paymentrequests given in fsociety: URIs
+    // netManager is used to fetch paymentrequests given in nudi: URIs
     netManager = new QNetworkAccessManager(this);
 
     QNetworkProxy proxy;
@@ -397,12 +397,12 @@ void PaymentServer::handleURIOrFile(const QString& s)
         return;
     }
 
-    if (s.startsWith("fsociety://", Qt::CaseInsensitive))
+    if (s.startsWith("nudi://", Qt::CaseInsensitive))
     {
-        Q_EMIT message(tr("URI handling"), tr("'fsociety://' is not a valid URI. Use 'fsociety:' instead."),
+        Q_EMIT message(tr("URI handling"), tr("'nudi://' is not a valid URI. Use 'nudi:' instead."),
             CClientUIInterface::MSG_ERROR);
     }
-    else if (s.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // fsociety: URI
+    else if (s.startsWith(BITCOIN_IPC_PREFIX, Qt::CaseInsensitive)) // nudi: URI
     {
         QUrlQuery uri((QUrl(s)));
         if (uri.hasQueryItem("r")) // payment request URI
@@ -553,7 +553,7 @@ bool PaymentServer::processPaymentRequest(const PaymentRequestPlus& request, Sen
             addresses.append(QString::fromStdString(EncodeDestination(dest)));
         }
         else if (!recipient.authenticatedMerchant.isEmpty()) {
-            // Unauthenticated payment requests to custom fsociety addresses are not supported
+            // Unauthenticated payment requests to custom nudi addresses are not supported
             // (there is no good way to tell the user where they are paying in a way they'd
             // have a chance of understanding).
             Q_EMIT message(tr("Payment request rejected"),

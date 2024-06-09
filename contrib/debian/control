@@ -1,8 +1,8 @@
-Source: fsociety
+Source: nudi
 Section: utils
 Priority: optional
-Maintainer: Holger Schinzel <holger@fsocietychain.com>
-Uploaders: Holger Schinzel <holger@fsocietychain.com>
+Maintainer: Holger Schinzel <holger@nudichain.com>
+Uploaders: Holger Schinzel <holger@nudichain.com>
 Build-Depends: debhelper,
  devscripts,
  automake,
@@ -26,11 +26,11 @@ Build-Depends: debhelper,
  python,
  libzmq3-dev
 Standards-Version: 3.9.2
-Homepage: https://www.fsocietychain.com/
-Vcs-Git: git://github.com/fsocietychain/fsociety.git
-Vcs-Browser: https://github.com/fsocietychain/fsociety
+Homepage: https://www.nudichain.com/
+Vcs-Git: git://github.com/nudichain/nudi.git
+Vcs-Browser: https://github.com/nudichain/nudi
 
-Package: fsocietyd
+Package: nudid
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
@@ -40,10 +40,10 @@ Description: peer-to-peer network based digital currency - daemon
  and issuing money are carried out collectively by the network. Nudi Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides the daemon, fsocietyd, and the CLI tool
- fsociety-cli to interact with the daemon.
+ This package provides the daemon, nudid, and the CLI tool
+ nudi-cli to interact with the daemon.
 
-Package: fsociety-qt
+Package: nudi-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
@@ -55,7 +55,7 @@ Description: peer-to-peer network based digital currency - Qt GUI
  .
  This package provides Nudi-Qt, a GUI for Nudi based on Qt.
 
-Package: fsociety-tx
+Package: nudi-tx
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer digital currency - standalone transaction tool
@@ -65,6 +65,6 @@ Description: peer-to-peer digital currency - standalone transaction tool
  and issuing money are carried out collectively by the network. Nudi Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides fsociety-tx, a command-line transaction creation
- tool which can be used without a fsociety daemon.  Some means of
+ This package provides nudi-tx, a command-line transaction creation
+ tool which can be used without a nudi daemon.  Some means of
  exchanging minimal transaction data with peers is still required.

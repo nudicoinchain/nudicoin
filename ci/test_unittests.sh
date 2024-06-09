@@ -20,11 +20,11 @@ export LD_LIBRARY_PATH=$BUILD_DIR/depends/$HOST/lib
 export WINEDEBUG=fixme-all
 export BOOST_TEST_LOG_LEVEL=test_suite
 
-cd build-ci/fsocietycore-$BUILD_TARGET
+cd build-ci/nudicore-$BUILD_TARGET
 
 if [ "$DIRECT_WINE_EXEC_TESTS" = "true" ]; then
   # Inside Docker, binfmt isn't working so we can't trust in make invoking windows binaries correctly
-  wine ./src/test/test_fsociety.exe
+  wine ./src/test/test_nudi.exe
 else
   make $MAKEJOBS check VERBOSE=1
 fi

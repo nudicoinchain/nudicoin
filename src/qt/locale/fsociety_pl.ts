@@ -349,8 +349,8 @@
       <translation>Odbie&amp;rz</translation>
     </message>
     <message>
-      <source>Request payments (generates QR codes and fsociety: URIs)</source>
-      <translation>Poproś o płatności (generuje kod QR oraz fsociety: link)</translation>
+      <source>Request payments (generates QR codes and nudi: URIs)</source>
+      <translation>Poproś o płatności (generuje kod QR oraz nudi: link)</translation>
     </message>
     <message>
       <source>&amp;Transactions</source>
@@ -541,8 +541,8 @@
       <translation>Otwórz &amp;URI...</translation>
     </message>
     <message>
-      <source>Open a fsociety: URI or payment request</source>
-      <translation>Otwórz fsociety: Link lub żądanie zapłaty</translation>
+      <source>Open a nudi: URI or payment request</source>
+      <translation>Otwórz nudi: Link lub żądanie zapłaty</translation>
     </message>
     <message>
       <source>&amp;Command-line options</source>
@@ -1432,9 +1432,9 @@
     </message>
     <message>
       <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</source>
+https://www.transifex.com/projects/p/nudi/</source>
       <translation>Nudi Core nie został przetłumaczony na Twój język? Tłumaczenie jest niepełne lub niepoprawne? Możesz pomóc nam tłumaczyć tutaj:
-https://www.transifex.com/projects/p/fsociety/</translation>
+https://www.transifex.com/projects/p/nudi/</translation>
     </message>
     <message>
       <source>&amp;Unit to show amounts in:</source>
@@ -1733,15 +1733,15 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Błąd żądania płatności</translation>
     </message>
     <message>
-      <source>Cannot start fsociety: click-to-pay handler</source>
-      <translation>Nie można włączyć fsociety: kliknij-aby-zapłacić ubsługującemu.</translation>
+      <source>Cannot start nudi: click-to-pay handler</source>
+      <translation>Nie można włączyć nudi: kliknij-aby-zapłacić ubsługującemu.</translation>
     </message>
     <message>
       <source>URI handling</source>
       <translation>Obsługa URI</translation>
     </message>
     <message>
-      <source>'fsociety://' is not a valid URI. Use 'fsociety:' instead.</source>
+      <source>'nudi://' is not a valid URI. Use 'nudi:' instead.</source>
       <translation>'Nudi: //' nie jest prawidłowym identyfikatorem URI. Zamiast tego użyj 'Nudi:'.</translation>
     </message>
     <message>
@@ -2800,7 +2800,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Jeśli ręcznie ustalona opłata wynosi 1000 Ruffów, a sama transakcja ma tylko 250 bajtów, to opłata "za kilobajt" wynosi tylko 250 ruffów. &lt;br/&gt;Dzieje się tak dla każdej transakcji poniżej 1000 ruffów. W przypadku transakcji większych niż jeden kilobajt opłata jest naliczana od kilobajta. </translation>
     </message>
     <message>
-      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</source>
+      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</source>
       <translation>Uiszczanie minimalnej opłaty za transakcję jest ok, dopóki ilość transakcji nie przekracza dostępnego miejsca w bloku. &lt;br /&gt;Jeśli zostanie wysłanych więcej transakcji niż sieć może przetworzyć, to może się zdarzyć, że Twoja transakcja nigdy nie zostanie potwierdzona.</translation>
     </message>
     <message>
@@ -3117,8 +3117,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Wiadomość:</translation>
     </message>
     <message>
-      <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
-      <translation>Wiadomość, która została dołączona do fsociety: Link, który zostanie zapisany wraz z transakcją do wglądu w przyszłości. Zauważ, że sama wiadomość nie zostanie wysłana przez sieć Nudi.</translation>
+      <source>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+      <translation>Wiadomość, która została dołączona do nudi: Link, który zostanie zapisany wraz z transakcją do wglądu w przyszłości. Zauważ, że sama wiadomość nie zostanie wysłana przez sieć Nudi.</translation>
     </message>
     <message>
       <source>Future</source>
@@ -4147,7 +4147,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
   </context>
   <context>
-    <name>fsociety-core</name>
+    <name>nudi-core</name>
     <message>
       <source>Nudi Core</source>
       <translation>Nudi Core</translation>

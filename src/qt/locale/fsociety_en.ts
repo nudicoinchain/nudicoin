@@ -400,7 +400,7 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../fsociety.cpp" line="+541"/>
+        <location filename="../nudi.cpp" line="+541"/>
         <source>A fatal error occurred. Nudi Core can no longer continue safely and will quit.</source>
         <translation>A fatal error occurred. Nudi Core can no longer continue safely and will quit.</translation>
     </message>
@@ -446,8 +446,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Request payments (generates QR codes and fsociety: URIs)</source>
-        <translation>Request payments (generates QR codes and fsociety: URIs)</translation>
+        <source>Request payments (generates QR codes and nudi: URIs)</source>
+        <translation>Request payments (generates QR codes and nudi: URIs)</translation>
     </message>
     <message>
         <location line="+222"/>
@@ -686,8 +686,8 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Open a fsociety: URI or payment request</source>
-        <translation>Open a fsociety: URI or payment request</translation>
+        <source>Open a nudi: URI or payment request</source>
+        <translation>Open a nudi: URI or payment request</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1796,9 +1796,9 @@
     <message>
         <location line="+21"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</source>
+https://www.transifex.com/projects/p/nudi/</source>
         <translation>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</translation>
+https://www.transifex.com/projects/p/nudi/</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -2183,8 +2183,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <location line="-396"/>
-        <source>Cannot start fsociety: click-to-pay handler</source>
-        <translation>Cannot start fsociety: click-to-pay handler</translation>
+        <source>Cannot start nudi: click-to-pay handler</source>
+        <translation>Cannot start nudi: click-to-pay handler</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2196,8 +2196,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <location line="-41"/>
-        <source>&apos;fsociety://&apos; is not a valid URI. Use &apos;fsociety:&apos; instead.</source>
-        <translation>&apos;fsociety://&apos; is not a valid URI. Use &apos;fsociety:&apos; instead.</translation>
+        <source>&apos;nudi://&apos; is not a valid URI. Use &apos;nudi:&apos; instead.</source>
+        <translation>&apos;nudi://&apos; is not a valid URI. Use &apos;nudi:&apos; instead.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -2337,7 +2337,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../fsociety.cpp" line="+17"/>
+        <location filename="../nudi.cpp" line="+17"/>
         <source>Choose data directory on startup (default: %u)</source>
         <translation>Choose data directory on startup (default: %u)</translation>
     </message>
@@ -2535,7 +2535,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
 <context>
     <name>QObject::QObject</name>
     <message>
-        <location filename="../fsociety.cpp" line="-171"/>
+        <location filename="../nudi.cpp" line="-171"/>
         <source>Error: Specified data directory &quot;%1&quot; does not exist.</source>
         <translation>Error: Specified data directory &quot;%1&quot; does not exist.</translation>
     </message>
@@ -3546,8 +3546,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     <message>
         <location line="+30"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</source>
-        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</source>
+        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</translation>
     </message>
     <message>
         <location line="-40"/>
@@ -3945,8 +3945,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
-        <translation>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</translation>
+        <source>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+        <translation>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</translation>
     </message>
     <message>
         <location line="+116"/>
@@ -5244,9 +5244,9 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
 </context>
 <context>
-    <name>fsociety-core</name>
+    <name>nudi-core</name>
     <message>
-        <location filename="../fsocietystrings.cpp" line="+12"/>
+        <location filename="../nudistrings.cpp" line="+12"/>
         <source>Nudi Core</source>
         <translation>Nudi Core</translation>
     </message>

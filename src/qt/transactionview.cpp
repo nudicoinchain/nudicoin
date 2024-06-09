@@ -547,7 +547,7 @@ void TransactionView::showAddressQRCode()
     QRDialog* dialog = new QRDialog(this);
 
     dialog->setAttribute(Qt::WA_DeleteOnClose);
-    dialog->setInfo(tr("QR code"), "fsociety:"+strAddress, "", strAddress);
+    dialog->setInfo(tr("QR code"), "nudi:"+strAddress, "", strAddress);
     dialog->show();
 }
 

@@ -5,7 +5,7 @@
 
 #include <bls/bls.h>
 #include <bls/bls_batchverifier.h>
-#include <test/test_fsociety.h>
+#include <test/test_nudi.h>
 
 #include <boost/test/unit_test.hpp>
 

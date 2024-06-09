@@ -15,7 +15,7 @@ export PYTHONPATH
 
 if BUILD_BITCOIN_LIBS
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = libfsocietyconsensus.pc
+pkgconfig_DATA = libnudiconsensus.pc
 endif
 
 BITCOIND_BIN=$(top_builddir)/src/$(BITCOIN_DAEMON_NAME)$(EXEEXT)
@@ -35,14 +35,14 @@ OSX_BACKGROUND_IMAGE_DPIS=36 72
 OSX_DSSTORE_GEN=$(top_srcdir)/contrib/macdeploy/custom_dsstore.py
 OSX_DEPLOY_SCRIPT=$(top_srcdir)/contrib/macdeploy/macdeployqtplus
 OSX_FANCY_PLIST=$(top_srcdir)/contrib/macdeploy/fancy.plist
-OSX_INSTALLER_ICONS=$(top_srcdir)/src/qt/res/icons/fsociety.icns
+OSX_INSTALLER_ICONS=$(top_srcdir)/src/qt/res/icons/nudi.icns
 OSX_PLIST=$(top_builddir)/share/qt/Info.plist #not installed
 OSX_QT_TRANSLATIONS = da,de,es,hu,ru,uk,zh_CN,zh_TW
 
 DIST_DOCS = $(wildcard doc/*.md) $(wildcard doc/release-notes/*.md)
-DIST_CONTRIB = $(top_srcdir)/contrib/fsociety-cli.bash-completion \
-	       $(top_srcdir)/contrib/fsociety-tx.bash-completion \
-	       $(top_srcdir)/contrib/fsocietyd.bash-completion \
+DIST_CONTRIB = $(top_srcdir)/contrib/nudi-cli.bash-completion \
+	       $(top_srcdir)/contrib/nudi-tx.bash-completion \
+	       $(top_srcdir)/contrib/nudid.bash-completion \
 	       $(top_srcdir)/contrib/init
 DIST_SHARE = \
   $(top_srcdir)/share/genbuild.sh \
@@ -51,7 +51,7 @@ DIST_SHARE = \
 BIN_CHECKS=$(top_srcdir)/contrib/devtools/symbol-check.py \
            $(top_srcdir)/contrib/devtools/security-check.py
 
-WINDOWS_PACKAGING = $(top_srcdir)/share/pixmaps/fsociety.ico \
+WINDOWS_PACKAGING = $(top_srcdir)/share/pixmaps/nudi.ico \
   $(top_srcdir)/share/pixmaps/nsis-header.bmp \
   $(top_srcdir)/share/pixmaps/nsis-wizard.bmp \
   $(top_srcdir)/doc/README_windows.txt
@@ -63,9 +63,9 @@ OSX_PACKAGING = $(OSX_DEPLOY_SCRIPT) $(OSX_INSTALLER_ICONS) \
   $(top_srcdir)/contrib/macdeploy/detached-sig-create.sh
 
 COVERAGE_INFO = baseline.info \
-  test_fsociety_filtered.info total_coverage.info \
+  test_nudi_filtered.info total_coverage.info \
   baseline_filtered.info functional_test.info functional_test_filtered.info \
-  test_fsociety_coverage.info test_fsociety.info
+  test_nudi_coverage.info test_nudi.info
 
 dist-hook:
 	-$(GIT) archive --format=tar HEAD -- src/clientversion.cpp | $(AMTAR) -C $(top_distdir) -xf -
@@ -91,7 +91,7 @@ $(OSX_APP)/Contents/Info.plist: $(OSX_PLIST)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
-$(OSX_APP)/Contents/Resources/fsociety.icns: $(OSX_INSTALLER_ICONS)
+$(OSX_APP)/Contents/Resources/nudi.icns: $(OSX_INSTALLER_ICONS)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
@@ -104,7 +104,7 @@ $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings:
 	echo '{	CFBundleDisplayName = "$(PACKAGE_NAME)"; CFBundleName = "$(PACKAGE_NAME)"; }' > $@
 
 OSX_APP_BUILT=$(OSX_APP)/Contents/PkgInfo $(OSX_APP)/Contents/Resources/empty.lproj \
-  $(OSX_APP)/Contents/Resources/fsociety.icns $(OSX_APP)/Contents/Info.plist \
+  $(OSX_APP)/Contents/Resources/nudi.icns $(OSX_APP)/Contents/Info.plist \
   $(OSX_APP)/Contents/MacOS/Nudi-Qt $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings
 
 osx_volname:
@@ -178,16 +178,16 @@ baseline_filtered.info: baseline.info
 	$(abs_builddir)/contrib/filter-lcov.py $(LCOV_FILTER_PATTERN) $< $@
 	$(LCOV) -a $@ $(LCOV_OPTS) -o $@
 
-test_fsociety.info: baseline_filtered.info
+test_nudi.info: baseline_filtered.info
 	$(MAKE) -C src/ check
-	$(LCOV) -c $(LCOV_OPTS) -d $(abs_builddir)/src -t test_fsociety -o $@
+	$(LCOV) -c $(LCOV_OPTS) -d $(abs_builddir)/src -t test_nudi -o $@
 	$(LCOV) -z $(LCOV_OPTS) -d $(abs_builddir)/src
 
-test_fsociety_filtered.info: test_fsociety.info
+test_nudi_filtered.info: test_nudi.info
 	$(abs_builddir)/contrib/filter-lcov.py $(LCOV_FILTER_PATTERN) $< $@
 	$(LCOV) -a $@ $(LCOV_OPTS) -o $@
 
-functional_test.info: test_fsociety_filtered.info
+functional_test.info: test_nudi_filtered.info
 	-@TIMEOUT=15 test/functional/test_runner.py $(EXTENDED_FUNCTIONAL_TESTS)
 	$(LCOV) -c $(LCOV_OPTS) -d $(abs_builddir)/src --t functional-tests -o $@
 	$(LCOV) -z $(LCOV_OPTS) -d $(abs_builddir)/src
@@ -196,13 +196,13 @@ functional_test_filtered.info: functional_test.info
 	$(abs_builddir)/contrib/filter-lcov.py $(LCOV_FILTER_PATTERN) $< $@
 	$(LCOV) -a $@ $(LCOV_OPTS) -o $@
 
-test_fsociety_coverage.info: baseline_filtered.info test_fsociety_filtered.info
-	$(LCOV) -a $(LCOV_OPTS) baseline_filtered.info -a test_fsociety_filtered.info -o $@
+test_nudi_coverage.info: baseline_filtered.info test_nudi_filtered.info
+	$(LCOV) -a $(LCOV_OPTS) baseline_filtered.info -a test_nudi_filtered.info -o $@
 
-total_coverage.info: test_fsociety_filtered.info functional_test_filtered.info
-	$(LCOV) -a $(LCOV_OPTS) baseline_filtered.info -a test_fsociety_filtered.info -a functional_test_filtered.info -o $@ | $(GREP) "\%" | $(AWK) '{ print substr($$3,2,50) "/" $$5 }' > coverage_percent.txt
+total_coverage.info: test_nudi_filtered.info functional_test_filtered.info
+	$(LCOV) -a $(LCOV_OPTS) baseline_filtered.info -a test_nudi_filtered.info -a functional_test_filtered.info -o $@ | $(GREP) "\%" | $(AWK) '{ print substr($$3,2,50) "/" $$5 }' > coverage_percent.txt
 
-test_fsociety.coverage/.dirstamp:  test_fsociety_coverage.info
+test_nudi.coverage/.dirstamp:  test_nudi_coverage.info
 	$(GENHTML) -s $(LCOV_OPTS) $< -o $(@D)
 	@touch $@
 
@@ -210,7 +210,7 @@ total.coverage/.dirstamp: total_coverage.info
 	$(GENHTML) -s $(LCOV_OPTS) $< -o $(@D)
 	@touch $@
 
-cov: test_fsociety.coverage/.dirstamp total.coverage/.dirstamp
+cov: test_nudi.coverage/.dirstamp total.coverage/.dirstamp
 
 endif
 
@@ -281,5 +281,5 @@ clean-docs:
 	rm -rf doc/doxygen
 
 clean-local: clean-docs
-	rm -rf coverage_percent.txt test_fsociety.coverage/ total.coverage/ test/tmp/ cache/ $(OSX_APP) src/qt/moc_*
+	rm -rf coverage_percent.txt test_nudi.coverage/ total.coverage/ test/tmp/ cache/ $(OSX_APP) src/qt/moc_*
 	rm -rf test/functional/__pycache__ test/functional/test_framework/__pycache__ test/cache

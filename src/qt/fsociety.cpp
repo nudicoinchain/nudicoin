@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fsociety-config.h>
+#include <config/nudi-config.h>
 #endif
 
 #include <qt/bitcoingui.h>
@@ -82,7 +82,7 @@ static void InitMessage(const std::string &message)
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("fsociety-core", psz).toStdString();
+    return QCoreApplication::translate("nudi-core", psz).toStdString();
 }
 
 static QString GetLangTerritory()
@@ -129,11 +129,11 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         QApplication::installTranslator(&qtTranslator);
 
-    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in fsociety.qrc)
+    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in nudi.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         QApplication::installTranslator(&translatorBase);
 
-    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in fsociety.qrc)
+    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in nudi.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         QApplication::installTranslator(&translator);
 }
@@ -240,7 +240,7 @@ private:
     void startThread();
 };
 
-#include <qt/fsociety.moc>
+#include <qt/nudi.moc>
 
 BitcoinCore::BitcoinCore(interfaces::Node& node) :
     QObject(), m_node(node)
@@ -515,7 +515,7 @@ void BitcoinApplication::initializeResult(bool success)
 
 #ifdef ENABLE_WALLET
         // Now that initialization/startup is done, process any command-line
-        // fsociety: URIs or payment requests:
+        // nudi: URIs or payment requests:
         connect(paymentServer, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
                          window, SLOT(handlePaymentRequest(SendCoinsRecipient)));
         connect(window, SIGNAL(receivedURI(QString)),
@@ -590,8 +590,8 @@ int main(int argc, char *argv[])
     // Do not refer to data directory yet, this can be overridden by Intro::pickDataDirectory
 
     /// 2. Basic Qt initialization (not dependent on parameters or configuration)
-    Q_INIT_RESOURCE(fsociety);
-    Q_INIT_RESOURCE(fsociety_locale);
+    Q_INIT_RESOURCE(nudi);
+    Q_INIT_RESOURCE(nudi_locale);
 
     // Generate high-dpi pixmaps
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
@@ -648,7 +648,7 @@ int main(int argc, char *argv[])
     if (!Intro::pickDataDirectory(*node))
         return EXIT_SUCCESS;
 
-    /// 6. Determine availability of data and blocks directory and parse fsociety.conf
+    /// 6. Determine availability of data and blocks directory and parse nudi.conf
     /// - Do not call GetDataDir(true) before this step finishes
     if (!fs::is_directory(GetDataDir(false)))
     {
@@ -700,7 +700,7 @@ int main(int argc, char *argv[])
         exit(EXIT_SUCCESS);
 
     // Start up the payment server early, too, so impatient users that click on
-    // fsociety: links repeatedly have their payment requests routed to this process:
+    // nudi: links repeatedly have their payment requests routed to this process:
     app.createPaymentServer();
 #endif
 

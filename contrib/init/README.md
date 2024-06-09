@@ -1,11 +1,11 @@
 Sample configuration files for:
 ```
-SystemD: fsocietyd.service
-Upstart: fsocietyd.conf
-OpenRC:  fsocietyd.openrc
-         fsocietyd.openrcconf
-CentOS:  fsocietyd.init
-OS X:    org.fsociety.fsocietyd.plist
+SystemD: nudid.service
+Upstart: nudid.conf
+OpenRC:  nudid.openrc
+         nudid.openrcconf
+CentOS:  nudid.init
+OS X:    org.nudi.nudid.plist
 ```
 have been made available to assist packagers in creating node packages here.
 

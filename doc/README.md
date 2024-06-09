@@ -1,7 +1,7 @@
 Nudi Core
 ==========
 
-This is the official reference wallet for Nudi digital currency and comprises the backbone of the Nudi peer-to-peer network. You can [download Nudi Core](https://www.fsocietychain.com/downloads/) or [build it yourself](#building) using the guides below.
+This is the official reference wallet for Nudi digital currency and comprises the backbone of the Nudi peer-to-peer network. You can [download Nudi Core](https://www.nudichain.com/downloads/) or [build it yourself](#building) using the guides below.
 
 Running
 ---------------------
@@ -11,12 +11,12 @@ The following are some helpful notes on how to run Nudi on your native platform.
 
 Unpack the files into a directory and run:
 
-- `bin/fsociety-qt` (GUI) or
-- `bin/fsocietyd` (headless)
+- `bin/nudi-qt` (GUI) or
+- `bin/nudid` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run fsociety-qt.exe.
+Unpack the files into a directory, and then run nudi-qt.exe.
 
 ### OS X
 
@@ -24,12 +24,12 @@ Drag Nudi-Qt to your applications folder, and then run Nudi-Qt.
 
 ### Need Help?
 
-* See the [Nudi documentation](https://docs.fsocietychain.com)
+* See the [Nudi documentation](https://docs.nudichain.com)
 for help and more information.
-* See the [Nudi Developer Documentation](https://fsociety-docs.github.io/) 
+* See the [Nudi Developer Documentation](https://nudi-docs.github.io/) 
 for technical specifications and implementation details.
-* Ask for help on [Nudi Nation Discord](http://fsocietychat.org)
-* Ask for help on the [Nudi Forum](https://fsocietychain.com/forum)
+* Ask for help on [Nudi Nation Discord](http://nudichat.org)
+* Ask for help on the [Nudi Forum](https://nudichain.com/forum)
 
 Building
 ---------------------
@@ -59,8 +59,8 @@ The Nudi Core repo's [root README](/README.md) contains relevant information on 
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [Nudi Forum](https://fsocietychain.com/forum), in the Development & Technical Discussion board.
-* Discuss on [Nudi Nation Discord](http://fsocietychat.org)
+* Discuss on the [Nudi Forum](https://nudichain.com/forum), in the Development & Technical Discussion board.
+* Discuss on [Nudi Nation Discord](http://nudichat.org)
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

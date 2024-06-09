@@ -105,7 +105,7 @@ std::string GetHelpString(int nParamNum, std::string strParamName)
 {
     static const std::map<std::string, std::string> mapParamHelp = {
         {"collateralAddress",
-            "%d. \"collateralAddress\"        (string, required) The fsociety address to send the collateral to.\n"
+            "%d. \"collateralAddress\"        (string, required) The nudi address to send the collateral to.\n"
         },
         {"collateralAmount",
             "%d. \"collateralAmount\"        (numeric, required) The collateral amount to be sent to collateral address.\n"
@@ -153,15 +153,15 @@ std::string GetHelpString(int nParamNum, std::string strParamName)
             "                              between 0.00 and 100.00.\n"
         },
         {"ownerAddress",
-            "%d. \"ownerAddress\"             (string, required) The fsociety address to use for payee updates and proposal voting.\n"
+            "%d. \"ownerAddress\"             (string, required) The nudi address to use for payee updates and proposal voting.\n"
             "                              The corresponding private key does not have to be known by your wallet.\n"
             "                              The address must be unused and must differ from the collateralAddress.\n"
         },
         {"payoutAddress_register",
-            "%d. \"payoutAddress\"            (string, required) The fsociety address to use for smartnode reward payments.\n"
+            "%d. \"payoutAddress\"            (string, required) The nudi address to use for smartnode reward payments.\n"
         },
         {"payoutAddress_update",
-            "%d. \"payoutAddress\"            (string, required) The fsociety address to use for smartnode reward payments.\n"
+            "%d. \"payoutAddress\"            (string, required) The nudi address to use for smartnode reward payments.\n"
             "                              If set to an empty string, the currently active payout address is reused.\n"
         },
         {"proTxHash",
@@ -1081,7 +1081,7 @@ void protx_quick_setup_help(CWallet* const pwallet)
 			"  \"collateralAmount\":      (numeric) The collateral Amount was used for this protx.\n"
 			"  \"operationPubkey\":       (string) The public key from bls generate.\n"
 			"  \"operationSecret\":       (string) The secret key from bls generate.\n"
-			"  \"fsociety.conf\" :       (string) The content of fsociety.conf to be used in vps node.\n"
+			"  \"nudi.conf\" :       (string) The content of nudi.conf to be used in vps node.\n"
       "}\n"
 			"\nExamples:\n"
       + HelpExampleCli("protx", "quick_setup \"collateralHash\" \"collateralIndex\" \"ipAndPort\" \"feeSourceAddress\"")
@@ -1133,7 +1133,7 @@ UniValue signMessage(CWallet * const pwallet, std::string strAddress, std::strin
 
 UniValue createConfigFile(string blsPrivateKey, string ip, string address) {
 
-	string fileName = get_current_dir() + "/" + address + "_fsociety.conf";
+	string fileName = get_current_dir() + "/" + address + "_nudi.conf";
 	ofstream configFile(fileName);
 	string username = generateRandomString(10, false);
 	string password = generateRandomString(20, true);
@@ -1205,7 +1205,7 @@ UniValue protx_quick_setup(const JSONRPCRequest& request) {
 	result.pushKV("operatorPublic", blsKeys["public"].get_str());
 	result.pushKV("operatorSecret", blsKeys["secret"].get_str());
 	UniValue config = createConfigFile( blsKeys["secret"].get_str(),request.params[3].get_str(),  prepareResult["collateralAddress"].get_str());
-	result.pushKV("fsociety.conf",config.get_str());
+	result.pushKV("nudi.conf",config.get_str());
 
 	return result;
 }

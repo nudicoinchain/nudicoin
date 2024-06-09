@@ -1956,7 +1956,7 @@ static bool WriteTxIndexDataForBlock(const CBlock& block, CValidationState& stat
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("fsociety-scriptch");
+    RenameThread("nudi-scriptch");
     scriptcheckqueue.Thread();
 }
 

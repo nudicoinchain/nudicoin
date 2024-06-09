@@ -534,7 +534,7 @@ void static NudiMiner(const CChainParams& chainparams)
 {
     LogPrintf("NudiMiner -- started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("fsociety-miner");
+    RenameThread("nudi-miner");
 
     unsigned int nExtraNonce = 0;
 

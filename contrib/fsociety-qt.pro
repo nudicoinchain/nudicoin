@@ -21,4 +21,4 @@ FORMS += \
     ../src/qt/forms/transactiondescdialog.ui
 
 RESOURCES += \
-    ../src/qt/fsociety.qrc
+    ../src/qt/nudi.qrc

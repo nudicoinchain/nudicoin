@@ -3,7 +3,7 @@
 
 #include <cachemultimap.h>
 
-#include <test/test_fsociety.h>
+#include <test/test_nudi.h>
 
 #include <algorithm>
 #include <iostream>

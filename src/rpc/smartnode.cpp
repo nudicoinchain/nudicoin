@@ -701,8 +701,8 @@ UniValue smartnodelist(const JSONRPCRequest& request)
 static const CRPCCommand commands[] =
 { //  category              name                      actor (function)         argNames
   //  --------------------- ------------------------  -----------------------  ----------
-    { "fsociety",               "smartnode",             &smartnode,             {} },
-    { "fsociety",               "smartnodelist",         &smartnodelist,         {} },
+    { "nudi",               "smartnode",             &smartnode,             {} },
+    { "nudi",               "smartnodelist",         &smartnodelist,         {} },
 };
 
 void RegisterSmartnodeRPCCommands(CRPCTable &t)

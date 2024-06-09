@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fsociety-config.h>
+#include <config/nudi-config.h>
 #endif
 
 #include <chainparams.h>
@@ -33,7 +33,7 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Nudi (https://www.fsocietychain.com/),
+ * This is the developer documentation of the reference client for an experimental new digital currency called Nudi (https://www.nudichain.com/),
  * which enables instant payments to anyone, anywhere in the world. Nudi uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
@@ -63,7 +63,7 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/fsociety.conf are parsed in qt/dash.cpp's main()
+    // If Qt is used, parameters/nudi.conf are parsed in qt/dash.cpp's main()
     SetupServerArgs();
 #if HAVE_DECL_DAEMON
     gArgs.AddArg("-daemon", "Run in the background as a daemon and accept commands", false, OptionsCategory::OPTIONS);
@@ -87,7 +87,7 @@ bool AppInit(int argc, char* argv[])
         else
         {
             strUsage += "\nUsage:\n"
-                  "  fsocietyd [options]                     " + strprintf("Start %s Daemon", PACKAGE_NAME) + "\n";
+                  "  nudid [options]                     " + strprintf("Start %s Daemon", PACKAGE_NAME) + "\n";
 
             strUsage += "\n" + gArgs.GetHelpMessage();
         }
@@ -127,12 +127,12 @@ bool AppInit(int argc, char* argv[])
         // Error out when loose non-argument tokens are encountered on command line
         for (int i = 1; i < argc; i++) {
             if (!IsSwitchChar(argv[i][0])) {
-                fprintf(stderr, "Error: Command line contains unexpected token '%s', see fsocietyd -h for a list of options.\n", argv[i]);
+                fprintf(stderr, "Error: Command line contains unexpected token '%s', see nudid -h for a list of options.\n", argv[i]);
                 return false;
             }
         }
 
-        // -server defaults to true for fsocietyd but not for the GUI so do this here
+        // -server defaults to true for nudid but not for the GUI so do this here
         gArgs.SoftSetBoolArg("-server", true);
         // Set this early so that parameter interactions go to console
         InitLogging();
@@ -203,7 +203,7 @@ int main(int argc, char* argv[])
 
     SetupEnvironment();
 
-    // Connect fsocietyd signal handlers
+    // Connect nudid signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE);

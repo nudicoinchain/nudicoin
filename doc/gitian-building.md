@@ -11,7 +11,7 @@ the same, tested dependencies are used and statically built into the executable.
 Multiple developers build the source code by following a specific descriptor
 ("recipe"), cryptographically sign the result, and upload the resulting signature.
 These results are compared and only if they match, the build is accepted and uploaded
-to fsocietychain.com.
+to nudichain.com.
 
 More independent Gitian builders are needed, which is why this guide exists.
 It is preferred you follow these steps yourself instead of using someone else's
@@ -26,7 +26,7 @@ Table of Contents
 - [Installing Gitian](#installing-gitian)
 - [Setting up the Gitian image](#setting-up-the-gitian-image)
 - [Getting and building the inputs](#getting-and-building-the-inputs)
-- [Building Nudi Core](#building-fsociety-core)
+- [Building Nudi Core](#building-nudi-core)
 - [Building an alternative repository](#building-an-alternative-repository)
 - [Signing externally](#signing-externally)
 - [Uploading signatures](#uploading-signatures)
@@ -314,8 +314,8 @@ Clone the git repositories for Nudi Core and Gitian.
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/fsocietychain/fsociety
-git clone https://github.com/fsocietychain/gitian.sigs.git
+git clone https://github.com/nudichain/nudi
+git clone https://github.com/nudichain/gitian.sigs.git
 ```
 
 Setting up the Gitian image
@@ -376,12 +376,12 @@ tail -f var/build.log
 Output from `gbuild` will look something like
 
 ```bash
-    Initialized empty Git repository in /home/debian/gitian-builder/inputs/fsociety/.git/
+    Initialized empty Git repository in /home/debian/gitian-builder/inputs/nudi/.git/
     remote: Counting objects: 57959, done.
     remote: Total 57959 (delta 0), reused 0 (delta 0), pack-reused 57958
     Receiving objects: 100% (57959/57959), 53.76 MiB | 484.00 KiB/s, done.
     Resolving deltas: 100% (41590/41590), done.
-    From https://github.com/fsocietychain/fsociety
+    From https://github.com/nudichain/nudi
     ... (new tags, new branch etc)
     --- Building for bionic amd64 ---
     Stopping target if it is up
@@ -407,18 +407,18 @@ and inputs.
 
 For example:
 ```bash
-URL=https://github.com/crowning-/fsociety.git
+URL=https://github.com/crowning-/nudi.git
 COMMIT=b616fb8ef0d49a919b72b0388b091aaec5849b96
-./bin/gbuild --commit fsociety=${COMMIT} --url fsociety=${URL} ../fsociety/contrib/gitian-descriptors/gitian-linux.yml
-./bin/gbuild --commit fsociety=${COMMIT} --url fsociety=${URL} ../fsociety/contrib/gitian-descriptors/gitian-win.yml
-./bin/gbuild --commit fsociety=${COMMIT} --url fsociety=${URL} ../fsociety/contrib/gitian-descriptors/gitian-osx.yml
+./bin/gbuild --commit nudi=${COMMIT} --url nudi=${URL} ../nudi/contrib/gitian-descriptors/gitian-linux.yml
+./bin/gbuild --commit nudi=${COMMIT} --url nudi=${URL} ../nudi/contrib/gitian-descriptors/gitian-win.yml
+./bin/gbuild --commit nudi=${COMMIT} --url nudi=${URL} ../nudi/contrib/gitian-descriptors/gitian-osx.yml
 ```
 
 Building fully offline
 -----------------------
 
 For building fully offline including attaching signatures to unsigned builds, the detached-sigs repository
-and the fsociety git repository with the desired tag must both be available locally, and then gbuild must be
+and the nudi git repository with the desired tag must both be available locally, and then gbuild must be
 told where to find them. It also requires an apt-cacher-ng which is fully-populated but set to offline mode, or
 manually disabling gitian-builder's use of apt-get to update the VM build environment.
 
@@ -437,7 +437,7 @@ cd /path/to/gitian-builder
 LXC_ARCH=amd64 LXC_SUITE=bionic on-target -u root apt-get update
 LXC_ARCH=amd64 LXC_SUITE=bionic on-target -u root \
   -e DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y install \
-  $( sed -ne '/^packages:/,/[^-] .*/ {/^- .*/{s/"//g;s/- //;p}}' ../fsociety/contrib/gitian-descriptors/*|sort|uniq )
+  $( sed -ne '/^packages:/,/[^-] .*/ {/^- .*/{s/"//g;s/- //;p}}' ../nudi/contrib/gitian-descriptors/*|sort|uniq )
 LXC_ARCH=amd64 LXC_SUITE=bionic on-target -u root apt-get -q -y purge grub
 LXC_ARCH=amd64 LXC_SUITE=bionic on-target -u root -e DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade
 ```
@@ -457,12 +457,12 @@ Then when building, override the remote URLs that gbuild would otherwise pull fr
 ```bash
 
 cd /some/root/path/
-git clone https://github.com/fsocietychain/fsociety-detached-sigs.git
+git clone https://github.com/nudichain/nudi-detached-sigs.git
 
-BTCPATH=/some/root/path/fsociety
-SIGPATH=/some/root/path/fsociety-detached-sigs
+BTCPATH=/some/root/path/nudi
+SIGPATH=/some/root/path/nudi-detached-sigs
 
-./bin/gbuild --url fsociety=${BTCPATH},signature=${SIGPATH} ../fsociety/contrib/gitian-descriptors/gitian-win-signer.yml
+./bin/gbuild --url nudi=${BTCPATH},signature=${SIGPATH} ../nudi/contrib/gitian-descriptors/gitian-win-signer.yml
 ```
 
 Signing externally
@@ -477,9 +477,9 @@ When you execute `gsign` you will get an error from GPG, which can be ignored. C
 in `gitian.sigs` to your signing machine and do
 
 ```bash
-    gpg --detach-sign ${VERSION}-linux/${SIGNER}/fsociety-linux-build.assert
-    gpg --detach-sign ${VERSION}-win/${SIGNER}/fsociety-win-build.assert
-    gpg --detach-sign ${VERSION}-osx-unsigned/${SIGNER}/fsociety-osx-build.assert
+    gpg --detach-sign ${VERSION}-linux/${SIGNER}/nudi-linux-build.assert
+    gpg --detach-sign ${VERSION}-win/${SIGNER}/nudi-win-build.assert
+    gpg --detach-sign ${VERSION}-osx-unsigned/${SIGNER}/nudi-osx-build.assert
 ```
 
 This will create the `.sig` files that can be committed together with the `.assert` files to assert your
@@ -489,6 +489,6 @@ Uploading signatures (not yet implemented)
 ---------------------
 
 In the future it will be possible to push your signatures (both the `.assert` and `.assert.sig` files) to the
-[fsociety/gitian.sigs](https://github.com/fsocietychain/gitian.sigs/) repository, or if that's not possible to create a pull
+[nudi/gitian.sigs](https://github.com/nudichain/gitian.sigs/) repository, or if that's not possible to create a pull
 request.
 There will be an official announcement when this repository is online.

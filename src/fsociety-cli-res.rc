@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "Nudi"
-            VALUE "FileDescription",    "fsociety-cli (JSON-RPC client for " PACKAGE_NAME ")"
+            VALUE "FileDescription",    "nudi-cli (JSON-RPC client for " PACKAGE_NAME ")"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "fsociety-cli"
+            VALUE "InternalName",       "nudi-cli"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "fsociety-cli.exe"
-            VALUE "ProductName",        "fsociety-cli"
+            VALUE "OriginalFilename",   "nudi-cli.exe"
+            VALUE "ProductName",        "nudi-cli"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

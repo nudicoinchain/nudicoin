@@ -9,7 +9,7 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both fsocietyd and fsociety-qt, to make it harder for attackers to
+ * for both nudid and nudi-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
 const std::string CLIENT_NAME("Nudi Core");

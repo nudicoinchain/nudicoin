@@ -8,7 +8,7 @@ Running
 ---------------------
 After compiling Nudi Core, the benchmarks can be run with:
 
-    src/bench/bench_fsociety
+    src/bench/bench_nudi
 
 The output will look similar to:
 ```
@@ -153,7 +153,7 @@ Help
 ---------------------
 `-?` will print a list of options and exit:
 
-    src/bench/bench_fsociety -?
+    src/bench/bench_nudi -?
 
 Notes
 ---------------------

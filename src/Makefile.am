@@ -49,36 +49,36 @@ BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 
 BLS_LIBS=-lbls-dash -lgmp
 
-LIBBITCOIN_SERVER=libfsociety_server.a
-LIBBITCOIN_COMMON=libfsociety_common.a
-LIBBITCOIN_CONSENSUS=libfsociety_consensus.a
-LIBBITCOIN_CLI=libfsociety_cli.a
-LIBBITCOIN_UTIL=libfsociety_util.a
-LIBBITCOIN_CRYPTO_BASE=crypto/libfsociety_crypto_base.a
-LIBBITCOINQT=qt/libfsocietyqt.a
+LIBBITCOIN_SERVER=libnudi_server.a
+LIBBITCOIN_COMMON=libnudi_common.a
+LIBBITCOIN_CONSENSUS=libnudi_consensus.a
+LIBBITCOIN_CLI=libnudi_cli.a
+LIBBITCOIN_UTIL=libnudi_util.a
+LIBBITCOIN_CRYPTO_BASE=crypto/libnudi_crypto_base.a
+LIBBITCOINQT=qt/libnudiqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBBITCOIN_ZMQ=libfsociety_zmq.a
+LIBBITCOIN_ZMQ=libnudi_zmq.a
 endif
 if BUILD_BITCOIN_LIBS
-LIBBITCOINCONSENSUS=libfsocietyconsensus.la
+LIBBITCOINCONSENSUS=libnudiconsensus.la
 endif
 if ENABLE_WALLET
-LIBBITCOIN_WALLET=libfsociety_wallet.a
+LIBBITCOIN_WALLET=libnudi_wallet.a
 endif
 
 LIBBITCOIN_CRYPTO= $(LIBBITCOIN_CRYPTO_BASE)
 if ENABLE_SSE41
-LIBBITCOIN_CRYPTO_SSE41 = crypto/libfsociety_crypto_sse41.a
+LIBBITCOIN_CRYPTO_SSE41 = crypto/libnudi_crypto_sse41.a
 LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_SSE41)
 endif
 if ENABLE_AVX2
-LIBBITCOIN_CRYPTO_AVX2 = crypto/libfsociety_crypto_avx2.a
+LIBBITCOIN_CRYPTO_AVX2 = crypto/libnudi_crypto_avx2.a
 LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_AVX2)
 endif
 if ENABLE_SHANI
-LIBBITCOIN_CRYPTO_SHANI = crypto/libfsociety_crypto_shani.a
+LIBBITCOIN_CRYPTO_SHANI = crypto/libnudi_crypto_shani.a
 LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_SHANI)
 endif
 
@@ -105,15 +105,15 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += fsocietyd
+  bin_PROGRAMS += nudid
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += fsociety-cli fsociety-tx
+  bin_PROGRAMS += nudi-cli nudi-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
-# fsociety core #
+# nudi core #
 BITCOIN_CORE_H = \
   addrdb.h \
   addressindex.h \
@@ -294,12 +294,12 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh "$(abs_top_builddir)/src/obj/build.h" \
 	  "$(abs_top_srcdir)"
-libfsociety_util_a-clientversion.$(OBJEXT): obj/build.h
+libnudi_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between fsocietyd and fsociety-qt
-libfsociety_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libfsociety_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libfsociety_server_a_SOURCES = \
+# server: shared between nudid and nudi-qt
+libnudi_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libnudi_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libnudi_server_a_SOURCES = \
   addrdb.cpp \
   addrman.cpp \
   batchedlogger.cpp \
@@ -386,9 +386,9 @@ libfsociety_server_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if ENABLE_ZMQ
-libfsociety_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libfsociety_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libfsociety_zmq_a_SOURCES = \
+libnudi_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libnudi_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libnudi_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp \
@@ -396,11 +396,11 @@ libfsociety_zmq_a_SOURCES = \
 endif
 
 
-# wallet: shared between fsocietyd and fsociety-qt, but only linked
+# wallet: shared between nudid and nudi-qt, but only linked
 # when wallet enabled
-libfsociety_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libfsociety_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libfsociety_wallet_a_SOURCES = \
+libnudi_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libnudi_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libnudi_wallet_a_SOURCES = \
   coinjoin/coinjoin-client.cpp \
   coinjoin/coinjoin-client-options.cpp \
   coinjoin/coinjoin-util.cpp \
@@ -419,9 +419,9 @@ libfsociety_wallet_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
-crypto_libfsociety_crypto_base_a_CPPFLAGS = $(AM_CPPFLAGS) $(PIC_FLAGS)
-crypto_libfsociety_crypto_base_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) $(PIC_FLAGS)
-crypto_libfsociety_crypto_base_a_SOURCES = \
+crypto_libnudi_crypto_base_a_CPPFLAGS = $(AM_CPPFLAGS) $(PIC_FLAGS)
+crypto_libnudi_crypto_base_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) $(PIC_FLAGS)
+crypto_libnudi_crypto_base_a_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/chacha_poly_aead.h \
@@ -507,31 +507,31 @@ crypto_libfsociety_crypto_base_a_SOURCES = \
   crypto/sha512.h
 
 if USE_ASM
-crypto_libfsociety_crypto_base_a_SOURCES += crypto/sha256_sse4.cpp
+crypto_libnudi_crypto_base_a_SOURCES += crypto/sha256_sse4.cpp
 endif
 
-crypto_libfsociety_crypto_sse41_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libfsociety_crypto_sse41_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libfsociety_crypto_sse41_a_CXXFLAGS += $(SSE41_CXXFLAGS)
-crypto_libfsociety_crypto_sse41_a_CPPFLAGS += -DENABLE_SSE41
-crypto_libfsociety_crypto_sse41_a_SOURCES = crypto/sha256_sse41.cpp
+crypto_libnudi_crypto_sse41_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libnudi_crypto_sse41_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libnudi_crypto_sse41_a_CXXFLAGS += $(SSE41_CXXFLAGS)
+crypto_libnudi_crypto_sse41_a_CPPFLAGS += -DENABLE_SSE41
+crypto_libnudi_crypto_sse41_a_SOURCES = crypto/sha256_sse41.cpp
 
-crypto_libfsociety_crypto_avx2_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libfsociety_crypto_avx2_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libfsociety_crypto_avx2_a_CXXFLAGS += $(AVX2_CXXFLAGS)
-crypto_libfsociety_crypto_avx2_a_CPPFLAGS += -DENABLE_AVX2
-crypto_libfsociety_crypto_avx2_a_SOURCES = crypto/sha256_avx2.cpp
+crypto_libnudi_crypto_avx2_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libnudi_crypto_avx2_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libnudi_crypto_avx2_a_CXXFLAGS += $(AVX2_CXXFLAGS)
+crypto_libnudi_crypto_avx2_a_CPPFLAGS += -DENABLE_AVX2
+crypto_libnudi_crypto_avx2_a_SOURCES = crypto/sha256_avx2.cpp
 
-crypto_libfsociety_crypto_shani_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libfsociety_crypto_shani_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libfsociety_crypto_shani_a_CXXFLAGS += $(SHANI_CXXFLAGS)
-crypto_libfsociety_crypto_shani_a_CPPFLAGS += -DENABLE_SHANI
-crypto_libfsociety_crypto_shani_a_SOURCES = crypto/sha256_shani.cpp
+crypto_libnudi_crypto_shani_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libnudi_crypto_shani_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libnudi_crypto_shani_a_CXXFLAGS += $(SHANI_CXXFLAGS)
+crypto_libnudi_crypto_shani_a_CPPFLAGS += -DENABLE_SHANI
+crypto_libnudi_crypto_shani_a_SOURCES = crypto/sha256_shani.cpp
 
 # consensus: shared between all executables that validate any consensus rules.
-libfsociety_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libfsociety_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libfsociety_consensus_a_SOURCES = \
+libnudi_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libnudi_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libnudi_consensus_a_SOURCES = \
   amount.h \
   founder_payment.h \
   arith_uint256.cpp \
@@ -555,7 +555,7 @@ libfsociety_consensus_a_SOURCES = \
   primitives/transaction.h \
   pubkey.cpp \
   pubkey.h \
-  script/fsocietyconsensus.cpp \
+  script/nudiconsensus.cpp \
   script/interpreter.cpp \
   script/interpreter.h \
   script/script.cpp \
@@ -572,10 +572,10 @@ libfsociety_consensus_a_SOURCES = \
   utilstrencodings.h \
   version.h
 
-# common: shared between fsocietyd, and fsociety-qt and non-server tools
-libfsociety_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libfsociety_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libfsociety_common_a_SOURCES = \
+# common: shared between nudid, and nudi-qt and non-server tools
+libnudi_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libnudi_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libnudi_common_a_SOURCES = \
   base58.cpp \
   bech32.cpp \
   founder_payment.cpp \
@@ -606,9 +606,9 @@ libfsociety_common_a_SOURCES = \
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libfsociety_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libfsociety_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libfsociety_util_a_SOURCES = \
+libnudi_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libnudi_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libnudi_util_a_SOURCES = \
   bls/bls_batchverifier.h \
   bls/bls_ies.cpp \
   bls/bls_ies.h \
@@ -637,31 +637,31 @@ libfsociety_util_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libfsociety_util_a_SOURCES += compat/glibc_compat.cpp
+libnudi_util_a_SOURCES += compat/glibc_compat.cpp
 AM_LDFLAGS += -Wl,--wrap=log2f -Wl,--wrap=__divmoddi4
 endif
 
-# cli: shared between fsociety-cli and fsociety-qt
-libfsociety_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libfsociety_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libfsociety_cli_a_SOURCES = \
+# cli: shared between nudi-cli and nudi-qt
+libnudi_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libnudi_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libnudi_cli_a_SOURCES = \
   rpc/client.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libfsociety_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libnudi_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# fsocietyd binary #
-fsocietyd_SOURCES = fsocietyd.cpp
-fsocietyd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-fsocietyd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-fsocietyd_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# nudid binary #
+nudid_SOURCES = nudid.cpp
+nudid_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+nudid_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+nudid_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-fsocietyd_SOURCES += fsocietyd-res.rc
+nudid_SOURCES += nudid-res.rc
 endif
 
-fsocietyd_LDADD = \
+nudid_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_WALLET) \
   $(LIBBITCOIN_COMMON) \
@@ -675,37 +675,37 @@ fsocietyd_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-fsocietyd_LDADD += $(BACKTRACE_LIB) $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(BLS_LIBS)
+nudid_LDADD += $(BACKTRACE_LIB) $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(BLS_LIBS)
 
-# fsociety-cli binary #
-fsociety_cli_SOURCES = fsociety-cli.cpp
-fsociety_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-fsociety_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-fsociety_cli_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# nudi-cli binary #
+nudi_cli_SOURCES = nudi-cli.cpp
+nudi_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+nudi_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+nudi_cli_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-fsociety_cli_SOURCES += fsociety-cli-res.rc
+nudi_cli_SOURCES += nudi-cli-res.rc
 endif
 
-fsociety_cli_LDADD = \
+nudi_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
-fsociety_cli_LDADD += $(BACKTRACE_LIB) $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS) $(BLS_LIBS)
+nudi_cli_LDADD += $(BACKTRACE_LIB) $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS) $(BLS_LIBS)
 #
 
-# fsociety-tx binary #
-fsociety_tx_SOURCES = fsociety-tx.cpp
-fsociety_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-fsociety_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-fsociety_tx_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# nudi-tx binary #
+nudi_tx_SOURCES = nudi-tx.cpp
+nudi_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+nudi_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+nudi_tx_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-fsociety_tx_SOURCES += fsociety-tx-res.rc
+nudi_tx_SOURCES += nudi-tx-res.rc
 endif
 
-fsociety_tx_LDADD = \
+nudi_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -713,22 +713,22 @@ fsociety_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-fsociety_tx_LDADD += $(BACKTRACE_LIB) $(BOOST_LIBS) $(CRYPTO_LIBS) $(BLS_LIBS)
+nudi_tx_LDADD += $(BACKTRACE_LIB) $(BOOST_LIBS) $(CRYPTO_LIBS) $(BLS_LIBS)
 #
 
-# fsocietyconsensus library #
+# nudiconsensus library #
 if BUILD_BITCOIN_LIBS
-include_HEADERS = script/fsocietyconsensus.h
-libfsocietyconsensus_la_SOURCES = support/cleanse.cpp $(crypto_libfsociety_crypto_base_a_SOURCES) $(libfsociety_consensus_a_SOURCES)
+include_HEADERS = script/nudiconsensus.h
+libnudiconsensus_la_SOURCES = support/cleanse.cpp $(crypto_libnudi_crypto_base_a_SOURCES) $(libnudi_consensus_a_SOURCES)
 
 if GLIBC_BACK_COMPAT
-  libfsocietyconsensus_la_SOURCES += compat/glibc_compat.cpp
+  libnudiconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
-libfsocietyconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-libfsocietyconsensus_la_LIBADD = $(LIBSECP256K1) $(BLS_LIBS)
-libfsocietyconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
-libfsocietyconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libnudiconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+libnudiconsensus_la_LIBADD = $(LIBSECP256K1) $(BLS_LIBS)
+libnudiconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
+libnudiconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #
@@ -761,12 +761,12 @@ EXTRA_DIST = $(CTAES_DIST)
 EXTRA_DIST += $(IMMER_DIST)
 
 
-config/fsociety-config.h: config/stamp-h1
+config/nudi-config.h: config/stamp-h1
 	@$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-config/stamp-h1: $(top_srcdir)/$(subdir)/config/fsociety-config.h.in $(top_builddir)/config.status
+config/stamp-h1: $(top_srcdir)/$(subdir)/config/nudi-config.h.in $(top_builddir)/config.status
 	$(AM_V_at)$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-$(top_srcdir)/$(subdir)/config/fsociety-config.h.in:  $(am__configure_deps)
-	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/fsociety-config.h.in
+$(top_srcdir)/$(subdir)/config/nudi-config.h.in:  $(am__configure_deps)
+	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/nudi-config.h.in
 
 
 clean-local:

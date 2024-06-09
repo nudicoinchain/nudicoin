@@ -349,7 +349,7 @@
       <translation>&amp;Получаване</translation>
     </message>
     <message>
-      <source>Request payments (generates QR codes and fsociety: URIs)</source>
+      <source>Request payments (generates QR codes and nudi: URIs)</source>
       <translation>Заявка за плащане (генерира QR кодове и Nudi: URI)</translation>
     </message>
     <message>
@@ -541,7 +541,7 @@
       <translation>Отвори &amp;URI...</translation>
     </message>
     <message>
-      <source>Open a fsociety: URI or payment request</source>
+      <source>Open a nudi: URI or payment request</source>
       <translation>Отвори Nudi: URI или заявка за плащане</translation>
     </message>
     <message>
@@ -1428,9 +1428,9 @@
     </message>
     <message>
       <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</source>
+https://www.transifex.com/projects/p/nudi/</source>
       <translation>Липсва език или превода е непълен? Можете да помогнете с превода тук:
-https://www.transifex.com/projects/p/fsociety/</translation>
+https://www.transifex.com/projects/p/nudi/</translation>
     </message>
     <message>
       <source>&amp;Unit to show amounts in:</source>
@@ -1725,16 +1725,16 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Грешка в заявката за плащане</translation>
     </message>
     <message>
-      <source>Cannot start fsociety: click-to-pay handler</source>
-      <translation>Не може да стартира fsociety: кликни за плащане на притежателя</translation>
+      <source>Cannot start nudi: click-to-pay handler</source>
+      <translation>Не може да стартира nudi: кликни за плащане на притежателя</translation>
     </message>
     <message>
       <source>URI handling</source>
       <translation>Обработка на URI</translation>
     </message>
     <message>
-      <source>'fsociety://' is not a valid URI. Use 'fsociety:' instead.</source>
-      <translation>'fsociety://' не е валиден URI. Използвайте 'fsociety:' вместо това.</translation>
+      <source>'nudi://' is not a valid URI. Use 'nudi:' instead.</source>
+      <translation>'nudi://' не е валиден URI. Използвайте 'nudi:' вместо това.</translation>
     </message>
     <message>
       <source>Payment request fetch URL is invalid: %1</source>
@@ -2780,8 +2780,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Ако променената такса е 1000 ruffs и транзакцията е само 250 байта, тогава "за килобайт" само плаща такса 250 ruffs,,&lt;br /&gt; тогава"за последно" заплаща 1000 ruffs. За транзакции по-големи от килобайт едновременно се заплащат от килобайт.</translation>
     </message>
     <message>
-      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</source>
-      <translation>Разплащането само минималната такса ще продължи толкова дълго,докато транзакцията заема по-малък обем в блоковото пространство.&lt;br /&gt; Но имайте предвид, че транзакцията може да се окаже без първоначално потвърждение ако се появи голямо търсене на fsociety транзакции отколкото мрежата може да обработи.</translation>
+      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</source>
+      <translation>Разплащането само минималната такса ще продължи толкова дълго,докато транзакцията заема по-малък обем в блоковото пространство.&lt;br /&gt; Но имайте предвид, че транзакцията може да се окаже без първоначално потвърждение ако се появи голямо търсене на nudi транзакции отколкото мрежата може да обработи.</translation>
     </message>
     <message>
       <source>per kilobyte</source>
@@ -3093,8 +3093,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Съобщение:</translation>
     </message>
     <message>
-      <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
-      <translation>Съобщението което беше прикрепено към fsociety: URI ще бъде запазено с транзакцията за ваше сведение. Забележка: Това съобщение няма да бъде изпратено през Nudi мрежата.</translation>
+      <source>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+      <translation>Съобщението което беше прикрепено към nudi: URI ще бъде запазено с транзакцията за ваше сведение. Забележка: Това съобщение няма да бъде изпратено през Nudi мрежата.</translation>
     </message>
     <message>
       <source>Future</source>
@@ -4117,7 +4117,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
   </context>
   <context>
-    <name>fsociety-core</name>
+    <name>nudi-core</name>
     <message>
       <source>Nudi Core</source>
       <translation>Nudi Core</translation>

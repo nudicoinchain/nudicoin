@@ -5,32 +5,32 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the fsocietyd tests manually, launch `src/test/test_fsociety`. To recompile
+To run the nudid tests manually, launch `src/test/test_nudi`. To recompile
 after a test file was modified, run `make` and then run the test again. If you
 modify a non-test file, use `make -C src/test` to recompile only what's needed
-to run the fsocietyd tests.
+to run the nudid tests.
 
-To add more fsocietyd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more nudid tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the `test/` directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 
-To run the fsociety-qt tests manually, launch `src/qt/test/test_fsociety-qt`
+To run the nudi-qt tests manually, launch `src/qt/test/test_nudi-qt`
 
-To add more fsociety-qt tests, add them to the `src/qt/test/` directory and
+To add more nudi-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.
 
 ### Running individual tests
 
-test_fsociety has some built-in command-line arguments; for
+test_nudi has some built-in command-line arguments; for
 example, to run just the getarg_tests verbosely:
 
-    test_fsociety --log_level=all --run_test=getarg_tests
+    test_nudi --log_level=all --run_test=getarg_tests
 
-... or to run just the doublefsociety test:
+... or to run just the doublenudi test:
 
-    test_fsociety --run_test=getarg_tests/doublefsociety
+    test_nudi --run_test=getarg_tests/doublenudi
 
-Run `test_fsociety --help` for the full list.
+Run `test_nudi --help` for the full list.
 
 ### Note on adding test cases
 
@@ -40,9 +40,9 @@ sense to simply use this framework rather than require developers to
 configure some other framework (we want as few impediments to creating
 unit tests as possible).
 
-The build system is setup to compile an executable called `test_fsociety`
+The build system is setup to compile an executable called `test_nudi`
 that runs all of the unit tests.  The main source file is called
-test_fsociety.cpp. To add a new unit test file to our test suite you need
+test_nudi.cpp. To add a new unit test file to our test suite you need
 to add the file to `src/Makefile.test.include`. The pattern is to create
 one test file for each class or source file for which you want to create
 unit tests.  The file naming convention is `<source_filename>_tests.cpp`

@@ -38,15 +38,15 @@ Next, follow the instructions in [build-generic](build-generic.md)
 Running
 -------
 
-Nudi Core is now available at `./src/fsocietyd`
+Nudi Core is now available at `./src/nudid`
 
 Before running, it's recommended you create an RPC configuration file.
 
-    echo -e "rpcuser=fsocietyrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/NudiCore/fsociety.conf"
+    echo -e "rpcuser=nudirpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/NudiCore/nudi.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/NudiCore/fsociety.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/NudiCore/nudi.conf"
 
-The first time you run fsocietyd, it will start downloading the blockchain. This process could take several hours.
+The first time you run nudid, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
@@ -55,6 +55,6 @@ You can monitor the download process by looking at the debug.log file:
 Other commands:
 -------
 
-    ./src/fsocietyd -daemon # Starts the fsociety daemon.
-    ./src/fsociety-cli --help # Outputs a list of command-line options.
-    ./src/fsociety-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/nudid -daemon # Starts the nudi daemon.
+    ./src/nudi-cli --help # Outputs a list of command-line options.
+    ./src/nudi-cli help # Outputs a list of RPC commands when the daemon is running.

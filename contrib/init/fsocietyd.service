@@ -3,13 +3,13 @@ Description=Nudi's distributed currency daemon
 After=network.target
 
 [Service]
-User=fsocietycore
-Group=fsocietycore
+User=nudicore
+Group=nudicore
 
 Type=forking
-PIDFile=/var/lib/fsocietyd/fsocietyd.pid
-ExecStart=/usr/bin/fsocietyd -daemon -pid=/var/lib/fsocietyd/fsocietyd.pid \
--conf=/etc/fsocietycore/fsociety.conf -datadir=/var/lib/fsocietyd -disablewallet
+PIDFile=/var/lib/nudid/nudid.pid
+ExecStart=/usr/bin/nudid -daemon -pid=/var/lib/nudid/nudid.pid \
+-conf=/etc/nudicore/nudi.conf -datadir=/var/lib/nudid -disablewallet
 
 Restart=always
 PrivateTmp=true

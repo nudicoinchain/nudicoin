@@ -1,6 +1,6 @@
 all:
-	$(MAKE) -C .. fsociety_test
+	$(MAKE) -C .. nudi_test
 clean:
-	$(MAKE) -C .. fsociety_test_clean
+	$(MAKE) -C .. nudi_test_clean
 check:
-	$(MAKE) -C .. fsociety_test_check
+	$(MAKE) -C .. nudi_test_check

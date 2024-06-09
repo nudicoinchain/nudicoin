@@ -83,7 +83,7 @@ static CBlock CreateDevNetGenesisBlock(const uint256 &prevBlockHash, const std::
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "[FSC] We are fsociety. We are finally free. A world that belong to us again. [2023]";
+    const char* pszTimestamp = "[FSC] We are nudi. We are finally free. A world that belong to us again. [2023]";
     const CScript genesisOutputScript = CScript() << ParseHex("04436917a1391f47c00eb8293440a7bdcb0e9cedd4e91805adfaf950f1587af7133eeda8f42f0a68d41f08990056e08757aaccd37f6b58fdf3d546d06dd26df238") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -563,16 +563,16 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0xf59828cf4def471df48f8453a6d22706637456b1f5bda5bc6debf7d6d9583ad9"));
         assert(genesis.hashMerkleRoot == uint256S("0x4c230a37cc3633079058a414a5d17bfcb2c0b15cf6e56a41ceff85771b7acd68"));
 
-        vSeeds.emplace_back("ns1.fsocietychain.com");
-        vSeeds.emplace_back("ns2.fsocietychain.com");
-        vSeeds.emplace_back("ns3.fsocietychain.com");
-	    vSeeds.emplace_back("ns4.fsocietychain.com");
-        vSeeds.emplace_back("ns5.fsocietychain.com");
-        vSeeds.emplace_back("ns6.fsocietychain.com");
-	    vSeeds.emplace_back("ns7.fsocietychain.com");
-        vSeeds.emplace_back("ns8.fsocietychain.com");
-		vSeeds.emplace_back("ns9.fsocietychain.com");
-		vSeeds.emplace_back("ns10.fsocietychain.com");
+        vSeeds.emplace_back("ns1.nudichain.com");
+        vSeeds.emplace_back("ns2.nudichain.com");
+        vSeeds.emplace_back("ns3.nudichain.com");
+	    vSeeds.emplace_back("ns4.nudichain.com");
+        vSeeds.emplace_back("ns5.nudichain.com");
+        vSeeds.emplace_back("ns6.nudichain.com");
+	    vSeeds.emplace_back("ns7.nudichain.com");
+        vSeeds.emplace_back("ns8.nudichain.com");
+		vSeeds.emplace_back("ns9.nudichain.com");
+		vSeeds.emplace_back("ns10.nudichain.com");
 
         // Nudi addresses start with 'F'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,35);
@@ -735,9 +735,9 @@ public:
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
 
-        vSeeds.emplace_back("tns1.fsocietychain.com");
-        vSeeds.emplace_back("tns2.fsocietychain", true);
-        vSeeds.emplace_back("tns3.fsocietychain", true);
+        vSeeds.emplace_back("tns1.nudichain.com");
+        vSeeds.emplace_back("tns2.nudichain", true);
+        vSeeds.emplace_back("tns3.nudichain", true);
 
         // Testnet Nudi addresses start with 't'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,65);
@@ -889,7 +889,7 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        //vSeeds.push_back(CDNSSeedData("fsocietyevo.org",  "devnet-seed.fsocietyevo.org"));
+        //vSeeds.push_back(CDNSSeedData("nudievo.org",  "devnet-seed.nudievo.org"));
 
         // Testnet Nudi addresses start with 'y'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);

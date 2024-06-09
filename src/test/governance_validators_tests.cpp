@@ -7,7 +7,7 @@
 #include <test/data/proposals_valid.json.h>
 #include <test/data/proposals_invalid.json.h>
 
-#include <test/test_fsociety.h>
+#include <test/test_nudi.h>
 
 #include <iostream>
 #include <fstream>

@@ -48,7 +48,7 @@ class TestP2PConn(P2PInterface):
 
 class LLMQ_IS_CL_Conflicts(NudiTestFramework):
     def set_test_params(self):
-        self.set_fsociety_test_params(6, 5, fast_dip3_enforcement=True)
+        self.set_nudi_test_params(6, 5, fast_dip3_enforcement=True)
         #disable_mocktime()
 
     def run_test(self):

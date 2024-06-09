@@ -1,6 +1,6 @@
 [Protocol]
-exec=fsociety-qt '%u'
-protocol=fsociety
+exec=nudi-qt '%u'
+protocol=nudi
 input=none
 output=none
 helper=true

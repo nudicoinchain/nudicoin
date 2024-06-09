@@ -5,7 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fsociety-config.h>
+#include <config/nudi-config.h>
 #endif
 
 #include <fs.h>
@@ -210,7 +210,7 @@ bool Intro::pickDataDirectory(interfaces::Node& node)
         GUIUtil::disableMacFocusRect(&intro);
         GUIUtil::loadStyleSheet(true);
         intro.setDataDirectory(dataDirDefaultCurrent);
-        intro.setWindowIcon(QIcon(":icons/fsociety"));
+        intro.setWindowIcon(QIcon(":icons/nudi"));
 
         while(true)
         {
@@ -237,8 +237,8 @@ bool Intro::pickDataDirectory(interfaces::Node& node)
         settings.setValue("strDataDirDefault", dataDirDefaultCurrent);
     }
     /* Only override -datadir if different from the default, to make it possible to
-     * override -datadir in the fsociety.conf file in the default data directory
-     * (to be consistent with fsocietyd behavior)
+     * override -datadir in the nudi.conf file in the default data directory
+     * (to be consistent with nudid behavior)
      */
     if(dataDir != dataDirDefaultCurrent) {
         node.softSetArg("-datadir", GUIUtil::qstringToBoostPath(dataDir).string()); // use OS locale for path setting

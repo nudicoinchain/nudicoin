@@ -15,7 +15,7 @@
 #include <uint256.h>
 #include <util.h>
 #include <utilstrencodings.h>
-#include <test/test_fsociety.h>
+#include <test/test_nudi.h>
 
 #include <vector>
 

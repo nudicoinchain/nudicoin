@@ -11,7 +11,7 @@ with each other, with the help of a P2P network to check for double-spending.
 
 Setup
 -----
-Unpack the files into a directory and run fsociety-qt.exe.
+Unpack the files into a directory and run nudi-qt.exe.
 
 Nudi Core is the original Nudi client and it builds the backbone of the network.
 However, it downloads and stores the entire history of Nudi transactions;
@@ -19,5 +19,5 @@ depending on the speed of your computer and network connection, the synchronizat
 process can take anywhere from a few hours to a day or more.
 
 See the Nudi documentation at:
-  https://docs.fsocietychain.com
+  https://docs.nudichain.com
 for more help and information.

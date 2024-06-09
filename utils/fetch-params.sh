@@ -8,7 +8,7 @@ uname_S=$(uname -s 2>/dev/null || echo not)
 if [ "$uname_S" = "Darwin" ]; then
     PARAMS_DIR="$HOME/Library/Application Support/NudiParams"
 else
-    PARAMS_DIR="$HOME/.fsociety-params"
+    PARAMS_DIR="$HOME/.nudi-params"
 fi
 
 # Commented out because these are unused; see below.
@@ -17,7 +17,7 @@ fi
 SAPLING_SPEND_NAME='sapling-spend.params'
 SAPLING_OUTPUT_NAME='sapling-output.params'
 SAPLING_SPROUT_GROTH16_NAME='sprout-groth16.params'
-DOWNLOAD_URL="https://github.com/fsocietychain/fsociety/releases/tag/1.2.15.3"
+DOWNLOAD_URL="https://github.com/nudichain/nudi/releases/tag/1.2.15.3"
 #IPFS_HASH="/ipfs/QmXRHVGLQBiKwvNq7c2vPxAKz1zRVmMYbmt7G5TQss7tY7"
 
 SHA256CMD="$(command -v sha256sum || echo shasum)"

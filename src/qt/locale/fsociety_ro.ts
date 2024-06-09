@@ -349,7 +349,7 @@
       <translation>P&amp;rimeşte</translation>
     </message>
     <message>
-      <source>Request payments (generates QR codes and fsociety: URIs)</source>
+      <source>Request payments (generates QR codes and nudi: URIs)</source>
       <translation>Cereţi plăţi (generează coduri QR şi Nudi-uri: URls)</translation>
     </message>
     <message>
@@ -541,7 +541,7 @@
       <translation>Deschide &amp;URI...</translation>
     </message>
     <message>
-      <source>Open a fsociety: URI or payment request</source>
+      <source>Open a nudi: URI or payment request</source>
       <translation>Deschidere Nudi: o adresa URI sau o cerere de plată</translation>
     </message>
     <message>
@@ -1429,9 +1429,9 @@
     </message>
     <message>
       <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/fsociety/</source>
+https://www.transifex.com/projects/p/nudi/</source>
       <translation>Limba lipsă sau traducerea incompletă? Ajută contribuind traduceri aici:
-https://www.transifex.com/projects/p/fsociety/</translation>
+https://www.transifex.com/projects/p/nudi/</translation>
     </message>
     <message>
       <source>&amp;Unit to show amounts in:</source>
@@ -1728,7 +1728,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Eroare la cererea de plată</translation>
     </message>
     <message>
-      <source>Cannot start fsociety: click-to-pay handler</source>
+      <source>Cannot start nudi: click-to-pay handler</source>
       <translation>Nudi nu poate porni: click-to-pay handler</translation>
     </message>
     <message>
@@ -1736,7 +1736,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Gestionare URI</translation>
     </message>
     <message>
-      <source>'fsociety://' is not a valid URI. Use 'fsociety:' instead.</source>
+      <source>'nudi://' is not a valid URI. Use 'nudi:' instead.</source>
       <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2789,8 +2789,8 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Dacă taxa vamală este stabilită la 1000 de ruffi și tranzacția are doar 250 de octeți, atunci "per kilobyte" plătește doar 250 de ruffi în taxă,&lt;br /&gt;în timp ce "cel puțin" plătește 1000 de ruffi. Pentru tranzacțiile mai mari decât un kilobyte, ambele plătesc cu kilobyte.</translation>
     </message>
     <message>
-      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for fsociety transactions than the network can process.</source>
-      <translation>Plata numai a taxei minime este ok, atâta timp cât există un volum mai mic de tranzacții decât spațiul din block-uri.&lt;br /&gt;Dar trebuie să știi că acest lucru se poate încheia într-o tranzacție care nu se confirmă odată ce există mai multă cerere pentru tranzacții fsociety decât poate procesa rețeaua.</translation>
+      <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for nudi transactions than the network can process.</source>
+      <translation>Plata numai a taxei minime este ok, atâta timp cât există un volum mai mic de tranzacții decât spațiul din block-uri.&lt;br /&gt;Dar trebuie să știi că acest lucru se poate încheia într-o tranzacție care nu se confirmă odată ce există mai multă cerere pentru tranzacții nudi decât poate procesa rețeaua.</translation>
     </message>
     <message>
       <source>per kilobyte</source>
@@ -3104,7 +3104,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
       <translation>Mesaj:</translation>
     </message>
     <message>
-      <source>A message that was attached to the fsociety: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
+      <source>A message that was attached to the nudi: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Nudi network.</source>
       <translation>un mesaj a fost ataşat la Nudi: URI care va fi stocat cu tranzacţia pentru referinţa dvs. Notă: Acest mesaj nu va fi trimis către reţeaua Nudi.</translation>
     </message>
     <message>
@@ -4131,7 +4131,7 @@ https://www.transifex.com/projects/p/fsociety/</translation>
     </message>
   </context>
   <context>
-    <name>fsociety-core</name>
+    <name>nudi-core</name>
     <message>
       <source>Nudi Core</source>
       <translation>Nudi Core</translation>

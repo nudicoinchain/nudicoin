@@ -12,8 +12,8 @@ When a "Transaction Lock" occurs the hash of the related transaction is broadcas
 * `zmqpubhashtxlock`: publishes the transaction hash when locked via InstantSend
 
 This mechanism has been integrated into Bitcore-Node-Nudi which allows for notification to be broadcast through Insight API in one of two ways:
-* WebSocket: [https://github.com/fsocietychain/insight-api-fsociety#web-socket-api](https://github.com/fsocietychain/insight-api-fsociety#web-socket-api)
-* API: [https://github.com/fsocietychain/insight-api-fsociety#instantsend-transactions](https://github.com/fsocietychain/insight-api-fsociety#instantsend-transactions)
+* WebSocket: [https://github.com/nudichain/insight-api-nudi#web-socket-api](https://github.com/nudichain/insight-api-nudi#web-socket-api)
+* API: [https://github.com/nudichain/insight-api-nudi#instantsend-transactions](https://github.com/nudichain/insight-api-nudi#instantsend-transactions)
 
 #### Command line option
 
