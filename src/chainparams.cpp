@@ -124,6 +124,33 @@ void CChainParams::UpdateVersionBitsParameters(Consensus::DeploymentPos d, int64
 //    consensus.DIP0003EnforcementHeight = nEnforcementHeight;
 //}
 
+
+// Function definitions for missing functions
+
+void UpdateDevnetSubsidyAndDiffParams(int nMinimumDifficultyBlocks, int nHighSubsidyBlocks, int nHighSubsidyFactor) {
+    // Example implementation:
+    consensus.nMinimumDifficultyBlocks = nMinimumDifficultyBlocks;
+    consensus.nHighSubsidyBlocks = nHighSubsidyBlocks;
+    consensus.nHighSubsidyFactor = nHighSubsidyFactor;
+}
+
+void UpdateDevnetLLMQChainLocks(Consensus::LLMQType llmqTypeChainLocks) {
+    // Example implementation:
+    consensus.llmqTypeChainLocks = llmqTypeChainLocks;
+}
+
+void UpdateDevnetLLMQInstantSend(Consensus::LLMQType llmqTypeInstantSend) {
+    // Example implementation:
+    consensus.llmqTypeInstantSend = llmqTypeInstantSend;
+}
+
+void UpdateLLMQParams(unsigned long allMNsCount, int height, bool isSporkActive) {
+    // Example implementation:
+    consensus.allMNsCount = allMNsCount;
+    consensus.height = height;
+    consensus.isSporkActive = isSporkActive;
+}
+
 void CChainParams::UpdateBudgetParameters(int nSmartnodePaymentsStartBlock, int nBudgetPaymentsStartBlock, int nSuperblockStartBlock)
 {
     consensus.nSmartnodePaymentsStartBlock = nSmartnodePaymentsStartBlock;

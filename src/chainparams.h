@@ -142,6 +142,12 @@ protected:
     bool fBIP9CheckSmartnodesUpgraded;
 
 };
+// Function declarations
+
+void UpdateDevnetSubsidyAndDiffParams(int nMinimumDifficultyBlocks, int nHighSubsidyBlocks, int nHighSubsidyFactor);
+void UpdateDevnetLLMQChainLocks(Consensus::LLMQType llmqTypeChainLocks);
+void UpdateDevnetLLMQInstantSend(Consensus::LLMQType llmqTypeInstantSend);
+void UpdateLLMQParams(unsigned long allMNsCount, int height, bool isSporkActive);
 
 /**
  * Creates and returns a std::unique_ptr<CChainParams> of the chosen chain.
